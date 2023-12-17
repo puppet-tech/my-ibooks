@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="木偶's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="手写春联：https:&#x2F;&#x2F;cl.xugaoyi.com&#x2F; 前言虎年春节快到了，首先祝大家新年快乐，轻松暴富。最近在网上经常看到生成春联的文章，不过这些小demo要么功能简陋,要么UI特别‘程序员’，满足不了我挑剔的眼光。干脆我自己做一个吧，顺便简单体验一下vite+vue3。（因为页面相对简单，vue组件风格还是使用选项式api，重点还是想把产品快速做出来。）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我做了一个手写春联小网页，祝大家虎年暴富">
+<meta property="og:url" content="http://example.com/2022/01/28/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E6%88%91%E5%81%9A%E4%BA%86%E4%B8%80%E4%B8%AA%E6%89%8B%E5%86%99%E6%98%A5%E8%81%94%E5%B0%8F%E7%BD%91%E9%A1%B5%EF%BC%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E8%99%8E%E5%B9%B4%E6%9A%B4%E5%AF%8C/index.html">
+<meta property="og:site_name" content="木偶&#39;s Blog">
+<meta property="og:description" content="手写春联：https:&#x2F;&#x2F;cl.xugaoyi.com&#x2F; 前言虎年春节快到了，首先祝大家新年快乐，轻松暴富。最近在网上经常看到生成春联的文章，不过这些小demo要么功能简陋,要么UI特别‘程序员’，满足不了我挑剔的眼光。干脆我自己做一个吧，顺便简单体验一下vite+vue3。（因为页面相对简单，vue组件风格还是使用选项式api，重点还是想把产品快速做出来。）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/185c88180b87ac7277072280a0c144ce.png">
+<meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/392f2036c0ce4c97b8562e6f17606491~tplv-k3u1fbpfcp-watermark.image">
+<meta property="article:published_time" content="2022-01-28T06:59:51.000Z">
+<meta property="article:modified_time" content="2023-12-17T12:54:31.943Z">
+<meta property="article:author" content="木偶">
+<meta property="article:tag" content="产品">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/185c88180b87ac7277072280a0c144ce.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2022/01/28/生活随笔/我做了一个手写春联小网页，祝大家虎年暴富/"/>
+
+
+
+
+
+  <title>我做了一个手写春联小网页，祝大家虎年暴富 | 木偶's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木偶's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">如果发现能力无法支撑自己的野心，那就静下心来学习吧</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resume">
+          <a href="/resume/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            resume
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E6%88%91%E5%81%9A%E4%BA%86%E4%B8%80%E4%B8%AA%E6%89%8B%E5%86%99%E6%98%A5%E8%81%94%E5%B0%8F%E7%BD%91%E9%A1%B5%EF%BC%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E8%99%8E%E5%B9%B4%E6%9A%B4%E5%AF%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木偶's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">我做了一个手写春联小网页，祝大家虎年暴富</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-28T14:59:51+08:00">
+                2022-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index">
+                    <span itemprop="name">生活随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>手写春联：<a target="_blank" rel="noopener" href="https://cl.xugaoyi.com/">https://cl.xugaoyi.com/</a></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虎年春节快到了，首先祝大家新年快乐，轻松暴富。<br>最近在网上经常看到生成春联的文章，不过这些小demo要么功能简陋,要么UI特别‘程序员’，满足不了我挑剔的眼光。干脆我自己做一个吧，顺便简单体验一下vite+vue3。（因为页面相对简单，vue组件风格还是使用选项式api，重点还是想把产品快速做出来。）</p>
+<span id="more"></span>
+
+
+<p align="center"><img src="https://img-blog.csdnimg.cn/img_convert/185c88180b87ac7277072280a0c144ce.png" width="500" style="cursor: zoom-in;"></p>
+
+<h3 id="产品构思"><a href="#产品构思" class="headerlink" title="产品构思"></a>产品构思</h3><p>包含<code>手写春节</code>和<code>生成春联</code>两大功能：</p>
+<ul>
+<li><p><strong>手写春联</strong></p>
+<ul>
+<li>模拟用笔写字的字迹</li>
+<li>选择画笔颜色</li>
+<li>调整画笔大小</li>
+<li>清空画布</li>
+<li>撤回笔画</li>
+<li>切换上、下联、横批、福字</li>
+<li>随机切换对联提示</li>
+<li>预览图片和下载</li>
+<li>贴春联海报和下载</li>
+</ul>
+</li>
+<li><p><strong>生成模式</strong></p>
+<ul>
+<li>选择画笔颜色</li>
+<li>挑选生成的对联</li>
+<li>输入对联</li>
+<li>随机切换对联</li>
+<li>贴春联海报和下载</li>
+</ul>
+</li>
+<li><p><strong>其他</strong></p>
+<ul>
+<li>快速切换模式按钮</li>
+<li>可控制的背景音乐</li>
+<li>微信分享网页</li>
+</ul>
+</li>
+</ul>
+<h3 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h3><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/392f2036c0ce4c97b8562e6f17606491~tplv-k3u1fbpfcp-watermark.image" alt="222.jpg"></p>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><ul>
+<li><strong>技术栈</strong><ul>
+<li>vite (打包&amp;构建)</li>
+<li>vue3 (页面开发)</li>
+<li>vant（ui）</li>
+<li>sass (css)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/linjc/smooth-signature">smooth-signature.js (带笔锋手写库)</a></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;wrap&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;&#x27;mode-&#x27; + mode&quot;</span> @<span class="attr">touchstart</span>=<span class="string">&quot;handleTouchstart&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 切换模式按钮 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toggle-mode-btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;toggleMode&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;&#123; mode === 1 ? &#x27;手写&#x27; : &#x27;生成&#x27; &#125;&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-qiehuan&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 工具栏 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">class</span>=<span class="string">&quot;actions&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">:style</span>=<span class="string">&quot;&#123; borderTopRightRadius: colorListVisibility ? &#x27;0&#x27; : &#x27;5px&#x27; &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    &gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- 手写模式显示 --&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-if</span>=<span class="string">&quot;mode === 1&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 调色板 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;palette btn-block&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">class</span>=<span class="string">&quot;cur-color&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            @<span class="attr">click</span>=<span class="string">&quot;togglePalette&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">:style</span>=<span class="string">&quot;&#123; background: colorList[curColorIndex] &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;colorList&quot;</span> <span class="attr">v-show</span>=<span class="string">&quot;colorListVisibility&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">li</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in colorList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              <span class="attr">:key</span>=<span class="string">&quot;item&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              <span class="attr">:style</span>=<span class="string">&quot;&#123; background: item &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              @<span class="attr">click</span>=<span class="string">&quot;selectColor(index)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            &gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 滑块 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider-box btn-block&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">van-slider</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">v-model</span>=<span class="string">&quot;progress&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">vertical</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            @<span class="attr">change</span>=<span class="string">&quot;changeProgress&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">bar-height</span>=<span class="string">&quot;28&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">active-color</span>=<span class="string">&quot;transparent&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">:min</span>=<span class="string">&quot;50&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            <span class="attr">:max</span>=<span class="string">&quot;150&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          &gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">template</span> #<span class="attr">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;custom-button&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">van-slider</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 清空 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleClear&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-lajitong&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 撤销 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleUndo&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-fanhui&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;line&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 切换画布的按钮 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;cur-active&#x27;: curCanvasIndex === index &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in canvasList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">:key</span>=<span class="string">&quot;item.name&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          @<span class="attr">click</span>=<span class="string">&quot;changeCanvas(index)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        &gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;&#123; item.name &#125;&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;line&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn prominent&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handlePreview&quot;</span>&gt;</span>预览<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn prominent&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;openPosters&quot;</span>&gt;</span>贴联<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- 生成模式显示 --&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-else</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 选颜色 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">class</span>=<span class="string">&quot;color-list-quick&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">:class</span>=<span class="string">&quot;&#123; active: curColorIndex === index &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in colorList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">:key</span>=<span class="string">&quot;item&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">:style</span>=<span class="string">&quot;&#123; background: item &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          @<span class="attr">click</span>=<span class="string">&quot;selectColor(index)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;line&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;showPickBox = true&quot;</span>&gt;</span>挑选<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;showInputBox = true&quot;</span>&gt;</span>输入<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 挑选对联弹窗 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">van-action-sheet</span> <span class="attr">v-model:show</span>=<span class="string">&quot;showPickBox&quot;</span> <span class="attr">title</span>=<span class="string">&quot;请挑选对联&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;duilian-list&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">li</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in duilianList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              <span class="attr">:key</span>=<span class="string">&quot;index&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              @<span class="attr">click</span>=<span class="string">&quot;handlePickDuilian(item)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">            &gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; item.shang &#125;&#125;&lt;/span</span></span><br><span class="line"><span class="language-xml">              &gt;， <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; item.xia &#125;&#125;&lt;/span</span></span><br><span class="line"><span class="language-xml">              &gt;。</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; item.heng &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">van-action-sheet</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="comment">&lt;!-- 输入对联弹窗 --&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">van-action-sheet</span> <span class="attr">v-model:show</span>=<span class="string">&quot;showInputBox&quot;</span> <span class="attr">title</span>=<span class="string">&quot;请输入对联&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">van-form</span> @<span class="attr">submit</span>=<span class="string">&quot;handleSubmitInput&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">van-cell-group</span> <span class="attr">inset</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">van-field</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">v-model</span>=<span class="string">&quot;shanglian&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">name</span>=<span class="string">&quot;shang&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">label</span>=<span class="string">&quot;上联&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">placeholder</span>=<span class="string">&quot;上联&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">:rules</span>=<span class="string">&quot;[</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#123;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    required: true,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    message: &#x27;请输入7位汉字上联&#x27;,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    pattern: /^[\u4e00-\u9fa5]&#123;7&#125;$/</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#125;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                ]&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">clearable</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              /&gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">van-field</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">v-model</span>=<span class="string">&quot;xialian&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">name</span>=<span class="string">&quot;xia&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">label</span>=<span class="string">&quot;下联&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">placeholder</span>=<span class="string">&quot;下联&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">:rules</span>=<span class="string">&quot;[</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#123;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    required: true,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    message: &#x27;请输入7位汉字下联&#x27;,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    pattern: /^[\u4e00-\u9fa5]&#123;7&#125;$/</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#125;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                ]&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">clearable</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              /&gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">van-field</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">v-model</span>=<span class="string">&quot;hengpi&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">name</span>=<span class="string">&quot;heng&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">label</span>=<span class="string">&quot;横批&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">placeholder</span>=<span class="string">&quot;横批&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">:rules</span>=<span class="string">&quot;[</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#123;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    required: true,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    message: &#x27;请输入4位汉字横批&#x27;,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                    pattern: /^[\u4e00-\u9fa5]&#123;4&#125;$/</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                  &#125;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">                ]&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">clearable</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              /&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">van-cell-group</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;margin: 16px&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">van-button</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">round</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">block</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">native-type</span>=<span class="string">&quot;submit&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                <span class="attr">color</span>=<span class="string">&quot;linear-gradient(to right, #ff6034, #c33825)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">              &gt;</span></span></span><br><span class="line"><span class="language-xml">                完成</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">van-form</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">van-action-sheet</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 模式1-春联画布 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">v-show</span>=<span class="string">&quot;mode === 1&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in canvasList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">:key</span>=<span class="string">&quot;item.name&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    &gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">canvas</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">class</span>=<span class="string">&quot;canvas&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">:class</span>=<span class="string">&quot;item.className&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">v-show</span>=<span class="string">&quot;curCanvasIndex === index&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">:style</span>=<span class="string">&quot;&#123;</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">          marginTop:</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">            item.height &lt; clientHeight</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">              ? `$&#123;(clientHeight - item.height) / 2&#125;px`</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">              : 0,</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">          marginLeft:</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">            item.width &lt; clientWidth ? `$&#123;(clientWidth - item.width) / 2&#125;px` : 0</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">        &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 模式2-春联画布 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-show</span>=<span class="string">&quot;mode === 2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;canvas-mode-2&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvas-top&quot;</span> <span class="attr">:width</span>=<span class="string">&quot;200 * scale&quot;</span> <span class="attr">:height</span>=<span class="string">&quot;60 * scale&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvas-left&quot;</span> <span class="attr">:width</span>=<span class="string">&quot;60 * scale&quot;</span> <span class="attr">:height</span>=<span class="string">&quot;364 * scale&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvas-right&quot;</span> <span class="attr">:width</span>=<span class="string">&quot;60 * scale&quot;</span> <span class="attr">:height</span>=<span class="string">&quot;364 * scale&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 贴春联按钮 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">class</span>=<span class="string">&quot;btn-posters&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;openPosters&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- footer-当前对联提示 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">footer</span> <span class="attr">v-if</span>=<span class="string">&quot;duilian.shang&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;refresh-btn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleRefresh(true)&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-shuaxin&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;&#123; rotate: isRotate &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;duilian&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span>对联<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; duilian.shang &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; duilian.xia &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span>横批<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123; duilian.heng &#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 分享按钮 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;share-btn&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;isShowShareBtn&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;isShowShareTip = true&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-fenxiang&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 微信分享提示语 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">class</span>=<span class="string">&quot;share-tip&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">v-if</span>=<span class="string">&quot;isShowShareTip&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      @<span class="attr">click</span>=<span class="string">&quot;isShowShareTip = false&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    &gt;</span></span></span><br><span class="line"><span class="language-xml">      点击右上角把这个工具分享给朋友</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hand&quot;</span>&gt;</span>👆<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 保存tip --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;isShowTip&quot;</span> <span class="attr">class</span>=<span class="string">&quot;download-tip&quot;</span>&gt;</span>*长按图片保存或转发<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 版权 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copyright&quot;</span>&gt;</span>公众号「有趣研究社」 ©版权所有<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 载入图片元素，用于快速贴图使用, 注意设置crossorigin=&quot;anonymous&quot;解决跨域 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;isReadImages&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">img</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in bgList&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">:src</span>=<span class="string">&quot;item&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">:key</span>=<span class="string">&quot;item&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">class</span>=<span class="string">&quot;hide-img&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">:id</span>=<span class="string">&quot;`bg-img-` + index&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">img</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">class</span>=<span class="string">&quot;hide-img&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">id</span>=<span class="string">&quot;qrcode&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/xugaoyi/image_store2@master/img/qrcode.zul0pldsuao.png&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- 背景音乐 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">audio</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/xugaoyi/image_store2@master/cjxq.mp3&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">id</span>=<span class="string">&quot;bgm&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">ref</span>=<span class="string">&quot;bgm&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">loop</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">class</span>=<span class="string">&quot;play-btn&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">:class</span>=<span class="string">&quot;&#123; paused: !isPlay &#125;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">ref</span>=<span class="string">&quot;playBtn&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      @<span class="attr">click</span>=<span class="string">&quot;handlePlay&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    &gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-yinle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;body-bg-img&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> &#123; <span class="title class_">ImagePreview</span>, <span class="title class_">Notify</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> &#123; isWX, isMobile &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> <span class="title class_">Button</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/Button.vue&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> dl <span class="keyword">from</span> <span class="string">&#x27;@/assets/img/yh/dl.jpeg&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> hp <span class="keyword">from</span> <span class="string">&#x27;@/assets/img/yh/hp.jpeg&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> fz <span class="keyword">from</span> <span class="string">&#x27;@/assets/img/yh/fz.png&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">// 对联数据</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> duilianList <span class="keyword">from</span> <span class="string">&#x27;@/mock/duilian&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">PROPORTION</span> = <span class="number">0.37</span> <span class="comment">// 图片缩小比例</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">INSTANTIATE_NAME</span> = <span class="string">&#x27;signature&#x27;</span> <span class="comment">// 实例名称</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">MIN_WIDTH</span> = <span class="number">3</span> <span class="comment">// 画笔最小宽</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">MAX_WIDTH</span> = <span class="number">12</span> <span class="comment">// 画笔最大宽</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">// 海报背景图大小</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">BG_WIDTH</span> = <span class="number">750</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">BG_HEIGHT</span> = <span class="number">1448</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">// 贴图定位和大小</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="variable constant_">POSITION</span> = [</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#123; <span class="attr">left</span>: <span class="number">57</span>, <span class="attr">top</span>: <span class="number">510</span>, <span class="attr">width</span>: <span class="number">90</span>, <span class="attr">height</span>: <span class="number">546</span> &#125;, <span class="comment">// 上联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#123; <span class="attr">left</span>: <span class="number">600</span>, <span class="attr">top</span>: <span class="number">510</span>, <span class="attr">width</span>: <span class="number">90</span>, <span class="attr">height</span>: <span class="number">546</span> &#125;, <span class="comment">// 下联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#123; <span class="attr">left</span>: <span class="number">225</span>, <span class="attr">top</span>: <span class="number">345</span>, <span class="attr">width</span>: <span class="number">300</span>, <span class="attr">height</span>: <span class="number">90</span> &#125;, <span class="comment">// 横幅</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#123; <span class="attr">left</span>: <span class="number">460</span>, <span class="attr">top</span>: <span class="number">450</span>, <span class="attr">width</span>: <span class="number">130</span>, <span class="attr">height</span>: <span class="number">130</span> &#125;, <span class="comment">// 福字</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">name</span>: <span class="string">&quot;Home&quot;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">components</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title class_">Button</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">return</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      duilianList,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">mode</span>: <span class="title class_">Number</span>(<span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;mode&#x27;</span>)) || <span class="number">1</span>, <span class="comment">// 1 手写，2 生成</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">curCanvasIndex</span>: <span class="number">0</span>, <span class="comment">// 显示哪个画布</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">progress</span>: <span class="number">100</span>, <span class="comment">// 画笔大小的刻度</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">clientWidth</span>: <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientWidth</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">clientHeight</span>: <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientHeight</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">canvasList</span>: [</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">name</span>: <span class="string">&#x27;上联&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">className</span>: <span class="string">&#x27;canvas-a&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">bgImage</span>: dl,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">width</span>: <span class="number">600</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">height</span>: <span class="number">3640</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">name</span>: <span class="string">&#x27;下联&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">className</span>: <span class="string">&#x27;canvas-b&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">bgImage</span>: dl,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">width</span>: <span class="number">600</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">height</span>: <span class="number">3640</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">name</span>: <span class="string">&#x27;横批&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">className</span>: <span class="string">&#x27;canvas-c&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">bgImage</span>: hp,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">width</span>: <span class="number">2000</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">height</span>: <span class="number">600</span> * <span class="variable constant_">PROPORTION</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">name</span>: <span class="string">&#x27;福字&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">className</span>: <span class="string">&#x27;canvas-d&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">bgImage</span>: fz,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">width</span>: <span class="number">366</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">height</span>: <span class="number">366</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      ],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">colorList</span>: [<span class="string">&#x27;#000000&#x27;</span>, <span class="string">&#x27;#ffd800&#x27;</span>, <span class="string">&#x27;#e8bd48&#x27;</span>, <span class="string">&#x27;#ddc08c&#x27;</span>,],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">curColorIndex</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">colorListVisibility</span>: <span class="literal">false</span>, <span class="comment">// 画布颜色选择列表可见性</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isShowTip</span>: <span class="literal">false</span>, <span class="comment">// 是否显示底部提示语</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">duilian</span>: &#123;&#125;, <span class="comment">// 当前对联文本对象</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isRotate</span>: <span class="literal">false</span>, <span class="comment">// 刷新icon旋转</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">bgList</span>: [</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="string">&#x27;https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/1.4j8qpdnq80i0.jpeg&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="string">&#x27;https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/4.4460an8ag5o0.jpeg&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="string">&#x27;https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/5.3axtl4xpvy00.jpeg&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="string">&#x27;https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/6.2lnbphdqjaq0.jpeg&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      ],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isReadImages</span>: <span class="literal">false</span>, <span class="comment">// 延迟加载图片用</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isShowShareBtn</span>: <span class="literal">false</span>, <span class="comment">// 是否显示分享按钮</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isShowShareTip</span>: <span class="literal">false</span>, <span class="comment">// 是否显示分享提示语</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">isPlay</span>: <span class="literal">false</span>, <span class="comment">// 是否在播放</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 模式2</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">canvasTop</span>: <span class="literal">null</span>, <span class="comment">// 横批</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">canvasLeft</span>: <span class="literal">null</span>, <span class="comment">// 上联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">canvasRight</span>: <span class="literal">null</span>, <span class="comment">// 下联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">imgObj1</span>: <span class="literal">null</span>, <span class="comment">// 横批图片对象</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">imgObj2</span>: <span class="literal">null</span>, <span class="comment">// 上下联图片对象</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">scale</span>: <span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="variable language_">window</span>.<span class="property">devicePixelRatio</span> || <span class="number">1</span>, <span class="number">2</span>), <span class="comment">// 用于增加画布清晰度</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">showPickBox</span>: <span class="literal">false</span>, <span class="comment">// 挑选对联的弹框</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">showInputBox</span>: <span class="literal">false</span>, <span class="comment">// 输入对联的弹框</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">shanglian</span>: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 输入的上联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">xialian</span>: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 输入的下联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">hengpi</span>: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 输入的横批</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">computed</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 模式1-当前画布实例</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">curCanvasInstantiate</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">return</span> <span class="variable language_">this</span>[<span class="variable constant_">INSTANTIATE_NAME</span> + <span class="variable language_">this</span>.<span class="property">curCanvasIndex</span>]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">created</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 微信浏览器显示分享按钮</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">this</span>.<span class="property">isShowShareBtn</span> = <span class="title function_">isWX</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">if</span> (!<span class="title function_">isMobile</span>()) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="title class_">Notify</span>(&#123; <span class="attr">type</span>: <span class="string">&#x27;warning&#x27;</span>, <span class="attr">message</span>: <span class="string">&#x27;请用移动端打开获得最佳体验&#x27;</span>, <span class="attr">duration</span>: <span class="number">6000</span>, &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">this</span>.<span class="title function_">initMode1</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 初始化对联提示</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">this</span>.<span class="title function_">handleRefresh</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">this</span>.<span class="title function_">initMode2</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 按钮添加激活时发光效果class</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> btnEl = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.btn,.btn-block&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    btnEl.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      item.<span class="title function_">addEventListener</span>(<span class="string">&#x27;touchstart&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        item.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;btn-active&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      item.<span class="title function_">addEventListener</span>(<span class="string">&#x27;touchend&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          item.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&#x27;btn-active&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;, <span class="number">100</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 延迟加载贴图背景</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">isReadImages</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;, <span class="number">1000</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">watch</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 切换画笔颜色</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">curColorIndex</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="property">color</span> = <span class="variable language_">this</span>.<span class="property">colorList</span>[<span class="variable language_">this</span>.<span class="property">curColorIndex</span>]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">mode</span> === <span class="number">2</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="title function_">refreshDuilian</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 切换画布时应用当前画笔颜色和大小</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">curCanvasIndex</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="property">color</span> = <span class="variable language_">this</span>.<span class="property">colorList</span>[<span class="variable language_">this</span>.<span class="property">curColorIndex</span>]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">handleChangeSize</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">window</span>.<span class="title function_">scrollTo</span>(<span class="number">0</span>, <span class="number">0</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">methods</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">initMode1</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> &#123; colorList, curColorIndex &#125; = <span class="variable language_">this</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasList</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">const</span> options = &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">width</span>: item.<span class="property">width</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">height</span>: item.<span class="property">height</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">minWidth</span>: <span class="variable constant_">MIN_WIDTH</span>, <span class="comment">// 画笔最小宽度(px)</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">maxWidth</span>: <span class="variable constant_">MAX_WIDTH</span>, <span class="comment">// 画笔最大宽度</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">minSpeed</span>: <span class="number">1.8</span>, <span class="comment">// 画笔达到最小宽度所需最小速度(px/ms)，取值范围1.0-10.0</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">color</span>: colorList[curColorIndex],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="comment">// 新增的配置</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">bgImage</span>: item.<span class="property">bgImage</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>[<span class="variable constant_">INSTANTIATE_NAME</span> + index] = <span class="keyword">new</span> <span class="title class_">SmoothSignature</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.&#x27;</span> + item.<span class="property">className</span>), options);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">initMode2</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasTop</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas-top&#x27;</span>).<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasLeft</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas-left&#x27;</span>).<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasRight</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas-right&#x27;</span>).<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 设字体样式</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> font = <span class="string">&quot;36px xs, cursive&quot;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="property">font</span> = font</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasLeft</span>.<span class="property">font</span> = font</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasRight</span>.<span class="property">font</span> = font</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 增强清晰度</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> &#123; scale &#125; = <span class="variable language_">this</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="title function_">scale</span>(scale, scale);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasLeft</span>.<span class="title function_">scale</span>(scale, scale);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasRight</span>.<span class="title function_">scale</span>(scale, scale);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 设背景图</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj1</span> = <span class="keyword">new</span> <span class="title class_">Image</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj2</span> = <span class="keyword">new</span> <span class="title class_">Image</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj1</span>.<span class="property">src</span> = hp</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj2</span>.<span class="property">src</span> = dl</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj1</span>.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴背景</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">60</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 字体加载完成后</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">fonts</span>.<span class="property">ready</span>.<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="title function_">handleTopFillText</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">imgObj2</span>.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴背景</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">canvasLeft</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">60</span>, <span class="number">364</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">canvasRight</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">60</span>, <span class="number">364</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 字体加载完成后</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">fonts</span>.<span class="property">ready</span>.<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="title function_">handleLRFillText</span>(<span class="variable language_">this</span>.<span class="property">canvasLeft</span>, <span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">shang</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="title function_">handleLRFillText</span>(<span class="variable language_">this</span>.<span class="property">canvasRight</span>, <span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">xia</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 模式2-刷新对联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">refreshDuilian</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">60</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasLeft</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">60</span>, <span class="number">364</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasRight</span>.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">imgObj2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">60</span>, <span class="number">364</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">handleTopFillText</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">handleLRFillText</span>(<span class="variable language_">this</span>.<span class="property">canvasLeft</span>, <span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">shang</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">handleLRFillText</span>(<span class="variable language_">this</span>.<span class="property">canvasRight</span>, <span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">xia</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 模式2-贴横批</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleTopFillText</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 贴文本</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="property">fillStyle</span> = <span class="variable language_">this</span>.<span class="property">colorList</span>[<span class="variable language_">this</span>.<span class="property">curColorIndex</span>]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">heng</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">duilian</span>.<span class="property">heng</span>.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="keyword">const</span> left = <span class="number">42</span> * (index + <span class="number">1</span>) - <span class="number">22</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="property">canvasTop</span>.<span class="title function_">fillText</span>(item, left, <span class="number">40</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 模式2-贴上下联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleLRFillText</span>(<span class="params">ctx, text</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      ctx.<span class="property">fillStyle</span> = <span class="variable language_">this</span>.<span class="property">colorList</span>[<span class="variable language_">this</span>.<span class="property">curColorIndex</span>]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (text) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        text.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="keyword">const</span> top = <span class="number">50</span> * (index + <span class="number">1</span>) - <span class="number">8</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          ctx.<span class="title function_">fillText</span>(item, <span class="number">13</span>, top)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 切换模式</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">toggleMode</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">mode</span> === <span class="number">1</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">mode</span> = <span class="number">2</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="title function_">refreshDuilian</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">mode</span> = <span class="number">1</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;mode&#x27;</span>, <span class="variable language_">this</span>.<span class="property">mode</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 打开调色板</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">togglePalette</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">colorListVisibility</span> = !<span class="variable language_">this</span>.<span class="property">colorListVisibility</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 关闭调色板</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleTouchstart</span>(<span class="params">e</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 不是点击选择颜色时</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (e.<span class="property">path</span>[<span class="number">1</span>]?.<span class="property">classList</span>?.<span class="property">value</span> !== <span class="string">&#x27;colorList&#x27;</span> &amp;&amp; e.<span class="property">target</span>.<span class="property">classList</span>?.<span class="property">value</span> !== <span class="string">&#x27;cur-color&#x27;</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">colorListVisibility</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 选择颜色</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">selectColor</span>(<span class="params">index</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curColorIndex</span> = index</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">colorListVisibility</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 切换画布</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">changeCanvas</span>(<span class="params">index</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasIndex</span> = index</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 清空画布</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleClear</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="title function_">clear</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 撤销笔画</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleUndo</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="title function_">undo</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 预览</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handlePreview</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">showTopTip</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">isShowTip</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> _this = <span class="variable language_">this</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="title class_">ImagePreview</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">images</span>: <span class="variable language_">this</span>.<span class="title function_">getImageList</span>(),</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">closeable</span>: <span class="literal">true</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">startPosition</span>: <span class="variable language_">this</span>.<span class="property">curCanvasIndex</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">onClose</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          _this.<span class="property">isShowTip</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 打开海报预览</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">openPosters</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 创建画布</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> canvas = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;canvas&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      canvas.<span class="property">width</span> = <span class="variable constant_">BG_WIDTH</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      canvas.<span class="property">height</span> = <span class="variable constant_">BG_HEIGHT</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> resultImageList = [];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 是否隐藏福字</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> isHideFu = <span class="variable language_">this</span>[<span class="variable constant_">INSTANTIATE_NAME</span> + <span class="number">3</span>].<span class="title function_">isEmpty</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">bgList</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴背景图</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        ctx.<span class="title function_">drawImage</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;bg-img-&#x27;</span> + index), <span class="number">0</span>, <span class="number">0</span>, <span class="variable constant_">BG_WIDTH</span>, <span class="variable constant_">BG_HEIGHT</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴对联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">mode</span> === <span class="number">1</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="property">canvasList</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">if</span> (index === <span class="number">3</span> &amp;&amp; isHideFu) <span class="keyword">return</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">const</span> dlCanvas = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.&#x27;</span> + item.<span class="property">className</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">const</span> &#123; left, top, width, height &#125; = <span class="variable constant_">POSITION</span>[index]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            ctx.<span class="title function_">drawImage</span>(dlCanvas, left, top, width, height)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          [<span class="string">&#x27;canvas-left&#x27;</span>, <span class="string">&#x27;canvas-right&#x27;</span>, <span class="string">&#x27;canvas-top&#x27;</span>].<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">const</span> dlCanvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(item)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">const</span> &#123; left, top, width, height &#125; = <span class="variable constant_">POSITION</span>[index]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            ctx.<span class="title function_">drawImage</span>(dlCanvas, left, top, width, height)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴二维码</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        ctx.<span class="title function_">drawImage</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;qrcode&quot;</span>), <span class="number">40</span>, <span class="number">1280</span>, <span class="number">580</span>, <span class="number">136</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 贴文本</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        ctx.<span class="property">font</span> = <span class="string">&quot;18px sans-serif&quot;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        ctx.<span class="property">fillStyle</span> = <span class="string">&quot;#666666&quot;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        ctx.<span class="title function_">fillText</span>(<span class="string">&#x27;©公众号「有趣研究社」&#x27;</span>, <span class="number">550</span>, <span class="number">1420</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 导出图片</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        resultImageList.<span class="title function_">push</span>(canvas.<span class="title function_">toDataURL</span>(<span class="string">&#x27;image/jpeg&#x27;</span>, <span class="number">0.8</span>))</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 打开图片预览</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">isShowTip</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> _this = <span class="variable language_">this</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="title class_">ImagePreview</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">images</span>: resultImageList,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">closeable</span>: <span class="literal">true</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">onClose</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          _this.<span class="property">isShowTip</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">showTopTip</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 弹出顶部提示语</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">showTopTip</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (!<span class="variable language_">sessionStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;showTip&#x27;</span>)) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">sessionStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;showTip&#x27;</span>, <span class="string">&#x27;true&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title class_">Notify</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">message</span>: <span class="string">&#x27;长按图片可保存到本地&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">color</span>: <span class="string">&#x27;#c33825&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="attr">background</span>: <span class="string">&#x27;#eed3ae&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 获取对联图片列表</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">getImageList</span>(<span class="params">type = <span class="string">&#x27;image/png&#x27;</span></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> imageList = []</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">canvasList</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span> (index === <span class="number">3</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="comment">// `福`字必须是png格式</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          type = <span class="string">&#x27;image/png&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        imageList.<span class="title function_">push</span>(<span class="variable language_">this</span>[<span class="variable constant_">INSTANTIATE_NAME</span> + index].<span class="title function_">toDataURL</span>(type, <span class="number">0.8</span>))</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">return</span> imageList</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 进度改变时</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">changeProgress</span>(<span class="params">progress</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">progress</span> = progress</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">handleChangeSize</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 调整画笔大小</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleChangeSize</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> &#123; progress &#125; = <span class="variable language_">this</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="property">minWidth</span> = <span class="variable constant_">MIN_WIDTH</span> * progress / <span class="number">100</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">curCanvasInstantiate</span>.<span class="property">maxWidth</span> = <span class="variable constant_">MAX_WIDTH</span> * progress / <span class="number">100</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 刷新对联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleRefresh</span>(<span class="params">rotate</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">duilian</span> = duilianList[<span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * duilianList.<span class="property">length</span>)]</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (rotate) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">mode</span> === <span class="number">2</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="title function_">refreshDuilian</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 使icon旋转</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">isRotate</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="property">isRotate</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;, <span class="number">300</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 播放背景音乐</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handlePlay</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> &#123; bgm &#125; = <span class="variable language_">this</span>.<span class="property">$refs</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span> (bgm.<span class="property">paused</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        bgm.<span class="title function_">play</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">isPlay</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        bgm.<span class="title function_">pause</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">this</span>.<span class="property">isPlay</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 完成输入对联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handleSubmitInput</span>(<span class="params">values</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">duilian</span> = values</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">showInputBox</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">refreshDuilian</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 完成挑选对联</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">handlePickDuilian</span>(<span class="params">item</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">duilian</span> = item</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">showPickBox</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="title function_">refreshDuilian</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br></pre></td></tr></table></figure>
+
+
+<p>更多有趣的小网页欢迎关注公众号<code>有趣研究社</code>:</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://cl.xugaoyi.com/">手写春联</a></br><br><a target="_blank" rel="noopener" href="https://game.xugaoyi.com/">FC在线模拟器</a></br><br><a target="_blank" rel="noopener" href="https://avatar.xugaoyi.com/">爱国头像生成器</a></br><br><a target="_blank" rel="noopener" href="https://zfb.xugaoyi.com/">到账语音生成器</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E4%BA%A7%E5%93%81/" rel="tag"># 产品</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/26/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E6%8B%A5%E6%8A%B1%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%8B%A5%E6%8A%B1%E5%BF%AB%E4%B9%90/" rel="next" title="拥抱生活，拥抱快乐">
+                <i class="fa fa-chevron-left"></i> 拥抱生活，拥抱快乐
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/02/12/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/" rel="prev" title="油猴脚本">
+                油猴脚本 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/puppetdevz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:puppetdevz@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E6%9E%84%E6%80%9D"><span class="nav-number">2.</span> <span class="nav-text">产品构思</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">开发</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">木偶</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
