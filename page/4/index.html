@@ -183,7 +183,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -203,7 +203,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -213,7 +213,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -223,7 +223,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -402,16 +402,21 @@
       
         
           
-            <h1 id="Cascader级联选择器出现空面板的问题"><a href="#Cascader级联选择器出现空面板的问题" class="headerlink" title="Cascader级联选择器出现空面板的问题"></a>Cascader级联选择器出现空面板的问题</h1><blockquote>
-<p>vue、element、el-element</p>
-</blockquote>
-<img src="http://img.puppetdev.top/image/note/0a8653f711ba357386a3201f78c03b6e.png" alt="image-20210617122750695" style="zoom: 67%;" />
-
-<p>出现空白面板是因为树形结构的数据的<strong>最底层 children 是个空数组</strong>。遇到这种问题，前端可以通过递归，将 children 长度为 0 的节点对象的 children 属性删除，或将值赋为 undefined</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">cleanData</span>(<span class="params">itemList</span>) &#123;  <span class="comment">// 将根节点的 children 传入，传入的只是数据对象的引用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> item <span class="keyword">of</span> itemList) &#123;</span><br><span class="line">        <span class="keyword">if</span> (item.<span class="property">children</span>.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">delete</span> item.<span class="property">children</span></span><br><span class="line">        <span class="keyword">else</span> <span class="variable language_">this</span>.<span class="title function_">cleanData</span>(item.<span class="property">children</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> itemList </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          Cascader级联选择器出现空面板的问题
+vue、element、el-element
 
 
-          
+
+出现空白面板是因为树形结构的数据的最底层 children 是个空数组。遇到这种问题，前端可以通过递归，将 children 长度为 0 的节点对象的 children 属性删除，或将值赋为 undefined
+1234567cleanData(itemList) &#123;  // 将根节点的 ch
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ael-cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E9%9D%A2%E6%9D%BF%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -562,19 +567,16 @@
       
         
           
-            <p>vue 允许将按键值作为修饰符来使用，如监听回车事件，有两种写法，如下代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.13</span>=<span class="string">&quot;console.log($event)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.enter</span>=<span class="string">&quot;console.log($event)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<p>当我们在 el-input 采用如上两种写法时，他是不生效的。el-input 监听不到键盘事件,原因是 element-ui 是封装组件，所以 el 标签属于自定义标签，因此触发不了键盘事件。</p>
-<p><strong>解决办法</strong> ：加上 <code>.native</code> 原生事件修饰符即可。</p>
-<p><code>.native</code>：监听组件根元素的原生事件，主要作用是给自定义的组件添加原生事件。vue 与 elementUI 中给 el-input 绑定键盘按键代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">placeholder</span>=<span class="string">&quot;店铺名称&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">clearable</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">&quot;queryObj.shopname&quot;</span> </span></span><br><span class="line"><span class="tag">  @<span class="attr">keyup.enter.native</span>=<span class="string">&quot;query&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;prepend&quot;</span>&gt;</span>店铺名称<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-          
+          vue 允许将按键值作为修饰符来使用，如监听回车事件，有两种写法，如下代码：
+12&lt;input type=&quot;text&quot; @keyup.13=&quot;console.log($event)&quot;&gt;&lt;/input&gt;&lt;input type=&quot;text&quot; @keyup.enter=&quot;console.log($even
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ael-input%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -725,14 +727,18 @@
       
         
           
-            <h1 id="解决van-dialog内容过多却没有滚动样式的问题"><a href="#解决van-dialog内容过多却没有滚动样式的问题" class="headerlink" title="解决van-dialog内容过多却没有滚动样式的问题"></a>解决van-dialog内容过多却没有滚动样式的问题</h1><h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>通过组件调用 Dialog 时，van-dialog 内嵌套其他组件，其内容过多，Dialog 不会自动出现滚动样式，导致无法显示底部按钮</p>
-<p><img src="http://img.puppetdev.top/image/note/ef727b324fb70c17dba47541cc6a0ec8.png" alt="image-20210708143224495"></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在样式中做如下设置</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/deep/ <span class="selector-class">.van-dialog__content</span> &#123;</span><br><span class="line">    <span class="attribute">max-height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          解决van-dialog内容过多却没有滚动样式的问题场景通过组件调用 Dialog 时，van-dialog 内嵌套其他组件，其内容过多，Dialog 不会自动出现滚动样式，导致无法显示底部按钮
 
-<p><strong>说明：</strong>先设置最大行高，然后再给溢出部分设置 scroll 滚动样式。</p>
-
-          
+解决方案在样式中做如下设置
+1234/deep/ .van-dialog__content &#123;    max-height: 400px;    overflow: scroll;&#125;
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Avan-dialog%E5%86%85%E5%AE%B9%E8%BF%87%E5%A4%9A%E6%97%B6%E5%8D%B4%E4%B8%8D%E4%BC%9A%E5%8F%98%E6%88%90%E6%BB%9A%E5%8A%A8%E6%A0%B7%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -883,32 +889,27 @@
       
         
           
-            <span id="more"></span>
-
-<h2 id="背景描述"><a href="#背景描述" class="headerlink" title="背景描述"></a>背景描述</h2><ul>
-<li>操作系统：macOS</li>
-<li>通过 npm 全局安装的 yarn</li>
-</ul>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>通过命令 <code>yarn global add packageName</code> 后，试图该模块的命令，发现无法找到</p>
-<img src="http://img.puppetdev.top/image/note/4fe618e399628724ad20b4a6323b0a59.png" alt="image-20210930135631984" style="zoom:50%;" />
-
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置和包路径默认位于家目录下</p>
-<img src="http://img.puppetdev.top/image/note/5dada55a4915bb85a40e68e0f75354cd.png" alt="image-20210930135818676" style="zoom:50%;" />
-
-<p>通过 yarn global add 安装包，则会被安装到 <code>~/.config/yarn/global/node_modules/</code> 中</p>
-<p><img src="http://img.puppetdev.top/image/note/791f480a09702d4bbc1f5d8213509e76.png" alt="image-20210930140102368"></p>
-<p>而该路径是没有配置在环境变量中的，因此无法找到。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将上述路径配置到环境变量中即可。此处我是配置在 <code>~/.zshrc</code> 中，大家可以视自身所用的 shell 自行决定。</p>
-<p>配置如下：</p>
-<p><img src="http://img.puppetdev.top/image/note/8e5e85ebf430d7676443903be1407465.png" alt="image-20210930140654119"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin&quot;</span><br></pre></td></tr></table></figure>
-
-<p>配置后保存，执行 <code>source ./.zshrc</code></p>
-<p>结果如下：</p>
-<img src="http://img.puppetdev.top/image/note/ad02e37701153120d62feef66115b282.png" alt="image-20210930140835904" style="zoom:50%;" />
-
-
           
+
+背景描述
+操作系统：macOS
+通过 npm 全局安装的 yarn
+
+问题描述通过命令 yarn global add packageName 后，试图该模块的命令，发现无法找到
+
+
+问题分析macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置和包路径默认位于家目录下
+
+
+通过 yarn global add 安装包，则会被安装到 ~/.config/yar
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AMacOS%E9%80%9A%E8%BF%87yarn%E5%AE%89%E8%A3%85%E5%85%A8%E5%B1%80%E5%8C%85%E5%90%8E%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E5%91%BD%E4%BB%A4/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1340,13 +1341,20 @@
       
         
           
-            <span id="more"></span>
+          
 
-<p>[[toc]]</p>
-<p>如果是 bash 则在 <code>.bashrc</code> 中加入 <code>set -o vi</code></p>
-<p>如果是 zsh，则建议安装 oh-my-zsh，然后启动 vi-mode 插件</p>
+[[toc]]
+如果是 bash 则在 .bashrc 中加入 set -o vi
+如果是 zsh，则建议安装 oh-my-zsh，然后启动 vi-mode 插件
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/08/03/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%BE%E7%BD%AE%E4%B8%BAvi-mode%E6%A8%A1%E5%BC%8F/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1486,18 +1494,22 @@
       
         
           
-            <span id="more"></span>
-
-<p>[[toc]]</p>
-<p>主要参考博客教程：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000042012007">https://segmentfault.com/a/1190000042012007</a></p>
-<p>期间遇到一些错误：</p>
-<ul>
-<li><p>idea 无法通过 SSH 连接到 docker，报错误：”java.io.IOException: unexpected end of stream on <a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1/</a>…”</p>
-<p>解决方案：<a target="_blank" rel="noopener" href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/4416763906322-Trouble-connecting-to-docker-via-ssh">https://intellij-support.jetbrains.com/hc/en-us/community/posts/4416763906322-Trouble-connecting-to-docker-via-ssh</a></p>
-</li>
-</ul>
-
           
+
+[[toc]]
+主要参考博客教程：https://segmentfault.com/a/1190000042012007
+期间遇到一些错误：
+
+idea 无法通过 SSH 连接到 docker，报错误：”java.io.IOException: unexpected end of stream on http://127.0.0.1/…”
+解决方案：https://intellij-suppo
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/08/02/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E9%80%9A%E8%BF%87idea%E4%B8%80%E9%94%AE%E5%B0%86Springboot%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%A8%8Bdocker%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1827,7 +1839,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1875,7 +1887,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">posts</span>
@@ -1959,25 +1971,19 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+        <div class="copyright">&copy; 2021 &mdash; <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">木偶</span>
+  <span class="author" itemprop="copyrightHolder">木偶</br><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022114751号-1<a /></span>
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
