@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>木偶&#39;s Blog</title>
-  
+  <icon>http://example.com/icon.png</icon>
   <subtitle>如果发现能力无法支撑自己的野心，那就静下心来学习吧</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
@@ -26,7 +26,10 @@
     
       
       
-    <summary type="html">&lt;p&gt;在 Apache ServiceComb 中，&lt;code&gt;Highway&lt;/code&gt;, &lt;code&gt;Vertx&lt;/code&gt;, 和 &lt;code&gt;HTTP&lt;/code&gt; 都与微服务间的通信有关，但它们之间的角色和关系是不同的。下面是一个简要的描述来解释它们之间的关系：&lt;/p</summary>
+        
+        
+    <summary type="html">&lt;p&gt;在 Apache ServiceComb 中，&lt;code&gt;Highway&lt;/code&gt;, &lt;code&gt;Vertx&lt;/code&gt;, 和 &lt;code&gt;HTTP&lt;/code&gt;</summary>
+        
       
     
     
@@ -48,7 +51,10 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;Java&quot;&gt;&lt;a href=&quot;#Java&quot; class=&quot;headerlink&quot; title=&quot;Java&quot;&gt;&lt;/a&gt;Java&lt;/h2&gt;&lt;p&gt;Java 语言普遍用于开发各种类型的软件系统、应用程序和 Web 服务，包括财务软件系统、社交网络软件、移动应用程序（虽然现</summary>
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java&quot;&gt;&lt;a href=&quot;#Java&quot; class=&quot;headerlink&quot; title=&quot;Java&quot;&gt;&lt;/a&gt;Java&lt;/h2&gt;&lt;p&gt;Java 语言普遍用于开发各种类型的软件系统、应用程序和 Web</summary>
+        
       
     
     
@@ -70,8 +76,11 @@
     
       
       
+        
+        
     <summary type="html">&lt;h2 id=&quot;1-1-问题描述&quot;&gt;&lt;a href=&quot;#1-1-问题描述&quot; class=&quot;headerlink&quot; title=&quot;1.1 问题描述&quot;&gt;&lt;/a&gt;1.1 问题描述&lt;/h2&gt;&lt;p&gt;docker 导入镜像 tar 包报错，报错信息如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;h</summary>
+&lt;p&gt;&lt;img</summary>
+        
       
     
     
@@ -93,7 +102,10 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;Unable-to-make-protected-final-java-lang-Class-java-lang-ClassLoader-defineClass&quot;&gt;&lt;a href=&quot;#Unable-to-make-protected-final-java-lang</summary>
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Unable-to-make-protected-final-java-lang-Class-java-lang-ClassLoader-defineClass&quot;&gt;&lt;a</summary>
+        
       
     
     
@@ -119,7 +131,10 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;前端向后端发送 POST 请求，请求数据为 JSON 格式，其中有个字段为日期，后端 SpringBoot 通过 Date </summary>
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;前端向后端发送 POST 请求，请求数据为 JSON 格式，其中有个字段为日期，后端 SpringBoot 通过 Date</summary>
+        
       
     
     
@@ -147,7 +162,10 @@
     
       
       
-    <summary type="html">&lt;h1 id=&quot;应届毕业生求职就业时的相关注意事项&quot;&gt;&lt;a href=&quot;#应届毕业生求职就业时的相关注意事项&quot; class=&quot;headerlink&quot; title=&quot;应届毕业生求职就业时的相关注意事项&quot;&gt;&lt;/a&gt;应届毕业生求职就业时的相关注意事项&lt;/h1&gt;&lt;p&gt;本文主要是针对第一次</summary>
+        
+        
+    <summary type="html">&lt;h1 id=&quot;应届毕业生求职就业时的相关注意事项&quot;&gt;&lt;a href=&quot;#应届毕业生求职就业时的相关注意事项&quot; class=&quot;headerlink&quot;</summary>
+        
       
     
     
@@ -188,7 +206,10 @@
     
       
       
-    <summary type="html">&lt;h1 id=&quot;纯小白如何自学编程&quot;&gt;&lt;a href=&quot;#纯小白如何自学编程&quot; class=&quot;headerlink&quot; title=&quot;纯小白如何自学编程&quot;&gt;&lt;/a&gt;纯小白如何自学编程&lt;/h1&gt;&lt;p&gt;看似一个简单的问题但包藏着很多信息，绝对不是简单几句话就能说清楚。首先程序员也分为很</summary>
+        
+        
+    <summary type="html">&lt;h1 id=&quot;纯小白如何自学编程&quot;&gt;&lt;a href=&quot;#纯小白如何自学编程&quot; class=&quot;headerlink&quot;</summary>
+        
       
     
     
@@ -234,10 +255,13 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
 &lt;ol&gt;
-&lt;li&gt;van-cell 组件默认 title 和 value 宽度为各占 50%，如果想要增加 value 的宽度，可以给当前的组件的 &lt;code&gt;van-cell__value&lt;/code&gt; 设置 min-width</summary>
+&lt;li&gt;van-cell 组件默认 title 和 value 宽度为各占 50%，如果想要增加 value 的宽度，可以给当前的组件的 &lt;code&gt;van-cell__value&lt;/code&gt; 设置</summary>
+        
       
     
     
@@ -261,9 +285,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;当我点击 van-radio 时，我需要先判断当前点击的 van-radio 是否已经处于</summary>
+&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;当我点击 van-radio 时，我需要先判断当前点击的 van-radio</summary>
+        
       
     
     
@@ -289,9 +316,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h2 id=&quot;跨平台&quot;&gt;&lt;a href=&quot;#跨平台&quot; class=&quot;headerlink&quot; title=&quot;跨平台&quot;&gt;&lt;/a&gt;跨平台&lt;/h2&gt;&lt;h3 id=&quot;GoodSync&quot;&gt;&lt;a href=&quot;#GoodSync&quot; class=</summary>
+&lt;h2 id=&quot;跨平台&quot;&gt;&lt;a href=&quot;#跨平台&quot; class=&quot;headerlink&quot; title=&quot;跨平台&quot;&gt;&lt;/a&gt;跨平台&lt;/h2&gt;&lt;h3 id=&quot;GoodSync&quot;&gt;&lt;a href=&quot;#GoodSync&quot;</summary>
+        
       
     
     
@@ -313,9 +343,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac 平台</summary>
+&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac</summary>
+        
       
     
     
@@ -339,10 +372,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h1 id=&quot;US1指纹加密闪存盘&quot;&gt;&lt;a href=&quot;#US1指纹加密闪存盘&quot; class=&quot;headerlink&quot; title=&quot;US1指纹加密闪存盘&quot;&gt;&lt;/a&gt;US1指纹加密闪存盘&lt;/h1&gt;&lt;p&gt;品牌：Netac&lt;/p&gt;
-</summary>
+&lt;h1 id=&quot;US1指纹加密闪存盘&quot;&gt;&lt;a href=&quot;#US1指纹加密闪存盘&quot; class=&quot;headerlink&quot;</summary>
+        
       
     
     
@@ -368,12 +403,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;概要列表&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;cleanmypc：全方面电脑文件垃圾清理&lt;/li&gt;
-</summary>
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot;</summary>
+        
       
     
     
@@ -397,9 +432,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h2 id=&quot;跨平台&quot;&gt;&lt;a href=&quot;#跨平台&quot; class=&quot;headerlink&quot; title=&quot;跨平台&quot;&gt;&lt;/a&gt;跨平台&lt;/h2&gt;&lt;h3 id=&quot;NDM&quot;&gt;&lt;a href=&quot;#NDM&quot; class=&quot;headerlin</summary>
+&lt;h2 id=&quot;跨平台&quot;&gt;&lt;a href=&quot;#跨平台&quot; class=&quot;headerlink&quot; title=&quot;跨平台&quot;&gt;&lt;/a&gt;跨平台&lt;/h2&gt;&lt;h3 id=&quot;NDM&quot;&gt;&lt;a href=&quot;#NDM&quot;</summary>
+        
       
     
     
@@ -421,10 +459,13 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
 &lt;h2 id=&quot;Magnet&quot;&gt;&lt;a href=&quot;#Magnet&quot; class=&quot;headerlink&quot; title=&quot;Magnet&quot;&gt;&lt;/a&gt;Magnet&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;适用于 macOS，Window</summary>
+&lt;p&gt;适用于</summary>
+        
       
     
     
@@ -446,11 +487,14 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
 &lt;p&gt;目前已知的可远程控制计算机的品牌有：&lt;/p&gt;
 &lt;p&gt;向日葵、花生壳、natapp.cn&lt;/p&gt;
-&lt;h2 id=&quot;向日葵远程控制&quot;&gt;&lt;a href=&quot;#向日葵远程控制&quot; class=&quot;headerlink&quot; title=&quot;向日</summary>
+&lt;h2 id=&quot;向日葵远程控制&quot;&gt;&lt;a href=&quot;#向日葵远程控制&quot; class=&quot;headerlink&quot;</summary>
+        
       
     
     
@@ -472,9 +516,12 @@
     
       
       
+        
+        
     <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
 
-&lt;h1 id=&quot;不为人知的搜索技巧&quot;&gt;&lt;a href=&quot;#不为人知的搜索技巧&quot; class=&quot;headerlink&quot; title=&quot;不为人知的搜索技巧&quot;&gt;&lt;/a&gt;不为人知的搜索技巧&lt;/h1&gt;&lt;h2 id=&quot;一张照片查出你的拍摄地点</summary>
+&lt;h1 id=&quot;不为人知的搜索技巧&quot;&gt;&lt;a href=&quot;#不为人知的搜索技巧&quot; class=&quot;headerlink&quot; title=&quot;不为人知的搜索技巧&quot;&gt;&lt;/a&gt;不为人知的搜索技巧&lt;/h1&gt;&lt;h2</summary>
+        
       
     
     
@@ -496,7 +543,10 @@
     
       
       
-    <summary type="html">&lt;h1 id=&quot;SIT-与-UAT-的区别&quot;&gt;&lt;a href=&quot;#SIT-与-UAT-的区别&quot; class=&quot;headerlink&quot; title=&quot;SIT 与 UAT 的区别&quot;&gt;&lt;/a&gt;SIT 与 UAT 的区别&lt;/h1&gt;&lt;p&gt;在企业级软件的测试过程中，经常会划分为三个阶段：单元</summary>
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SIT-与-UAT-的区别&quot;&gt;&lt;a href=&quot;#SIT-与-UAT-的区别&quot; class=&quot;headerlink&quot; title=&quot;SIT 与 UAT 的区别&quot;&gt;&lt;/a&gt;SIT 与 UAT</summary>
+        
       
     
     
