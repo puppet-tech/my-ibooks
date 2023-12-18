@@ -27,8 +27,8 @@ override: false
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
+  small: /uploads/favicon_32.ico
+  medium: /uploads/favicon_64.ico
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
@@ -45,22 +45,22 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2021
 
   # Icon between year and copyright info.
   icon: user
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: 木偶</br><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022114751号-1<a />
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -92,14 +92,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
+  home: /|| home
   resume: /resume/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  tags: /tags/|| tags
+  categories: /categories/|| th
+  archives: /archives/|| archive
+  #schedule: /schedule/|| calendar
+  #sitemap: /sitemap.xml|| sitemap
+  #commonweal: /404/|| heartbeat
 
 
 # Enable/Disable menu icons.
@@ -228,8 +228,8 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 200
 
 # Post meta display settings
 post_meta:

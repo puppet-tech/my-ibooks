@@ -104,10 +104,11 @@ deploy:
   - type: git
     repo: https://github.com/puppetdevz/blog.git
     branch: gh-pages
-  - type: rsync
-    host: blog.puppetdev.top
-    user: root
-    root: /root/blog/
+  # 除了项目要安装 hexo-deployer-rsync 插件外，本地和远程也要安装 rsync 工具
+  # - type: rsync
+  #   host: blog.puppetdev.top
+  #   user: root
+  #   root: /root/blog/
 
 # ---------------------------------------------------------------
 # Plugins Settings
