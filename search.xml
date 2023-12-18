@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java集合初始化时赋初值</title>
+    <url>/2022/02/18/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/HashMap%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E8%B5%8B%E5%80%BC/</url>
+    <content><![CDATA[<p>在 Java 中，HashMap、ArrayList 和 HashSet 等是常用的数据结构，如果我们想在初始化时就直接给它们赋值，该怎么写呢？（而不是创建一个空的集合后，用 put&#x2F;add 等方法添加进去）</p>
+<span id="more"></span>
+
+<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, String&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        put(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;test&quot;</span>);  </span><br><span class="line">        put(<span class="string">&quot;age&quot;</span>, <span class="string">&quot;20&quot;</span>); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>说明：这里的双括号 <code>&#123;&#123;&#125;&#125;</code> 是什么意思？</p>
+<p>第一层实际是定义了一个匿名内部类(Anonymous Inner Class)。</p>
+<p>第二层实际上是一个实例初始化块(instance initializer block)，这个块在内部匿名类构造时被执行。</p>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; names = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            add(<span class="string">&quot;A&quot;</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化时直接赋值的缺点"><a href="#初始化时直接赋值的缺点" class="headerlink" title="初始化时直接赋值的缺点"></a>初始化时直接赋值的缺点</h2><p><strong>如果这个对象要串行化，可能会导致串行化失败。</strong>原因如下：</p>
+<ul>
+<li><p>上述实现是匿名内部类的声明方式，所以引用中存有外部类的引用。因此，当要串行化这个集合时，外部类也会被串行化，而此时如果外部类没有实现 serialize 接口时，就会报错。</p>
+<p>可以在外部类中实现 serialize 接口。</p>
+</li>
+<li><p>上述实现其实是声明了一个继承自 HashMap 的子类。但是有些串行化方式，例如通过 Gson 串行化为 json，或要串行化为 xml 时，类库中提供的方式无法串行化 HashSet 或者 HashMap 的子类，就会导致串行化失败。</p>
+<p>解决方案：只能乖乖重新初始化集合对象 —— <code>new HashMap(map);</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="2022-07-05更"><a href="#2022-07-05更" class="headerlink" title="2022-07-05更"></a>2022-07-05更</h2><p>后看到 Oracle 官网发布的 <a href="https://openjdk.org/jeps/269">JEP 269: Convenience Factory Methods for Collections (openjdk.org)</a></p>
+<p>里面就有谈到，不建议使用上述的方式去初始化集合的初值，上面的方式可能会导致<strong>内存溢出</strong>或者<strong>序列化相关的问题</strong>，文档原话如下：</p>
+<blockquote>
+<p>Another alternative is to use the so-called “double brace” technique:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Collections.unmodifiableSet(<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;String&gt;() &#123;&#123;</span><br><span class="line">    add(<span class="string">&quot;a&quot;</span>); add(<span class="string">&quot;b&quot;</span>); add(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">&#125;&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>This uses the instance-initializer construct in an anonymous inner class, which is a bit prettier. However, it is quite obscure, and it costs an extra class at each usage. It also holds hidden references to the enclosing instance and to any captured objects. This may cause memory leaks or problems with serialization. For these reasons, this technique is best avoided.</p>
+</blockquote>
+<p>那么我们要怎么做呢？如果是 JDK 9 及其之后的版本，JDK 新增一些相关的方法，例如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Set.of(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line">List.of(a, b, c);</span><br><span class="line"></span><br><span class="line">Map.of();</span><br><span class="line">Map.of(k1, v1);</span><br><span class="line">Map.of(k1, v1, k2, v2);</span><br><span class="line">Map.of(k1, v1, k2, v2, k3, v3);</span><br><span class="line">Map.ofEntries(Map.Entry&lt;K,V&gt;...);</span><br></pre></td></tr></table></figure>
+
+<p>但上述的方式，JDK 8 是不支持的，JDK 8 的采用如下方式</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Collections.unmodifiableSet(Stream.of(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>).collect(toSet()));</span><br><span class="line"></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>但可用的方法很有限，并且依旧十分 verbose，如果无法忍受，则可以用第三方的库，例如 Google 的 Guava 库，里面就提供了很多好用的 api</p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IDEA源码阅读技巧</title>
     <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/IDEA%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<p>阅读代码（源码）是我们经常需要做的事情。那么 IDEA 有什么技巧可以帮助我们更好、效率更高地去阅读代码（源码）呢？</p>
@@ -165,52 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java集合初始化时赋初值</title>
-    <url>/2022/02/18/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/HashMap%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E8%B5%8B%E5%80%BC/</url>
-    <content><![CDATA[<p>在 Java 中，HashMap、ArrayList 和 HashSet 等是常用的数据结构，如果我们想在初始化时就直接给它们赋值，该怎么写呢？（而不是创建一个空的集合后，用 put&#x2F;add 等方法添加进去）</p>
-<span id="more"></span>
-
-<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, String&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        put(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;test&quot;</span>);  </span><br><span class="line">        put(<span class="string">&quot;age&quot;</span>, <span class="string">&quot;20&quot;</span>); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>说明：这里的双括号 <code>&#123;&#123;&#125;&#125;</code> 是什么意思？</p>
-<p>第一层实际是定义了一个匿名内部类(Anonymous Inner Class)。</p>
-<p>第二层实际上是一个实例初始化块(instance initializer block)，这个块在内部匿名类构造时被执行。</p>
-<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; names = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            add(<span class="string">&quot;A&quot;</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="初始化时直接赋值的缺点"><a href="#初始化时直接赋值的缺点" class="headerlink" title="初始化时直接赋值的缺点"></a>初始化时直接赋值的缺点</h2><p><strong>如果这个对象要串行化，可能会导致串行化失败。</strong>原因如下：</p>
-<ul>
-<li><p>上述实现是匿名内部类的声明方式，所以引用中存有外部类的引用。因此，当要串行化这个集合时，外部类也会被串行化，而此时如果外部类没有实现 serialize 接口时，就会报错。</p>
-<p>可以在外部类中实现 serialize 接口。</p>
-</li>
-<li><p>上述实现其实是声明了一个继承自 HashMap 的子类。但是有些串行化方式，例如通过 Gson 串行化为 json，或要串行化为 xml 时，类库中提供的方式无法串行化 HashSet 或者 HashMap 的子类，就会导致串行化失败。</p>
-<p>解决方案：只能乖乖重新初始化集合对象 —— <code>new HashMap(map);</code></p>
-</li>
-</ul>
-<hr>
-<h2 id="2022-07-05更"><a href="#2022-07-05更" class="headerlink" title="2022-07-05更"></a>2022-07-05更</h2><p>后看到 Oracle 官网发布的 <a href="https://openjdk.org/jeps/269">JEP 269: Convenience Factory Methods for Collections (openjdk.org)</a></p>
-<p>里面就有谈到，不建议使用上述的方式去初始化集合的初值，上面的方式可能会导致<strong>内存溢出</strong>或者<strong>序列化相关的问题</strong>，文档原话如下：</p>
-<blockquote>
-<p>Another alternative is to use the so-called “double brace” technique:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Collections.unmodifiableSet(<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;String&gt;() &#123;&#123;</span><br><span class="line">    add(<span class="string">&quot;a&quot;</span>); add(<span class="string">&quot;b&quot;</span>); add(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">&#125;&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>This uses the instance-initializer construct in an anonymous inner class, which is a bit prettier. However, it is quite obscure, and it costs an extra class at each usage. It also holds hidden references to the enclosing instance and to any captured objects. This may cause memory leaks or problems with serialization. For these reasons, this technique is best avoided.</p>
-</blockquote>
-<p>那么我们要怎么做呢？如果是 JDK 9 及其之后的版本，JDK 新增一些相关的方法，例如</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Set.of(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line">List.of(a, b, c);</span><br><span class="line"></span><br><span class="line">Map.of();</span><br><span class="line">Map.of(k1, v1);</span><br><span class="line">Map.of(k1, v1, k2, v2);</span><br><span class="line">Map.of(k1, v1, k2, v2, k3, v3);</span><br><span class="line">Map.ofEntries(Map.Entry&lt;K,V&gt;...);</span><br></pre></td></tr></table></figure>
-
-<p>但上述的方式，JDK 8 是不支持的，JDK 8 的采用如下方式</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set&lt;String&gt; set = Collections.unmodifiableSet(Stream.of(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>).collect(toSet()));</span><br><span class="line"></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>但可用的方法很有限，并且依旧十分 verbose，如果无法忍受，则可以用第三方的库，例如 Google 的 Guava 库，里面就提供了很多好用的 api</p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JDK8至JDK17各版本重要特性更新</title>
     <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/JDK8%E8%87%B3JDK17%E5%90%84%E7%89%88%E6%9C%AC%E9%87%8D%E8%A6%81%E7%89%B9%E6%80%A7%E6%9B%B4%E6%96%B0/</url>
     <content><![CDATA[<span id="more"></span>
@@ -334,6 +334,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Mybatis与SpringDataJpa的关系</title>
+    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Mybatis%E4%B8%8ESpringDataJpa%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>[toc]</p>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><ol>
+<li>Java持久层框架有哪些？</li>
+<li>Mybatis与SpringDataJpa的关系是什么？</li>
+<li>Mybatis与MybatisPlus的关系是什么？</li>
+<li>如果Mybatis和SpringDataJpa都是持久层框架，且是可选择的，那什么时候要用 Mybatis？什么时候要用 SpringDataJpa？它们各有什么优势？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Mybatis</tag>
+        <tag>Spring</tag>
+        <tag>JPA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Postman四种Body类型之间的区别</title>
     <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Postman%E5%9B%9B%E7%A7%8DBody%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<p>使用 Postman 模拟请求，并想要在请求 Body 中携带数据一起发送时，我们会发现 Postman 的 Body 类型有很多，这些类型具体有什么区别呢？</p>
@@ -365,29 +388,6 @@
       <tags>
         <tag>Postman</tag>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mybatis与SpringDataJpa的关系</title>
-    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Mybatis%E4%B8%8ESpringDataJpa%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>[toc]</p>
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><ol>
-<li>Java持久层框架有哪些？</li>
-<li>Mybatis与SpringDataJpa的关系是什么？</li>
-<li>Mybatis与MybatisPlus的关系是什么？</li>
-<li>如果Mybatis和SpringDataJpa都是持久层框架，且是可选择的，那什么时候要用 Mybatis？什么时候要用 SpringDataJpa？它们各有什么优势？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Mybatis</tag>
-        <tag>Spring</tag>
-        <tag>JPA</tag>
       </tags>
   </entry>
   <entry>
@@ -543,6 +543,40 @@
       </tags>
   </entry>
   <entry>
+    <title>从0到网站部署_软件准备</title>
+    <url>/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%BB%8E0%E5%88%B0%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<h1 id="从0到网站部署-软件准备"><a href="#从0到网站部署-软件准备" class="headerlink" title="从0到网站部署_软件准备"></a>从0到网站部署_软件准备</h1><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>以下推荐适合有点编程基础，或者想快速搭建个人网站的，如果你是想锻炼自己的开发能力，那你就自己从 0 开始 codeing。</p>
+<p>我个人非常推荐基于 PHP 开源的 CMS 系统 WordPress，虽然不少人鄙视 php，但不得不承认 php 在个人网站和中小企业网站上还是很值得选择的。</p>
+<p>WordPress 基本上满足个人网站的功能，用户注册，登陆，内容发布，管理，评论等，而且扩展性强，主题模板和功能插件非常丰富，即使没有 php 编程的基础也可以搭建一套完美的网站系统，如果有 php 开发技术也可以根据需要进行二次开发。</p>
+<p>这里就不多介绍了，有需要的可以自己百度。当然 Python，Java 等也都有类似 WordPress 开源的系统，具体的大家可以百度关键词，例如‘Python 开源cms系统’。</p>
+<h2 id="SEO搜索"><a href="#SEO搜索" class="headerlink" title="SEO搜索"></a>SEO搜索</h2><ol>
+<li><p>网站上线后，要主动向各个搜索引擎提交自己的网站入口，<a href="http://www.baidusourl.com/%EF%BC%8C%E8%BF%99%E6%A0%B7%E5%88%AB%E4%BA%BA%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%E6%90%9C%E7%B4%A2%E5%88%B0%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E3%80%82">http://www.baidusourl.com/，这样别人就可以通过网站名称搜索到你的网站。</a></p>
+</li>
+<li><p>生成自己的网站页面地图。有利于搜索引擎收录网站内容，以便用户使用关键词搜索到你的网站内容。如果你使用的是 WordPress，那极力推荐你使用 Baidu Sitemap Generator 这个插件，可以自动生成一个静态的站点地图页面，可以手动提交给搜索引擎加快百度的收录速度。</p>
+</li>
+</ol>
+<p>以上只是最入门也是必备的 SEO 搜索优化，更多的优化，大家可以百度搜索关键词“网站SEO搜索优化”</p>
+<h2 id="网站安全"><a href="#网站安全" class="headerlink" title="网站安全"></a>网站安全</h2><h3 id="必备安全功能"><a href="#必备安全功能" class="headerlink" title="必备安全功能"></a>必备安全功能</h3><ol>
+<li>记录注册用户的 IP 地址。这个简单，一个字段存数据库就好了。</li>
+<li>防止访客 F5 频繁刷新页面。网站使用的技术不同，实现方式也不相同，大致原理就是，根据访问用户的ip，用session记录1秒内访问的次数，如果访问的过多就输出拒绝访问的提示。如果这个功能没有，长按F5就可以把你的网站服务器刷爆。</li>
+<li>黑名单功能。就是来防止用户恶意评论等不友好的操作或直接防止用户访问（一般这个可以通过服务器配置文件，配置禁止访问的IP地址）。基本上都是在用户使用某种网站功能时 先判断用户IP是否在黑名单中，如果在，禁止使用，否则就放行。如果没有这种功能，遇到了变态用户会恶心到你吐。如果你使用的是WordPress，这里我也推荐你使用WP-Ban这个插件。</li>
+</ol>
+<h3 id="接入第三方的云加速平台"><a href="#接入第三方的云加速平台" class="headerlink" title="接入第三方的云加速平台"></a>接入第三方的云加速平台</h3><p>当然这个平台的高级功能是收费的，但个人网站使用其免费功能也就够用了，例如 <strong>360 云加速</strong>，<strong>百度云加速</strong>，<strong>抗 D 保</strong>等平台。</p>
+<p>这里我首推 360 云加速，毕竟是做安全出身；个人认为使用加速平台的免费功能最大的好处就是可以隐藏网站真实的 IP 地址，其次是支持配置 IP 黑名单（这个功能有些平台是收费的），也有静态文件缓存，加速，图片防盗链等功能。</p>
+<h2 id="用户统计"><a href="#用户统计" class="headerlink" title="用户统计"></a>用户统计</h2><ol>
+<li>根据自己需要开发用户统计的功能。这个不多讲，根据选择的技术方案实现也各不相同。</li>
+<li>接入第三方的统计平台。个人使用过<strong>百度统计</strong>和 <a href="https://web.umeng.com/main.php">CNZZ 数据专家</a>。推荐使用后者，功能很强大。日访问量，独立IP，访客ip….等等</li>
+</ol>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>以上只是经验之谈，都是些最基本，但也是必备的功能。</p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>自建网站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从0到网站部署_硬件准备</title>
     <url>/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%BB%8E0%E5%88%B0%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%EF%BC%9A%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87/</url>
     <content><![CDATA[<h1 id="从0到网站部署-硬件准备"><a href="#从0到网站部署-硬件准备" class="headerlink" title="从0到网站部署_硬件准备"></a>从0到网站部署_硬件准备</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>网站上线运营就必须要购买域名，而万网是选择相对比较多的，万网目前在阿里旗下，首先你要有一个阿里云的账号，阿里云官方网站 <a href="https://www.aliyun.com/%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E5%85%A5%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%8C%E7%84%B6%E5%90%8E%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%E3%80%82%E5%9F%9F%E5%90%8D%E7%9A%84%E4%BB%B7%E6%A0%BC%E4%B8%8D%E6%98%AF%E5%BE%88%E8%B4%B5">https://www.aliyun.com/，然后进入管理控制台，然后购买域名。域名的价格不是很贵</a> ，一年也就几十元吧。</p>
@@ -587,40 +621,6 @@
 </ul>
 <p>一般如果你部署网站的环境选择的是类似百度 BAE 的 PaaS 平台，那么平台会提供一个二级域名，如果选择的是云虚拟机或云服务器则会提供一个 ip 地址。</p>
 <p><img src="http://img.puppetdev.top/image/note/430a15f934bfcfab4546ee78ea6f25b3.png" alt="image-20210904131852710"></p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>自建网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从0到网站部署_软件准备</title>
-    <url>/2022/09/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%BB%8E0%E5%88%B0%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%87%86%E5%A4%87/</url>
-    <content><![CDATA[<h1 id="从0到网站部署-软件准备"><a href="#从0到网站部署-软件准备" class="headerlink" title="从0到网站部署_软件准备"></a>从0到网站部署_软件准备</h1><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>以下推荐适合有点编程基础，或者想快速搭建个人网站的，如果你是想锻炼自己的开发能力，那你就自己从 0 开始 codeing。</p>
-<p>我个人非常推荐基于 PHP 开源的 CMS 系统 WordPress，虽然不少人鄙视 php，但不得不承认 php 在个人网站和中小企业网站上还是很值得选择的。</p>
-<p>WordPress 基本上满足个人网站的功能，用户注册，登陆，内容发布，管理，评论等，而且扩展性强，主题模板和功能插件非常丰富，即使没有 php 编程的基础也可以搭建一套完美的网站系统，如果有 php 开发技术也可以根据需要进行二次开发。</p>
-<p>这里就不多介绍了，有需要的可以自己百度。当然 Python，Java 等也都有类似 WordPress 开源的系统，具体的大家可以百度关键词，例如‘Python 开源cms系统’。</p>
-<h2 id="SEO搜索"><a href="#SEO搜索" class="headerlink" title="SEO搜索"></a>SEO搜索</h2><ol>
-<li><p>网站上线后，要主动向各个搜索引擎提交自己的网站入口，<a href="http://www.baidusourl.com/%EF%BC%8C%E8%BF%99%E6%A0%B7%E5%88%AB%E4%BA%BA%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%E6%90%9C%E7%B4%A2%E5%88%B0%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E3%80%82">http://www.baidusourl.com/，这样别人就可以通过网站名称搜索到你的网站。</a></p>
-</li>
-<li><p>生成自己的网站页面地图。有利于搜索引擎收录网站内容，以便用户使用关键词搜索到你的网站内容。如果你使用的是 WordPress，那极力推荐你使用 Baidu Sitemap Generator 这个插件，可以自动生成一个静态的站点地图页面，可以手动提交给搜索引擎加快百度的收录速度。</p>
-</li>
-</ol>
-<p>以上只是最入门也是必备的 SEO 搜索优化，更多的优化，大家可以百度搜索关键词“网站SEO搜索优化”</p>
-<h2 id="网站安全"><a href="#网站安全" class="headerlink" title="网站安全"></a>网站安全</h2><h3 id="必备安全功能"><a href="#必备安全功能" class="headerlink" title="必备安全功能"></a>必备安全功能</h3><ol>
-<li>记录注册用户的 IP 地址。这个简单，一个字段存数据库就好了。</li>
-<li>防止访客 F5 频繁刷新页面。网站使用的技术不同，实现方式也不相同，大致原理就是，根据访问用户的ip，用session记录1秒内访问的次数，如果访问的过多就输出拒绝访问的提示。如果这个功能没有，长按F5就可以把你的网站服务器刷爆。</li>
-<li>黑名单功能。就是来防止用户恶意评论等不友好的操作或直接防止用户访问（一般这个可以通过服务器配置文件，配置禁止访问的IP地址）。基本上都是在用户使用某种网站功能时 先判断用户IP是否在黑名单中，如果在，禁止使用，否则就放行。如果没有这种功能，遇到了变态用户会恶心到你吐。如果你使用的是WordPress，这里我也推荐你使用WP-Ban这个插件。</li>
-</ol>
-<h3 id="接入第三方的云加速平台"><a href="#接入第三方的云加速平台" class="headerlink" title="接入第三方的云加速平台"></a>接入第三方的云加速平台</h3><p>当然这个平台的高级功能是收费的，但个人网站使用其免费功能也就够用了，例如 <strong>360 云加速</strong>，<strong>百度云加速</strong>，<strong>抗 D 保</strong>等平台。</p>
-<p>这里我首推 360 云加速，毕竟是做安全出身；个人认为使用加速平台的免费功能最大的好处就是可以隐藏网站真实的 IP 地址，其次是支持配置 IP 黑名单（这个功能有些平台是收费的），也有静态文件缓存，加速，图片防盗链等功能。</p>
-<h2 id="用户统计"><a href="#用户统计" class="headerlink" title="用户统计"></a>用户统计</h2><ol>
-<li>根据自己需要开发用户统计的功能。这个不多讲，根据选择的技术方案实现也各不相同。</li>
-<li>接入第三方的统计平台。个人使用过<strong>百度统计</strong>和 <a href="https://web.umeng.com/main.php">CNZZ 数据专家</a>。推荐使用后者，功能很强大。日访问量，独立IP，访客ip….等等</li>
-</ol>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>以上只是经验之谈，都是些最基本，但也是必备的功能。</p>
 ]]></content>
       <categories>
         <category>技术文章</category>
@@ -1095,6 +1095,31 @@
       </tags>
   </entry>
   <entry>
+    <title>解决方案：IDEA结合Tomcat启动Web项目报错</title>
+    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AIDEA%E7%BB%93%E5%90%88Tomcat%E5%90%AF%E5%8A%A8web%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>[[toc]]</p>
+<h2 id="Servlet-DispatcherServlet-in-web-application-threw-load-exception"><a href="#Servlet-DispatcherServlet-in-web-application-threw-load-exception" class="headerlink" title="Servlet [DispatcherServlet] in web application [] threw load() exception"></a>Servlet [DispatcherServlet] in web application [] threw load() exception</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p><img src="http://img.puppetdev.top/image/note/f04a0dc90d8e5d17b1e3e2e49633b463.png" alt="image-20220428114132435"></p>
+<h3 id="原因分析-解决方案"><a href="#原因分析-解决方案" class="headerlink" title="原因分析&amp;&amp;解决方案"></a>原因分析&amp;&amp;解决方案</h3><p>根据报错信息，可以发现是无法找到 DispatcherServlet 类，</p>
+<p>进一步查看编译输出目录下时候有 lib 目录</p>
+<img src="http://img.puppetdev.top/image/note/5f7506f4006c04a35b99396119cb4275.png" alt="image-20220428114412254" style="zoom:50%;" />
+
+<p>如果没有，可能是依赖库没有加载加载进来，或者放置的位置有问题，进一步查看</p>
+<img src="http://img.puppetdev.top/image/note/cf82a2b57215281a12bcf4b6d9c9875a.png" alt="image-20220428114645183" style="zoom:50%;" />
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>IDEA</tag>
+        <tag>Web</tag>
+        <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker导入进行报错：invalid diffID for layer xx：expected “sha256:xxx</title>
     <url>/2022/12/01/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9ADocker%E5%AF%BC%E5%85%A5%E9%95%9C%E5%83%8F%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<h2 id="1-1-问题描述"><a href="#1-1-问题描述" class="headerlink" title="1.1 问题描述"></a>1.1 问题描述</h2><p>docker 导入镜像 tar 包报错，报错信息如下：</p>
@@ -1114,31 +1139,6 @@
       </categories>
       <tags>
         <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决方案：IDEA结合Tomcat启动Web项目报错</title>
-    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AIDEA%E7%BB%93%E5%90%88Tomcat%E5%90%AF%E5%8A%A8web%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>[[toc]]</p>
-<h2 id="Servlet-DispatcherServlet-in-web-application-threw-load-exception"><a href="#Servlet-DispatcherServlet-in-web-application-threw-load-exception" class="headerlink" title="Servlet [DispatcherServlet] in web application [] threw load() exception"></a>Servlet [DispatcherServlet] in web application [] threw load() exception</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p><img src="http://img.puppetdev.top/image/note/f04a0dc90d8e5d17b1e3e2e49633b463.png" alt="image-20220428114132435"></p>
-<h3 id="原因分析-解决方案"><a href="#原因分析-解决方案" class="headerlink" title="原因分析&amp;&amp;解决方案"></a>原因分析&amp;&amp;解决方案</h3><p>根据报错信息，可以发现是无法找到 DispatcherServlet 类，</p>
-<p>进一步查看编译输出目录下时候有 lib 目录</p>
-<img src="http://img.puppetdev.top/image/note/5f7506f4006c04a35b99396119cb4275.png" alt="image-20220428114412254" style="zoom:50%;" />
-
-<p>如果没有，可能是依赖库没有加载加载进来，或者放置的位置有问题，进一步查看</p>
-<img src="http://img.puppetdev.top/image/note/cf82a2b57215281a12bcf4b6d9c9875a.png" alt="image-20220428114645183" style="zoom:50%;" />
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>IDEA</tag>
-        <tag>Java</tag>
-        <tag>Web</tag>
-        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -1538,6 +1538,24 @@
       </tags>
   </entry>
   <entry>
+    <title>商用U盘</title>
+    <url>/2022/10/08/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="US1指纹加密闪存盘"><a href="#US1指纹加密闪存盘" class="headerlink" title="US1指纹加密闪存盘"></a>US1指纹加密闪存盘</h1><p>品牌：Netac</p>
+<p>制造商：深圳市朗科科技股份有限公司</p>
+<p>技术支持&#x2F;客服热线：400-830-3662</p>
+]]></content>
+      <categories>
+        <category>测评推荐</category>
+      </categories>
+      <tags>
+        <tag>U盘</tag>
+        <tag>硬件</tag>
+        <tag>商用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows卸载清理工具推荐</title>
     <url>/2022/04/13/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Windows%E5%8D%B8%E8%BD%BD%E6%B8%85%E7%90%86%E7%A5%9E%E5%99%A8/</url>
     <content><![CDATA[<span id="more"></span>
@@ -1558,24 +1576,6 @@
       <categories>
         <category>测评推荐</category>
       </categories>
-  </entry>
-  <entry>
-    <title>商用U盘</title>
-    <url>/2022/10/08/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h1 id="US1指纹加密闪存盘"><a href="#US1指纹加密闪存盘" class="headerlink" title="US1指纹加密闪存盘"></a>US1指纹加密闪存盘</h1><p>品牌：Netac</p>
-<p>制造商：深圳市朗科科技股份有限公司</p>
-<p>技术支持&#x2F;客服热线：400-830-3662</p>
-]]></content>
-      <categories>
-        <category>测评推荐</category>
-      </categories>
-      <tags>
-        <tag>U盘</tag>
-        <tag>硬件</tag>
-        <tag>商用</tag>
-      </tags>
   </entry>
   <entry>
     <title>Windows软件</title>
@@ -2167,6 +2167,30 @@
       </tags>
   </entry>
   <entry>
+    <title>纯小白如何自学编程</title>
+    <url>/2022/10/25/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="纯小白如何自学编程"><a href="#纯小白如何自学编程" class="headerlink" title="纯小白如何自学编程"></a>纯小白如何自学编程</h1><p>看似一个简单的问题但包藏着很多信息，绝对不是简单几句话就能说清楚。首先程序员也分为很多种。例如从大的方向来说，有后端、web，移动端、嵌入式等等。再从编程语言方向细分，如后端程序员又分为 Java、PHP、.NET 等等，所以无论是自学还是报班都要先搞清楚你要学习或者你感兴趣的方向，其次再确定编程语言，之后再开始学习。这个顺序不搞清楚，自学起来就会稀里糊涂，越学越累，走很多弯路。</p>
+<p>即使我这么描述了一圈，还是有一些读者接着问，“后端程序员又是个啥玩意？”，每次听到这类问题我都感觉很无语，不知道怎么解释。但闲下来后再想想，这些茫然我也是经历过，被嘲笑过，被无语过，毕竟我也算是 0 基础自学过来的，所以，今天趁着周末，我会尽可能的在自己的知识范围内为大家梳理一下这些问题。</p>
+<p>首先就从大家经常接触的前端开始。这里的前端并不是单单指 web，其实应该叫终端。再通俗点说可以理解为给用户使用的产品。你打开的一个网页、一个 App、或者 PC 端的一个软件，都可以理解为前端，而这些产品需要程序员用不同的编程语言开发。这里先给大家大致梳理一下关于前端的一下东西。</p>
+<p><img src="http://img.puppetdev.top/image/note/fc2b65c9fdb321e1cf8ae49a457c85c0.png" alt="image-20210904124356657"></p>
+<p>这图应该还算清晰吧，假如你想学习 Android 开发，那首先学习的编程语言就应该是 Java 或者 Kotlin。当然这张图还是非常笼统的，只不过是让大家先有个简单的认识，毕竟是给小白写的不能太复杂。前端的东西相对还是很好理解的，毕竟看得见摸得着。</p>
+<p>那后端又是啥玩意呢？可以简单理解为运行在远程服务器上的代码程序，主要是为前端提供数据。例如网站上展示的文字图片；用户的登录及用户信息的存储等，都是有后端程序完成的。而一个最基本的后端也至少包含两部分：处理程序和数据库。能够开发后端程序的技术也是有很多，不同的技术也使用不用的编程语言。大概如下图。</p>
+<img src="http://img.puppetdev.top/image/note/9d72224e89969bf1f219a77c9288ad74.png" alt="image-20210904124442490" style="zoom:80%;" />
+
+<p>再强调一下，此图只是一个最基本的后端，而后端范畴远不止于此。这里就不扩展开来讲了。很多东西都是在学习的过程中慢慢理解的。</p>
+<p>那么前后端是如何通信的呢。那就不得不说到 HTTP 请求了。</p>
+<p><img src="http://img.puppetdev.top/image/note/f3dfa1cd1333d17a545018034e526b28.png" alt="image-20210904124507450"></p>
+<p>至此，别说是小白了，就算是个猴子也应该对前后端&#x2F;对自学编程有初步的认识了吧！（开个玩笑）</p>
+<p>那么肯定又有读者会纠结：到底是学习前端还是后端呢？哪个简单？哪个工资高？只能说因人而异吧。作为初学者也别太纠结，都学就是了，先找找感觉，后面再选择一个技术栈深造！后端的程序员多少要懂点前端，而前端程序员大概率都会点后端技术。</p>
+]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>自学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>理解造轮子的程度</title>
     <url>/2022/10/25/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E7%90%86%E8%A7%A3%E9%80%A0%E8%BD%AE%E5%AD%90%E7%9A%84%E7%A8%8B%E5%BA%A6/</url>
     <content><![CDATA[<p>造轮子造轮子，造法也有很多种，我们可以从零件厂采购轮毂、轮胎，自己组装，也可以从冶金、找橡胶树资源开始。</p>
@@ -2204,30 +2228,6 @@
       </categories>
       <tags>
         <tag>造轮子</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>纯小白如何自学编程</title>
-    <url>/2022/10/25/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="纯小白如何自学编程"><a href="#纯小白如何自学编程" class="headerlink" title="纯小白如何自学编程"></a>纯小白如何自学编程</h1><p>看似一个简单的问题但包藏着很多信息，绝对不是简单几句话就能说清楚。首先程序员也分为很多种。例如从大的方向来说，有后端、web，移动端、嵌入式等等。再从编程语言方向细分，如后端程序员又分为 Java、PHP、.NET 等等，所以无论是自学还是报班都要先搞清楚你要学习或者你感兴趣的方向，其次再确定编程语言，之后再开始学习。这个顺序不搞清楚，自学起来就会稀里糊涂，越学越累，走很多弯路。</p>
-<p>即使我这么描述了一圈，还是有一些读者接着问，“后端程序员又是个啥玩意？”，每次听到这类问题我都感觉很无语，不知道怎么解释。但闲下来后再想想，这些茫然我也是经历过，被嘲笑过，被无语过，毕竟我也算是 0 基础自学过来的，所以，今天趁着周末，我会尽可能的在自己的知识范围内为大家梳理一下这些问题。</p>
-<p>首先就从大家经常接触的前端开始。这里的前端并不是单单指 web，其实应该叫终端。再通俗点说可以理解为给用户使用的产品。你打开的一个网页、一个 App、或者 PC 端的一个软件，都可以理解为前端，而这些产品需要程序员用不同的编程语言开发。这里先给大家大致梳理一下关于前端的一下东西。</p>
-<p><img src="http://img.puppetdev.top/image/note/fc2b65c9fdb321e1cf8ae49a457c85c0.png" alt="image-20210904124356657"></p>
-<p>这图应该还算清晰吧，假如你想学习 Android 开发，那首先学习的编程语言就应该是 Java 或者 Kotlin。当然这张图还是非常笼统的，只不过是让大家先有个简单的认识，毕竟是给小白写的不能太复杂。前端的东西相对还是很好理解的，毕竟看得见摸得着。</p>
-<p>那后端又是啥玩意呢？可以简单理解为运行在远程服务器上的代码程序，主要是为前端提供数据。例如网站上展示的文字图片；用户的登录及用户信息的存储等，都是有后端程序完成的。而一个最基本的后端也至少包含两部分：处理程序和数据库。能够开发后端程序的技术也是有很多，不同的技术也使用不用的编程语言。大概如下图。</p>
-<img src="http://img.puppetdev.top/image/note/9d72224e89969bf1f219a77c9288ad74.png" alt="image-20210904124442490" style="zoom:80%;" />
-
-<p>再强调一下，此图只是一个最基本的后端，而后端范畴远不止于此。这里就不扩展开来讲了。很多东西都是在学习的过程中慢慢理解的。</p>
-<p>那么前后端是如何通信的呢。那就不得不说到 HTTP 请求了。</p>
-<p><img src="http://img.puppetdev.top/image/note/f3dfa1cd1333d17a545018034e526b28.png" alt="image-20210904124507450"></p>
-<p>至此，别说是小白了，就算是个猴子也应该对前后端&#x2F;对自学编程有初步的认识了吧！（开个玩笑）</p>
-<p>那么肯定又有读者会纠结：到底是学习前端还是后端呢？哪个简单？哪个工资高？只能说因人而异吧。作为初学者也别太纠结，都学就是了，先找找感觉，后面再选择一个技术栈深造！后端的程序员多少要懂点前端，而前端程序员大概率都会点后端技术。</p>
-]]></content>
-      <categories>
-        <category>生活随笔</category>
-      </categories>
-      <tags>
-        <tag>自学</tag>
       </tags>
   </entry>
   <entry>
@@ -2592,6 +2592,24 @@
       </tags>
   </entry>
   <entry>
+    <title>解决方案：给el-select手动赋值后的事件触发（如change事件）</title>
+    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>vue、elementUI、vscode</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由<code>&#39;&#39;</code> 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发 el-select 的 change 事件</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>经查阅，尚未发现更好的解决方法，只能在进入的时候，手动触发事件。</p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>解决方案</tag>
+        <tag>ElementUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决方案：van-radio判断当前radio是否被选中</title>
     <url>/2022/10/21/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Avan-radio%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8Dradio%E6%98%AF%E5%90%A6%E8%A2%AB%E9%80%89%E4%B8%AD/</url>
     <content><![CDATA[<span id="more"></span>
@@ -2610,24 +2628,6 @@
       <tags>
         <tag>解决方案</tag>
         <tag>Vant</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决方案：给el-select手动赋值后的事件触发（如change事件）</title>
-    <url>/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>vue、elementUI、vscode</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由<code>&#39;&#39;</code> 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发 el-select 的 change 事件</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>经查阅，尚未发现更好的解决方法，只能在进入的时候，手动触发事件。</p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>解决方案</tag>
-        <tag>ElementUI</tag>
       </tags>
   </entry>
   <entry>
