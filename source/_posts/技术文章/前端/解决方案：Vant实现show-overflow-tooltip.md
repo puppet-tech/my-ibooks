@@ -23,7 +23,7 @@ sticky:
 
 用于编写 PC 端的 UI 框架 Element-UI 的 Table 组件有一个属性叫 show-overflow-tooltip 属性，可以实现当单元格的文字太多时，用省略号(ellipsis)展示，鼠标覆上时显示文字全文本的提示框效果。如下：
 
-![image-20211129165847396](http://img.puppetdev.top/image/note/a3ad5f8cec0fbac62c27424dbae96a64.png)
+![image-20211129165847396](https://oss.puppetdev.top/image/note/a3ad5f8cec0fbac62c27424dbae96a64.png)
 
 这阵子在项目碰到一个问题，由于我主要是做后端的，对前端并不是很熟悉，但被迫做了一阵子前端。项目组用的技术栈是 Vue + Vant，移动端的 UI 框架，需要实现一个方框里当文字太多时，用省略号代替超出的文本，当手触碰时，又能够显示所有文本。
 

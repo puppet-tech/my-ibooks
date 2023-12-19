@@ -28,7 +28,7 @@ sticky:
 
 与AutoSleep相比，Pillow无论从操作还是展示上，都算是非常「亲民」的那一位。
 
-![img](http://img.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
+![img](https://oss.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
 
 首页简洁的圆环直观地表现出你的睡眠状况，除此之外，还提供了几个重要参数的数据详情例如睡眠时段。同时将你的睡眠质量用直方图的形式表现出来，不同的色块代表不同的睡眠参数，点击之后则能看到具体的数据。
 
@@ -46,7 +46,7 @@ sticky:
 
 初次使用软件，简单设置后，便可以上手使用了，根据你的使用情况，软件还可以帮你合理安排时间，帮助你**健康使用手机**。
 
-![img](http://img.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
+![img](https://oss.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
 
 ## FOREST
 
@@ -54,10 +54,10 @@ sticky:
 
 通过种树的小游戏，帮助你有趣，主动的减少手机使用时间。开始专注时，给自己设置一个时间，这个时间内不使用手机，你的树苗种子便会长成**树木。**
 
-![img](http://img.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
+![img](https://oss.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
 
 一旦触碰，树苗便会死亡。
 
-![img](http://img.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
+![img](https://oss.puppetdev.top/image/note/01f18fd0ce1ded402b12777a8630fa92.png)
 
 还可以建立**多人种树**的模式，和朋友一起慢慢戒掉手机成瘾症，实现专注。平台为了鼓励大家使用，每个人都有**五颗真树**种植的的机会哦。你的树苗会被种植在沙漠区域，很有价值。

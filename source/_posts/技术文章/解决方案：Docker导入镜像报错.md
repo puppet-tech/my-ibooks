@@ -14,7 +14,7 @@ date: 2022-12-01 15:30:45
 
 docker 导入镜像 tar 包报错，报错信息如下：
 
-![image-20221201153103996](http://img.puppetdev.top/image/note/e0a9732c86ce643f614c7b76901e1100.png)
+![image-20221201153103996](https://oss.puppetdev.top/image/note/e0a9732c86ce643f614c7b76901e1100.png)
 
 ## 1.2 解决方案
 

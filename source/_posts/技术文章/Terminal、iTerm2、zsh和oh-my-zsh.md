@@ -60,7 +60,7 @@ oh-my-zsh 在安装后，便自带了很多插件和主题，我们只需要在 
 >
 > 例如 agnoster 主题，如果没有合适的字体补丁，就会乱码
 >
-> <img src="http://img.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png" alt="image-20221109130141997" style="zoom:50%;" />
+> <img src="https://oss.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png" alt="image-20221109130141997" style="zoom:50%;" />
 >
 > 用了 Powerline Font 或 Nerd Front 后，就正常了
 

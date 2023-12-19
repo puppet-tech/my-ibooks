@@ -23,7 +23,7 @@ date: 2022-03-17 00:00:00
 ：pm ERR! code EINTEGRITY
 ```
 
-![image-20220317132008831](http://img.puppetdev.top/image/note/0df6ae6fb0bd9e492fb05a3d8d15b2d3.png)
+![image-20220317132008831](https://oss.puppetdev.top/image/note/0df6ae6fb0bd9e492fb05a3d8d15b2d3.png)
 
 ### 问题解决
 

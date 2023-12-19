@@ -46,7 +46,7 @@ public class DemoSlf4j {
 
 运行后，报了如下错误：
 
-![img](http://img.puppetdev.top/image/note/0fd1e80416e526a14caf7f765cad0680.png)
+![img](https://oss.puppetdev.top/image/note/0fd1e80416e526a14caf7f765cad0680.png)
 
 ## II Log4j
 
@@ -73,7 +73,7 @@ Log4j 是 apache 实现的一个开源日志组件（Wrapped implementations，�
 
 添加了上面的依赖后，会引入以下三个包
 
-<img src="http://img.puppetdev.top/image/note/3fca1c7dca1732392f8c00ffa657c435.png" alt="image-20220401102656101" style="zoom:50%;" />
+<img src="https://oss.puppetdev.top/image/note/3fca1c7dca1732392f8c00ffa657c435.png" alt="image-20220401102656101" style="zoom:50%;" />
 
 * log4j：适配层
 * slf4j-api：slf4j规范
@@ -331,7 +331,7 @@ Log4j2 在 Log4j 上做了很多重大的改进，还吸取了 Logback 很多优
 
 ### V.1 异步性能比较
 
-<img src="http://img.puppetdev.top/image/note/46c4671dd720db36186b6c1e70d0ebe7.png" alt="image-20220401110328469" style="zoom:50%;" />
+<img src="https://oss.puppetdev.top/image/note/46c4671dd720db36186b6c1e70d0ebe7.png" alt="image-20220401110328469" style="zoom:50%;" />
 
 其中，`Loggers all async` 是基于 [LMAX Disruptor](http://lmax-exchange.github.com/disruptor/) 实现的，可见 Log4j2 的异步日志性能是最棒的。
 

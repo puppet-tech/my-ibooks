@@ -36,11 +36,11 @@ date: 2022-09-21 22:14:44
    Vue.use(ElementUI);
    ```
 
-   ![image-20210425115123893](http://img.puppetdev.top/image/note/3beabd4a0d41ca69c14a7a846cf50eff.png)
+   ![image-20210425115123893](https://oss.puppetdev.top/image/note/3beabd4a0d41ca69c14a7a846cf50eff.png)
 
 3. 使用 element-ui，在 App.vue 中使用；从 elemet-ui 的官网中拷贝对应的元素的代码过来。
 
-   ![image-20210425115454749](http://img.puppetdev.top/image/note/40dccbfcca8e6be55b49ece6802a5fd8.png)
+   ![image-20210425115454749](https://oss.puppetdev.top/image/note/40dccbfcca8e6be55b49ece6802a5fd8.png)
 
 ## 通过图形化界面安装
 
@@ -54,6 +54,6 @@ date: 2022-09-21 22:14:44
 
 5. 配置插件，按需导入，减少打包后项目的体积
 
-   ![image-20210425120032949](http://img.puppetdev.top/image/note/e7eca2c3516e495a4eb12d09339e7915.png)
+   ![image-20210425120032949](https://oss.puppetdev.top/image/note/e7eca2c3516e495a4eb12d09339e7915.png)
 
    **注意：一定要修改为“按需导入”，否则 vue-cli 会全部导入，项目打包后，体积会很大。**

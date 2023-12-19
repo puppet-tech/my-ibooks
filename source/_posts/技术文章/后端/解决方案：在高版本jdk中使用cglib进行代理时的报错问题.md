@@ -68,4 +68,4 @@ public class CglibProxyForMultiInterfacesTest {
 --add-opens java.base/java.lang=ALL-UNNAMED  
 ```
 
-![image-20221128141538748](http://img.puppetdev.top/image/note/26068c2c1d8b57fd7b41650b68e1086f.png)
+![image-20221128141538748](https://oss.puppetdev.top/image/note/26068c2c1d8b57fd7b41650b68e1086f.png)
