@@ -84,7 +84,7 @@
 <meta name="description" content="环境vue、elementUI、vscode 问题描述在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由&#39;&#39; 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决方案：给el-select手动赋值后的事件触发（如change事件）">
-<meta property="og:url" content="http://example.com/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/index.html">
+<meta property="og:url" content="https://blog.puppetdev.top/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/index.html">
 <meta property="og:site_name" content="木偶&#39;s Blog">
 <meta property="og:description" content="环境vue、elementUI、vscode 问题描述在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由&#39;&#39; 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发">
 <meta property="og:locale" content="zh_CN">
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2022/04/13/技术文章/前端/解决方案：给el-select手动赋值后的事件触发(如change事件)/"/>
+  <link rel="canonical" href="https://blog.puppetdev.top/2022/04/13/技术文章/前端/解决方案：给el-select手动赋值后的事件触发(如change事件)/"/>
 
 
 
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
+    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/2022/04/13/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
