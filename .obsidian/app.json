@@ -1,1 +1,37 @@
-{}
+{
+  "showFrontmatter": true,
+  "showLineNumber": false,
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "userIgnoreFilters": [
+    "vdoing/",
+    "utils/",
+    "docs/@pages/",
+    "docs/00.目录页/",
+    "node_modules.nosync/",
+    "docs/index",
+    "node_modules/"
+  ],
+  "attachmentFolderPath": "./attachments",
+  "autoPairMarkdown": true,
+  "autoPairBrackets": true,
+  "useMarkdownLinks": true,
+  "useTab": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": true,
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "foldHeading": false,
+  "foldIndent": false,
+  "showIndentGuide": false,
+  "spellcheck": false,
+  "tabSize": 4,
+  "showInlineTitle": true
+}

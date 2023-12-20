@@ -1,0 +1,116 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "editor:open-search-replace",
+      "icon": "lucide-search",
+      "name": "在当前笔记中查找并替换",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-mind-map:app:markmap-preview",
+      "icon": "activity",
+      "name": "Mind Map: Preview the current note as a Mind Map",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:export-pdf",
+      "icon": "album",
+      "name": "导出为 PDF",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [
+    {
+      "id": "workspace:copy-path",
+      "icon": "lucide-copy",
+      "name": "复制当前文件的路径",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:export-pdf",
+      "icon": "arrow-down-right",
+      "name": "导出为 PDF",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:new-file",
+      "icon": "lucide-file-plus",
+      "name": "新建笔记",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "obsidian-dynamic-toc:dynamic-toc-insert-command",
+      "icon": "align-justify",
+      "name": "Dynamic Table of Contents: Insert Table of Contents",
+      "mode": "any"
+    },
+    {
+      "id": "number-headings-obsidian:remove-number-headings",
+      "icon": "alarm-clock-off",
+      "name": "Number Headings: Remove numbering from all headings in document",
+      "mode": "any"
+    },
+    {
+      "id": "number-headings-obsidian:number-headings",
+      "icon": "anchor",
+      "name": "Number Headings: Number all headings in document",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-quick-actions:level-down-headline",
+      "icon": "arrow-big-down",
+      "name": "Quick Actions Plugin: Level down headline",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-quick-actions:level-up-headline",
+      "icon": "arrow-big-up",
+      "name": "Quick Actions Plugin: Level up headline",
+      "mode": "any"
+    },
+    {
+      "id": "app:reload",
+      "icon": "lucide-rotate-ccw",
+      "name": "重新加载 Obsidian（不保存当前编辑内容）",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-quick-actions:add-code-block",
+      "icon": "at-sign",
+      "name": "Quick Actions Plugin: Add code block",
+      "mode": "any"
+    },
+    {
+      "id": "markdown-table-editor:markdown-table-editor-open-vertical",
+      "icon": "brush",
+      "name": "Markdown Table Editor: Open Editor (Next to the Active View)",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

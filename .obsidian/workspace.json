@@ -1,20 +1,21 @@
 {
   "main": {
-    "id": "03cc705c5903d81c",
+    "id": "8816ae7a4ed44d09",
     "type": "split",
     "children": [
       {
-        "id": "482b50bbd0a2570b",
+        "id": "38f3767d680e1a03",
         "type": "tabs",
         "children": [
           {
-            "id": "43c2dad7f3b68944",
+            "id": "17943fc62e3a267a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/技术文章/解决方案：Xshell无法启动.md",
+                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -25,15 +26,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "c15662f8239028cd",
+    "id": "0f8c1a52c21b7654",
     "type": "split",
     "children": [
       {
-        "id": "87fcf9ad1e146055",
+        "id": "59ce38cdd2bee26a",
         "type": "tabs",
         "children": [
           {
-            "id": "f6ea99a5ad334ac1",
+            "id": "99f72b7bd613a56c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,12 +44,12 @@
             }
           },
           {
-            "id": "4ecafe5f917dc7ec",
+            "id": "d6cf6b06a7c3e5c9",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#xshell",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,37 +57,28 @@
                 "sortOrder": "alphabetical"
               }
             }
-          },
-          {
-            "id": "098548bed4b9621f",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 373.5
   },
   "right": {
-    "id": "dcbc8ad5f104317d",
+    "id": "5eb3e75808d560d6",
     "type": "split",
     "children": [
       {
-        "id": "da43168d74d0a932",
+        "id": "6b23f607130469a0",
         "type": "tabs",
         "children": [
           {
-            "id": "c43a198127114f05",
+            "id": "57ee8dd78be7b957",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/技术文章/解决方案：Xshell无法启动.md",
+                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +90,19 @@
             }
           },
           {
-            "id": "9d9a58446985dd0f",
+            "id": "df52776c15828799",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/技术文章/解决方案：Xshell无法启动.md",
+                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7e348ac6a7d56041",
+            "id": "1486c0aec5343055",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,79 +113,119 @@
             }
           },
           {
-            "id": "13da227cd8ef95af",
+            "id": "5b75fcf3aea4e3ab",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "4d721560bb3cd005",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
               "state": {
-                "file": "source/_posts/技术文章/解决方案：Xshell无法启动.md"
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "c10d8f78c69b5ef2",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
+      },
+      {
+        "id": "5b60ab0aeb4a89ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "353a3abae98d9194",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 507.5
+    "width": 294.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
+      "switcher:打开快速切换": true,
       "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
+      "canvas:新建白板": true,
+      "daily-notes:打开/创建今天的日记": true,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "zk-prefixer:创建时间戳笔记": true,
+      "workspaces:管理工作区布局": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "43c2dad7f3b68944",
+  "active": "17943fc62e3a267a",
   "lastOpenFiles": [
-    "public/page/7/index.html",
-    "public/page/6/index.html",
-    "public/page/5/index.html",
-    "public/page/4/index.html",
-    "public/page/2/index.html",
-    "public/page/3/index.html",
-    "public/page/7",
-    "public/page/6",
-    "public/page/5",
-    "public/page/4",
-    "public/page/2",
-    "public/images/searchicon.png",
+    "db.json",
+    "public/2022/09/21/技术文章/前端/解决方案：MacOS通过yarn安装全局包后无法找到命令/index.html",
+    "public/2022/10/08/测评推荐/远程控制/index.html",
+    "public/2022/09/21/技术文章/前端/解决方案：van-dialog内容过多时却不会变成滚动样式的问题/index.html",
+    "public/2022/10/08/测评推荐/Windows软件/index.html",
+    "public/2022/09/21/技术文章/从0到网站部署：硬件准备/index.html",
+    "public/2022/04/13/技术文章/前端/解决方案：elementUI的input组件autofocus失效/index.html",
+    "public/2022/04/13/技术文章/前端/解决方案：Vant实现show-overflow-tooltip/index.html",
+    "public/2022/04/13/技术文章/前端/解决方案：element的dialog中无法获取内部表单引用/index.html",
+    "public/2022/04/13/技术文章/前端/解决方案：给el-select手动赋值后的事件触发(如change事件)/index.html",
+    "public/2022/08/03/技术文章/Terminal、iTerm2、zsh和oh-my-zsh/index.html",
+    "public/lib/font-awesome/fonts/fontawesome-webfont.svg",
+    "public/uploads/avatar.png",
+    "public/lib/fancybox/source/fancybox_overlay.png",
+    "public/lib/fancybox/source/fancybox_sprite.png",
+    "public/lib/fancybox/source/fancybox_loading@2x.gif",
+    "public/lib/fancybox/source/fancybox_sprite@2x.png",
+    "public/lib/fancybox/source/fancybox_loading.gif",
+    "public/images/cc-by-nc.svg",
     "public/images/quote-r.svg",
     "public/images/quote-l.svg",
-    "public/images/placeholder.gif",
-    "public/images/logo.svg",
-    "public/images/loading.gif",
-    "public/images/favicon-32x32-next.png",
-    "public/images/favicon-16x16-next.png",
-    "public/images/cc-by.svg",
-    "public/images/cc-by-nd.svg",
-    "themes/next/README.cn.md",
-    "source/404/index.md",
-    "themes/next/source/lib/jquery_lazyload/README.md",
-    "themes/next/source/lib/jquery_lazyload/CONTRIBUTING.md",
-    "themes/next/source/lib/fastclick/README.md",
-    "themes/next/README.md",
-    "themes/next/README.en.md",
-    "source/_posts/技术文章/终端命令行设置为vi-mode模式.md",
-    "source/_posts/测评推荐/U盘.md",
-    "source/_posts/技术文章/解决方案：IDEA结合Tomcat启动web项目报错.md",
-    "source/_posts/技术文章/Postman四种Body类型之间的区别.md",
-    "source/_posts/技术文章/MySQL连接数据库报错.md",
-    "source/_posts/技术文章/Mybatis与SpringDataJpa的关系.md",
-    "source/_posts/测评推荐/手机APP.md",
-    "source/_posts/技术文章/后端/解决方案：使用@Async或@Transactional注解失效.md",
-    "source/_posts/测评推荐/Mac软件.md",
-    "source/_posts/技术文章/各个操作系统剖析命令的位置.md",
-    "source/_posts/技术文章/运维推荐书单.md",
-    "source/_posts/技术文章/通过idea一键将Springboot应用部署到远程docker服务器上.md",
-    "source/_posts/技术文章/解决方案：Docker导入镜像报错.md",
-    "source/_posts/测评推荐/Windows卸载清理神器.md",
-    "source/_posts/测评推荐/Windows软件.md",
-    "source/_posts/技术文章/后端/解决方案：SpringBoot-前端时间传递到后端少了8个小时的问题.md",
-    "source/_posts/技术文章/Terminal、iTerm2、zsh和oh-my-zsh.md",
-    "source/_posts/技术文章/IDEA源码阅读技巧.md"
+    "05.后端/15.Netty网络编程/01.NIO/01.概述.md",
+    "20.嵌入式/10.模电/01.物理基础.md",
+    "05.后端/15.Netty网络编程/00.Netty网络编程学习资料.md",
+    "docs/10.更多技术/040.Jenkins/072.方案实现：Jenkins通过Kubernetes实现高可用.md",
+    "docs/02.后端/02.数据库/02.MySQL(偏重使用)/18.存储过程&自定义函数.md",
+    "50.收藏与导航/10.代码库/20.前端/20.前端复用代码库.md",
+    "50.收藏与导航/10.代码库/10.Shell脚本/20.检查所有docker镜像的架构.md",
+    "50.收藏与导航/10.代码库/40.文件操作/35.文件操作复用代码库.md",
+    "50.收藏与导航/10.代码库/10.Shell脚本/10.获取请求响应状态码.md",
+    "50.收藏与导航/10.代码库/30.爬虫/30.爬虫复用代码库.md",
+    "50.收藏与导航/20.轮子库/020.前端轮子.md",
+    "50.收藏与导航/20.轮子库/010.Python轮子.md",
+    "50.收藏与导航/20.轮子库/001.Java轮子.md",
+    "50.收藏与导航/50.各种镜像源帮助文档.md",
+    "50.收藏与导航/40.字体.md",
+    "50.收藏与导航/30.Shawdowrocket规则配置.md",
+    "50.收藏与导航/01.导航.md",
+    "50.收藏与导航/05.网站.md",
+    "30.其他/03.面试/91.P6P7/17.领域模型落地.md",
+    "30.其他/03.面试/91.P6P7/16.架构设计篇.md",
+    "30.其他/03.面试/91.P6P7/15.个人项目篇.md",
+    "30.其他/03.面试/91.P6P7/14.实战算法篇.md",
+    "30.其他/03.面试/91.P6P7/13.LeetCode篇.md",
+    "30.其他/03.面试/91.P6P7/12.Netty篇.md",
+    "30.其他/03.面试/91.P6P7/11.DockerAndK8S篇.md",
+    "canvas/未命名 1.canvas",
+    "canvas/未命名.canvas",
+    "未命名.canvas"
   ]
 }
