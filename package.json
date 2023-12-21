@@ -15,7 +15,6 @@
     "version": "7.0.0"
   },
   "dependencies": {
-    "css": "^3.0.0",
     "hexo": "^7.0.0",
     "hexo-auto-category": "^0.2.2",
     "hexo-deployer-git": "^4.0.0",
@@ -31,9 +30,7 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-renderer-swig": "^2.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0",
-    "hexo-util": "^3.1.0",
-    "js-yaml": "^4.1.0"
+    "hexo-theme-landscape": "^1.0.0"
   },
   "devDependencies": {
     "chalk": "^5.3.0",
