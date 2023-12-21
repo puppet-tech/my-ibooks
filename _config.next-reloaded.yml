@@ -58,7 +58,7 @@ favicon:
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
-custom_logo: /uploads/logo.png
+custom_logo: # /uploads/logo.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
@@ -258,8 +258,11 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
-  separated_meta: true
-  item_text_total: false
+  separated_meta: true    # 是否换行显示 字数统计 及 阅读时长
+  item_text_total: false  # 博客底部统计 字数统计 阅读时长 使用图标 还是 文本表示
+  # item_text_post: false    # 文章 字数统计 阅读时长 使用图标 还是 文本表示
+  # awl: 4
+  # wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -295,8 +298,9 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
+  # url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/  # Link for view source
+  url: https://github.com/puppetdevz/blog/tree/main/source/ # Link for view source
+  # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
@@ -388,7 +392,7 @@ back2top:
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: left | right
   start_at: left
   # Available values: top | bottom
@@ -927,8 +931,3 @@ vendors:
 css: css
 js: js
 images: images
-
-# Custom Settings
-auto_excerpt:
-  enable: true
-  length: 150
