@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon_64.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon_32.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.puppetdev.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="作为一名程序员，我们跟终端打交道的频率非常地高，终端的是否好用，往往跟我们的效率关系很大。一开始用的是 MacOS 自带的 zsh，有时候在敲很长的 shell 命令时，发现打错了某个字符，想要修改，很是麻烦。这让我不禁想，要是终端命令也能用 vi 来编辑该多好！！！于是开始捣鼓，我发现了 oh-my-zsh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Terminal、iTerm2、zsh与oh-my-zsh">
+<meta property="og:url" content="https://blog.puppetdev.top/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Terminal%E3%80%81iTerm2%E3%80%81zsh%E5%92%8Coh-my-zsh/index.html">
+<meta property="og:site_name" content="木偶&#39;s Blog">
+<meta property="og:description" content="作为一名程序员，我们跟终端打交道的频率非常地高，终端的是否好用，往往跟我们的效率关系很大。一开始用的是 MacOS 自带的 zsh，有时候在敲很长的 shell 命令时，发现打错了某个字符，想要修改，很是麻烦。这让我不禁想，要是终端命令也能用 vi 来编辑该多好！！！于是开始捣鼓，我发现了 oh-my-zsh">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oss.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png">
+<meta property="article:published_time" content="2022-08-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-19T15:37:00.940Z">
+<meta property="article:author" content="木偶">
+<meta property="article:tag" content="Shell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oss.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png">
+
+
+<link rel="canonical" href="https://blog.puppetdev.top/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Terminal%E3%80%81iTerm2%E3%80%81zsh%E5%92%8Coh-my-zsh/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"auto","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.puppetdev.top/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Terminal%E3%80%81iTerm2%E3%80%81zsh%E5%92%8Coh-my-zsh/","path":"20220803/技术文章/Terminal、iTerm2、zsh和oh-my-zsh/","title":"Terminal、iTerm2、zsh与oh-my-zsh"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Terminal、iTerm2、zsh与oh-my-zsh | 木偶's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="木偶's Blog" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="木偶's Blog" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">木偶's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">如果发现能力无法支撑自己的野心，那就静下心来学习吧</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-user fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Terminal%E3%80%81iTerm2%E3%80%81zsh%E3%80%81bash%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">1.1 Terminal、iTerm2、zsh、bash之间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-iTerm2"><span class="nav-text">1.2 iTerm2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-oh-my-zsh%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%98%E7%BD%91"><span class="nav-text">1.3 oh-my-zsh简介与官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E6%8E%A8%E8%8D%90%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="nav-text">1.4 推荐的插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E6%8E%A8%E8%8D%90%E7%9A%84%E4%B8%BB%E9%A2%98"><span class="nav-text">1.5 推荐的主题</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="木偶"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">木偶</p>
+  <div class="site-description" itemprop="description">本站为木偶的技术分享博客，偶尔会聊聊其他的。主要内容涵盖Java、Python、Go、C、Cpp、前端以及对应相关的一些框架技术的研究与知识分享。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/puppetdevz" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;puppetdevz" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:puppetdevz@163.com" title="E-Mail → mailto:puppetdevz@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Terminal%E3%80%81iTerm2%E3%80%81zsh%E5%92%8Coh-my-zsh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="木偶">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木偶's Blog">
+      <meta itemprop="description" content="本站为木偶的技术分享博客，偶尔会聊聊其他的。主要内容涵盖Java、Python、Go、C、Cpp、前端以及对应相关的一些框架技术的研究与知识分享。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Terminal、iTerm2、zsh与oh-my-zsh | 木偶's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Terminal、iTerm2、zsh与oh-my-zsh
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2022-08-03T00:00:00+08:00">2022-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-19 23:37:00" itemprop="dateModified" datetime="2023-12-19T23:37:00+08:00">2023-12-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">技术文章</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>作为一名程序员，我们跟终端打交道的频率非常地高，终端的是否好用，往往跟我们的效率关系很大。一开始用的是 MacOS 自带的 zsh，有时候在敲很长的 shell 命令时，发现打错了某个字符，想要修改，很是麻烦。这让我不禁想，要是终端命令也能用 vi 来编辑该多好！！！于是开始捣鼓，我发现了 oh-my-zsh</p>
+<span id="more"></span>
+
+<h2 id="1-1-Terminal、iTerm2、zsh、bash之间的关系"><a href="#1-1-Terminal、iTerm2、zsh、bash之间的关系" class="headerlink" title="1.1 Terminal、iTerm2、zsh、bash之间的关系"></a>1.1 Terminal、iTerm2、zsh、bash之间的关系</h2><p>在使用 oh-my-zsh 之前，先了解一下 Terminal、iTerm2、zsh、bash 之间的关系。</p>
+<p>Terminal、 iTerm2 跟 zsh、bash 并不是一类东西。</p>
+<p>zsh 和 bash 是两种不同的 shell，是区别于『核』的『壳』，借助 shell，我们可以通过命令对系统进行操作。zsh 和 bash 之间有一定的兼容性。</p>
+<p>而 Terminal 和 iTerm2 是相同种类的 APP，是各种 shell 的 GUI，可以通过 Terminal.app 来跑 zsh 和 bash，也可以通过 iTerm2 来运行。只是相比之下，iTerm2 比 MacOS 自带的 Terminal 要好用得多。</p>
+<p>此外，像 Jetbrains IDE 和 Visual Studio Code 等内置的终端，跟 Terminal 和 iTerm2 也是同一类应用程序。</p>
+<h2 id="1-2-iTerm2"><a href="#1-2-iTerm2" class="headerlink" title="1.2 iTerm2"></a>1.2 <a target="_blank" rel="noopener" href="https://iterm2.com/index.html">iTerm2</a></h2><p>iTerm2 的配色主题方案：<a target="_blank" rel="noopener" href="https://iterm2colorschemes.com/">https://iterm2colorschemes.com/</a></p>
+<h2 id="1-3-oh-my-zsh简介与官网"><a href="#1-3-oh-my-zsh简介与官网" class="headerlink" title="1.3 oh-my-zsh简介与官网"></a>1.3 oh-my-zsh简介与官网</h2><p>官网与项目地址：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ohmyz.sh/">https://ohmyz.sh/</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">https://github.com/ohmyzsh/ohmyzsh</a></li>
+</ul>
+<p>oh-my-zsh 可以理解成 zsh 的超级增强版，如果是 MacOS，且默认的 shell 是 zsh，那安装是相当容易的，只需要根据 GitHub 上的教程，执行以下命令，就可以安装好了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装后，oh-my-zsh 会将自己的配置 <code>.zshrc</code> 去覆盖旧的，而旧的 <code>.zshrc</code> 会被备份为 <code>.zshrc.pre-oh-my-zsh</code>，该备份有两个用处：</p>
+<ol>
+<li>可以将自己原先的配置，例如 Java 相关环境变量，移动到新的 <code>.zshrc</code> 配置中</li>
+<li>当以后要写在 oh-my-zsh 时，直接在终端执行 uninstall_oh_my_zsh 命令，程序会将所有与 oh-my-zsh 有关东西都删除掉，然后还原该备份文件为 <code>.zshrc</code></li>
+</ol>
+<p>当然，我相信你用了它之后，不会想卸载的，作为 zsh 的超级增强版，oh-my-zsh 真的很强大，很易用</p>
+<p>oh-my-zsh 本质跟 zsh 没有什么区别，该怎么配置，还是怎么配置，但 oh-my-zsh 在原基础上新增了插件和主题机制，同时提供了很多实用的别名（alias）</p>
+<p>oh-my-zsh 在安装后，便自带了很多插件和主题，我们只需要在 <code>.zshrc</code> 中根据注释，在 plugins 中加入想要的启动的插件即可，主题也同理</p>
+<blockquote>
+<p>但是要注意，许多主题如果想要正常地显示，可能需要特定的字体补丁。即需要安装 <a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">Powerline Font</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts">Nerd Font</a>，对于这两种的字体补丁的介绍见：<a href="/pages/c48a5b/">字体</a></p>
+<p>例如 agnoster 主题，如果没有合适的字体补丁，就会乱码</p>
+<img src="https://oss.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png" alt="image-20221109130141997" style="zoom:50%;" />
+
+<p>用了 Powerline Font 或 Nerd Front 后，就正常了</p>
+</blockquote>
+<p>此外，oh-my-zsh 还支持第三方的插件和主题，只需要下载后，放置到 <code>~/.oh-my-zsh/custom</code> 目录下即可启动</p>
+<h2 id="1-4-推荐的插件"><a href="#1-4-推荐的插件" class="headerlink" title="1.4 推荐的插件"></a>1.4 推荐的插件</h2><p>插件也不宜启动太多，oh-my-zsh 的作者也提到，如果插件太多，会影响到 shell 的启动速度</p>
+<ul>
+<li><p>vi-mode：首推，也是我想要用 oh-my-zsh 的原因（虽然其他的很多也可以，但挡不住它简单）</p>
+</li>
+<li><p>git：提供很多 git 命令的缩写（别名）</p>
+</li>
+<li><p>autojump：快速跳转到最近的文件夹</p>
+</li>
+<li><p>zsh-syntax-highlighting：命令高亮，且如果路径正确，会带下划线</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换到 ~/.oh-my-zsh/custom/plugins 目录下后执行下面命令</span></span><br><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git </span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>zsh-autosuggestions：自动补全可能的路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换到 ~/.oh-my-zsh/custom/plugins 目录下后执行下面命令</span></span><br><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="1-5-推荐的主题"><a href="#1-5-推荐的主题" class="headerlink" title="1.5 推荐的主题"></a>1.5 推荐的主题</h2><p>每个人的 the right-one 都不同，可以到<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">这里</a>去找</p>
+<p>其他三方主题推荐：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">https://github.com/romkatv/powerlevel10k</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/uploads/wechatpay.jpeg" alt="木偶 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/uploads/alipay.jpeg" alt="木偶 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>[object Object]
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.puppetdev.top/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Terminal%E3%80%81iTerm2%E3%80%81zsh%E5%92%8Coh-my-zsh/" title="Terminal、iTerm2、zsh与oh-my-zsh">https://blog.puppetdev.top/20220803/技术文章/Terminal、iTerm2、zsh和oh-my-zsh/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/uploads/wechat_channel.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Shell/" rel="tag"># Shell</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/20220803/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%BE%E7%BD%AE%E4%B8%BAvi-mode%E6%A8%A1%E5%BC%8F/" rel="prev" title="终端命令行设置为vi-mode模式">
+                  <i class="fa fa-angle-left"></i> 终端命令行设置为vi-mode模式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/20220818/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/jdk%E4%B8%ADjava%E3%80%81javax%E3%80%81sun%E5%92%8Corg%E5%8C%85%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="jdk中java、javax、sun和org包的区别">
+                  jdk中java、javax、sun和org包的区别 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">木偶</br><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022114751号-1<a /></span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"puppetdevz","repo":"blog","client_id":"5fc238dce5cb1e835808","client_secret":"c4eae999dbf9faa98dd9e72b9ca7411d70aa2be0","admin_user":"puppetdevz","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"05de77d90d79d839462877df70393cc2"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
