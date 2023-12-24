@@ -320,6 +320,60 @@
       </tags>
   </entry>
   <entry>
+    <title>下载器</title>
+    <url>/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h2><h3 id="NDM"><a href="#NDM" class="headerlink" title="NDM"></a>NDM</h3><p>可能我们都知道，下载届有一个非常牛叉的神器：Inet Download Manager —— IDM。这个下载神器不仅支持多线程加速下载功能，还具备网页视频嗅探功能。当然，它还具备其他很多我尚未尝试过的功能，平时用得最多也就是这两个了，用过的也都说 nice，真香。</p>
+<p>但在我切换到 macOS 系统后，发现 IDM 不兼容 macOS，所以找了一些可以替代 IDM 的下载器，最后发现有一款与 IDM 很相似的下载器，同样具备 IDM 那两个我个人常用的功能。这个下载器就是今天要介绍的：NDM</p>
+<h4 id="介绍与安装使用"><a href="#介绍与安装使用" class="headerlink" title="介绍与安装使用"></a>介绍与安装使用</h4><p>NDM（Neat Download Manager）这款软件完全免费无广告，支持 Windows 和 macOS</p>
+<p>官方网站：<a href="https://www.neatdownloadmanager.com/index.php/en/">https://www.neatdownloadmanager.com/index.php/en/</a></p>
+<p>可以直接上官网下载，也可以通过以下链接下载：</p>
+<blockquote>
+<p>链接: <a href="https://pan.baidu.com/s/1dxJHR0GhSgEGhGFTFEQ5rQ">https://pan.baidu.com/s/1dxJHR0GhSgEGhGFTFEQ5rQ</a> 提取码: sae6 </p>
+</blockquote>
+<p>安装后打开的界面如下：</p>
+<p><img src="https://oss.puppetdev.top/image/note/8c38c42921f5bbf782ab1772ceac2fd8.png" alt="image-20211128234641307"></p>
+<p>这样子就可以使用了，APP 非常简洁。配合上浏览器插件，可以实现视频嗅探功能</p>
+<h4 id="嗅探功能"><a href="#嗅探功能" class="headerlink" title="嗅探功能"></a>嗅探功能</h4><p>给谷歌浏览器安装以下插件：</p>
+<p><img src="https://oss.puppetdev.top/image/note/f14e18fdb9d258b77ccecb6f7570cccc.png" alt="image-20211129090733277"></p>
+<p>接着随便打开一个视频网站测试</p>
+<img src="https://oss.puppetdev.top/image/note/6de00adeff981ec61fcc02090e88bd68.png" alt="image-20211129090930346" style="zoom:33%;" />
+
+<p>可以看到上面的红色方框中有三个可下载文件：1、2、3，视频越大，说明越高清。直接点击想要的清晰度视频，就可以实现下载。</p>
+<img src="https://oss.puppetdev.top/image/note/996df77160b6c13c7f3a50f7823bf0d1.png" alt="image-20211129091209091" style="zoom:50%;" />
+
+<h3 id="qBitTorrent"><a href="#qBitTorrent" class="headerlink" title="qBitTorrent"></a>qBitTorrent</h3><p>官网：<a href="https://github.com/qbittorrent/qBittorrent">https://github.com/qbittorrent/qBittorrent</a></p>
+<p>下载地址：<a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases">https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases</a></p>
+<p>种子与磁力链接的下载神器，推荐使用。</p>
+<p>在 Windows 上如果迅雷不是很好用，可以用它来代替迅雷；在 MacOS 上可以用它来代替 Folx</p>
+<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><h3 id="Downie"><a href="#Downie" class="headerlink" title="Downie"></a>Downie</h3><p>专门用来下载视频的，支持很多主流网站视频的一键下载</p>
+<p>跟 NDM 相比，NDM 属于通用型，Downie 属于专业性</p>
+<h3 id="Folx"><a href="#Folx" class="headerlink" title="Folx"></a>Folx</h3><p>不管是 NDM 还是 Downie 都无法下载磁链或 bt，所以还是需要 Folx、迅雷 或者 uTorrent 来补充</p>
+<p>但个人使用后的感觉是 Folx 在 bt 搜索方面做得非常好，但是下载速度，且一言难尽，亦或者是个人配置问题，有哪位大佬知道的，能不能指导一下，不胜感激。</p>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="IDM"><a href="#IDM" class="headerlink" title="IDM"></a>IDM</h3><p>最强下载神器，除了不能下载磁链和 bt，其他都可以，速度飞快且稳定，配置还非常简单。</p>
+<h3 id="迅雷"><a href="#迅雷" class="headerlink" title="迅雷"></a>迅雷</h3><p>弥补 IDM 无法下载磁链和 bt 的不足。也可以用 Motrix 或 qBitTorren 等替换</p>
+<h3 id="蜈蚣文件"><a href="#蜈蚣文件" class="headerlink" title="蜈蚣文件"></a>蜈蚣文件</h3><p>蜈蚣文件是一款免费开源的下载神器，支持 Windows 和 Linux 平台（目前为 1.9 版本，暂不支持 Mac OS）</p>
+<p>其官网为：<a href="http://www.filecxx.com/zh_CN/index.html">http://www.filecxx.com/zh_CN/index.html</a></p>
+<p>蜈蚣文件具备 IDM 和 NDM 的所有功能，而 IDM 和 NDM 所没有的功能但常用的，它也基本都有，例如 BT 下载、磁力链接下载等等。</p>
+<p>同时，它还与 IDM 和 NDM 类似，支持在各个主流浏览器中安装插件，捕获下载链接，进行下载。</p>
+<h2 id="总结与推荐"><a href="#总结与推荐" class="headerlink" title="总结与推荐"></a>总结与推荐</h2><h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><p>迅雷 + IDM</p>
+<p>很多人都说 QBitTorrent 好，但是在一些冷门种子上，迅雷还是很能打的，QBitTorrent 下载不了的，迅雷也能下载。对于热门种子来说，两者的差异并不大。</p>
+<p>蜈蚣文件的功能很全面，不仅能进行普通下载，也能下载种子，但是体验上，很多时候都没有速度，不是很行。</p>
+<p>对于普通下载来说，在 Windows 上，IDM 还是最强的，虽然 NDM 也很强（两者功能相差无几），但是如果让我选，我选 IDM</p>
+<h3 id="MacOS-1"><a href="#MacOS-1" class="headerlink" title="MacOS"></a>MacOS</h3><p>NDM + qBitTorrent</p>
+<p>因为 IDM 没有 MacOS 版本，所以只能用 NDM 代替</p>
+<p>如果下载种子，则推荐用 QBitTorrent，Folx 说是 MacOS 上最强的种子下载神器，但在体验上，我并没有感受到（可能是因为在国内，亦或者是配置问题？）但是 Folx 提供了另一个很强大的功能：种子搜索。不过只能搜索国外的种子。总之，个人还是觉得 QBitTorrent 更好用些</p>
+<p>Downie 更适合于专门下载视频的，如果需要时常从油管、B站等这类网站上下载视频，那这个软件确实是神器，下载速度快、可批量、可自定义视频链接，还方便对下载下来的视频进行自动化后续处理。（如果简单的下载，NDM 和 IDM 也能做到）</p>
+]]></content>
+      <categories>
+        <category>测评推荐</category>
+      </categories>
+      <tags>
+        <tag>下载器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分屏软件</title>
     <url>/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/%E5%88%86%E5%B1%8F%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<span id="more"></span>
@@ -407,60 +461,6 @@
       </categories>
       <tags>
         <tag>文件同步</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>下载器</title>
-    <url>/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h2><h3 id="NDM"><a href="#NDM" class="headerlink" title="NDM"></a>NDM</h3><p>可能我们都知道，下载届有一个非常牛叉的神器：Inet Download Manager —— IDM。这个下载神器不仅支持多线程加速下载功能，还具备网页视频嗅探功能。当然，它还具备其他很多我尚未尝试过的功能，平时用得最多也就是这两个了，用过的也都说 nice，真香。</p>
-<p>但在我切换到 macOS 系统后，发现 IDM 不兼容 macOS，所以找了一些可以替代 IDM 的下载器，最后发现有一款与 IDM 很相似的下载器，同样具备 IDM 那两个我个人常用的功能。这个下载器就是今天要介绍的：NDM</p>
-<h4 id="介绍与安装使用"><a href="#介绍与安装使用" class="headerlink" title="介绍与安装使用"></a>介绍与安装使用</h4><p>NDM（Neat Download Manager）这款软件完全免费无广告，支持 Windows 和 macOS</p>
-<p>官方网站：<a href="https://www.neatdownloadmanager.com/index.php/en/">https://www.neatdownloadmanager.com/index.php/en/</a></p>
-<p>可以直接上官网下载，也可以通过以下链接下载：</p>
-<blockquote>
-<p>链接: <a href="https://pan.baidu.com/s/1dxJHR0GhSgEGhGFTFEQ5rQ">https://pan.baidu.com/s/1dxJHR0GhSgEGhGFTFEQ5rQ</a> 提取码: sae6 </p>
-</blockquote>
-<p>安装后打开的界面如下：</p>
-<p><img src="https://oss.puppetdev.top/image/note/8c38c42921f5bbf782ab1772ceac2fd8.png" alt="image-20211128234641307"></p>
-<p>这样子就可以使用了，APP 非常简洁。配合上浏览器插件，可以实现视频嗅探功能</p>
-<h4 id="嗅探功能"><a href="#嗅探功能" class="headerlink" title="嗅探功能"></a>嗅探功能</h4><p>给谷歌浏览器安装以下插件：</p>
-<p><img src="https://oss.puppetdev.top/image/note/f14e18fdb9d258b77ccecb6f7570cccc.png" alt="image-20211129090733277"></p>
-<p>接着随便打开一个视频网站测试</p>
-<img src="https://oss.puppetdev.top/image/note/6de00adeff981ec61fcc02090e88bd68.png" alt="image-20211129090930346" style="zoom:33%;" />
-
-<p>可以看到上面的红色方框中有三个可下载文件：1、2、3，视频越大，说明越高清。直接点击想要的清晰度视频，就可以实现下载。</p>
-<img src="https://oss.puppetdev.top/image/note/996df77160b6c13c7f3a50f7823bf0d1.png" alt="image-20211129091209091" style="zoom:50%;" />
-
-<h3 id="qBitTorrent"><a href="#qBitTorrent" class="headerlink" title="qBitTorrent"></a>qBitTorrent</h3><p>官网：<a href="https://github.com/qbittorrent/qBittorrent">https://github.com/qbittorrent/qBittorrent</a></p>
-<p>下载地址：<a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases">https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases</a></p>
-<p>种子与磁力链接的下载神器，推荐使用。</p>
-<p>在 Windows 上如果迅雷不是很好用，可以用它来代替迅雷；在 MacOS 上可以用它来代替 Folx</p>
-<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><h3 id="Downie"><a href="#Downie" class="headerlink" title="Downie"></a>Downie</h3><p>专门用来下载视频的，支持很多主流网站视频的一键下载</p>
-<p>跟 NDM 相比，NDM 属于通用型，Downie 属于专业性</p>
-<h3 id="Folx"><a href="#Folx" class="headerlink" title="Folx"></a>Folx</h3><p>不管是 NDM 还是 Downie 都无法下载磁链或 bt，所以还是需要 Folx、迅雷 或者 uTorrent 来补充</p>
-<p>但个人使用后的感觉是 Folx 在 bt 搜索方面做得非常好，但是下载速度，且一言难尽，亦或者是个人配置问题，有哪位大佬知道的，能不能指导一下，不胜感激。</p>
-<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="IDM"><a href="#IDM" class="headerlink" title="IDM"></a>IDM</h3><p>最强下载神器，除了不能下载磁链和 bt，其他都可以，速度飞快且稳定，配置还非常简单。</p>
-<h3 id="迅雷"><a href="#迅雷" class="headerlink" title="迅雷"></a>迅雷</h3><p>弥补 IDM 无法下载磁链和 bt 的不足。也可以用 Motrix 或 qBitTorren 等替换</p>
-<h3 id="蜈蚣文件"><a href="#蜈蚣文件" class="headerlink" title="蜈蚣文件"></a>蜈蚣文件</h3><p>蜈蚣文件是一款免费开源的下载神器，支持 Windows 和 Linux 平台（目前为 1.9 版本，暂不支持 Mac OS）</p>
-<p>其官网为：<a href="http://www.filecxx.com/zh_CN/index.html">http://www.filecxx.com/zh_CN/index.html</a></p>
-<p>蜈蚣文件具备 IDM 和 NDM 的所有功能，而 IDM 和 NDM 所没有的功能但常用的，它也基本都有，例如 BT 下载、磁力链接下载等等。</p>
-<p>同时，它还与 IDM 和 NDM 类似，支持在各个主流浏览器中安装插件，捕获下载链接，进行下载。</p>
-<h2 id="总结与推荐"><a href="#总结与推荐" class="headerlink" title="总结与推荐"></a>总结与推荐</h2><h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><p>迅雷 + IDM</p>
-<p>很多人都说 QBitTorrent 好，但是在一些冷门种子上，迅雷还是很能打的，QBitTorrent 下载不了的，迅雷也能下载。对于热门种子来说，两者的差异并不大。</p>
-<p>蜈蚣文件的功能很全面，不仅能进行普通下载，也能下载种子，但是体验上，很多时候都没有速度，不是很行。</p>
-<p>对于普通下载来说，在 Windows 上，IDM 还是最强的，虽然 NDM 也很强（两者功能相差无几），但是如果让我选，我选 IDM</p>
-<h3 id="MacOS-1"><a href="#MacOS-1" class="headerlink" title="MacOS"></a>MacOS</h3><p>NDM + qBitTorrent</p>
-<p>因为 IDM 没有 MacOS 版本，所以只能用 NDM 代替</p>
-<p>如果下载种子，则推荐用 QBitTorrent，Folx 说是 MacOS 上最强的种子下载神器，但在体验上，我并没有感受到（可能是因为在国内，亦或者是配置问题？）但是 Folx 提供了另一个很强大的功能：种子搜索。不过只能搜索国外的种子。总之，个人还是觉得 QBitTorrent 更好用些</p>
-<p>Downie 更适合于专门下载视频的，如果需要时常从油管、B站等这类网站上下载视频，那这个软件确实是神器，下载速度快、可批量、可自定义视频链接，还方便对下载下来的视频进行自动化后续处理。（如果简单的下载，NDM 和 IDM 也能做到）</p>
-]]></content>
-      <categories>
-        <category>测评推荐</category>
-      </categories>
-      <tags>
-        <tag>下载器</tag>
       </tags>
   </entry>
   <entry>
@@ -894,6 +894,22 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL连接数据库报错</title>
+    <url>/20220731/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/MySQL%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>本文记录的是在连接到 MySQL 数据库过程中遇到的各种报错和对应的解决方案</p>
+<span id="more"></span>
+
+<p>[[toc]]</p>
+<h2 id="MySQL8-0-连接报错：Could-not-create-connection-to-database-server"><a href="#MySQL8-0-连接报错：Could-not-create-connection-to-database-server" class="headerlink" title="MySQL8.0 连接报错：Could not create connection to database server"></a>MySQL8.0 连接报错：Could not create connection to database server</h2><p><a href="https://blog.csdn.net/qq_22076345/article/details/81952035">https://blog.csdn.net/qq_22076345/article/details/81952035</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mybatis与SpringDataJpa的关系</title>
     <url>/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Mybatis%E4%B8%8ESpringDataJpa%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
     <content><![CDATA[<span id="more"></span>
@@ -973,22 +989,6 @@
       </categories>
       <tags>
         <tag>流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL连接数据库报错</title>
-    <url>/20220731/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/MySQL%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>本文记录的是在连接到 MySQL 数据库过程中遇到的各种报错和对应的解决方案</p>
-<span id="more"></span>
-
-<p>[[toc]]</p>
-<h2 id="MySQL8-0-连接报错：Could-not-create-connection-to-database-server"><a href="#MySQL8-0-连接报错：Could-not-create-connection-to-database-server" class="headerlink" title="MySQL8.0 连接报错：Could not create connection to database server"></a>MySQL8.0 连接报错：Could not create connection to database server</h2><p><a href="https://blog.csdn.net/qq_22076345/article/details/81952035">https://blog.csdn.net/qq_22076345/article/details/81952035</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1643,28 +1643,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker导入进行报错：invalid diffID for layer xx：expected “sha256:xxx</title>
-    <url>/20221201/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9ADocker%E5%AF%BC%E5%85%A5%E9%95%9C%E5%83%8F%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h2 id="1-1-问题描述"><a href="#1-1-问题描述" class="headerlink" title="1.1 问题描述"></a>1.1 问题描述</h2><p>docker 导入镜像 tar 包报错，报错信息如下：</p>
-<p><img src="https://oss.puppetdev.top/image/note/e0a9732c86ce643f614c7b76901e1100.png" alt="image-20221201153103996"></p>
-<h2 id="1-2-解决方案"><a href="#1-2-解决方案" class="headerlink" title="1.2 解决方案"></a>1.2 解决方案</h2><p>通过报错信息可以看出，是导入的时候，docker 对 SHA256 哈希码进行校验，没有校验通过，说明这个镜像 tar 包被修改过。为了验证，我们可以利用 MD5 对镜像进行比对</p>
-<ol>
-<li><p>在通过 <code>docker save 镜像名称/id -o demo.tar</code> 命令导出镜像 tar 包后，计算出 tar 包的 MD5 值</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">md5sum</span> demo.tar  <span class="comment"># md5sum 是 Linux 自带的命令</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将 demo.tar 从 Linux 下载下来后，再次对 demo.tar 计算 MD5 值</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">certutil -hashfile demo.tar MD5  <span class="comment"># certutil 是 Windows 自带的程序</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>计算后，对比上面两步的 MD5 值，如果不一致，说明从 Linux 将 demo.tar 包下载下来时，可能因为网络等原因，导致数据发生了改变，从而产生这个错误。只需要重新从 Linux 下载 demo.tar 即可，下载后再次计算 MD5 进行对比，直到一致。</p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件绿色版、便携版、破解版和精简版的区别</title>
     <url>/20220530/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E7%BB%BF%E8%89%B2%E7%89%88%E3%80%81%E4%BE%BF%E6%90%BA%E7%89%88%E3%80%81%E7%A0%B4%E8%A7%A3%E7%89%88%E3%80%81%E7%B2%BE%E7%AE%80%E7%89%88%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<p>当我们在网上下载软件时，时常会看到各式各样的软件版本，绿色版、便携版、精简版…等等，这些版本都意味着什么呢？又有什么区别呢？</p>
@@ -1693,29 +1671,25 @@
       </tags>
   </entry>
   <entry>
-    <title>解决方案：xshell无法启动</title>
-    <url>/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AXshell%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</url>
-    <content><![CDATA[<p>xshell 无法启动，提示：“要继续使用此程序，您必须应用最新的更新或使用新版本”。</p>
-<span id="more"></span>
-
-<p>[[toc]]</p>
-<p>在使用 xshell 6 时，启动要求更新版本，否则无法正常启动</p>
-<img src="https://oss.puppetdev.top/image/note/8da0dca3f0f4e83d5b97c9db2d8ac0da.png" alt="image-20210222110448584" style="zoom:67%;" />
-
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>原理：修改时间</p>
-<h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>修改电脑系统时间，例如修改为 18 年 12 月 25 日之前的时间</p>
-<p>但该方案看起来就很蠢，临时使用还好，不然为了使用这个软件还得去改时间。</p>
-<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>修改 nslicense.dll 文件。该文件为一个二进制文件，需要使用特别的编辑器才能打开，否则会乱码，例如使用 C32asm、UltraEdit，我使用的是 UltraEdit，可以直接百度搜索，官网下载。该软件需要付费使用，可试用 30 天，用来改个文件绰绰有余。(也可以自己想办法破解)</p>
-<p>下载安装好 UltraEdit 后，打开 xshell 的安装目录，找到目录下的 nslicense.dll，用 UltraEdit 打开，Ctrl + F 搜索 “7F 0C 81 F9 80 33 E1 01 0F 86 81”，将 86 改为 83，保存。<strong>注意备份 nslicense.dll 文件，避免失败重装</strong></p>
-<p>完成。</p>
+    <title>Docker导入进行报错：invalid diffID for layer xx：expected “sha256:xxx</title>
+    <url>/20221201/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9ADocker%E5%AF%BC%E5%85%A5%E9%95%9C%E5%83%8F%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h2 id="1-1-问题描述"><a href="#1-1-问题描述" class="headerlink" title="1.1 问题描述"></a>1.1 问题描述</h2><p>docker 导入镜像 tar 包报错，报错信息如下：</p>
+<p><img src="https://oss.puppetdev.top/image/note/e0a9732c86ce643f614c7b76901e1100.png" alt="image-20221201153103996"></p>
+<h2 id="1-2-解决方案"><a href="#1-2-解决方案" class="headerlink" title="1.2 解决方案"></a>1.2 解决方案</h2><p>通过报错信息可以看出，是导入的时候，docker 对 SHA256 哈希码进行校验，没有校验通过，说明这个镜像 tar 包被修改过。为了验证，我们可以利用 MD5 对镜像进行比对</p>
+<ol>
+<li><p>在通过 <code>docker save 镜像名称/id -o demo.tar</code> 命令导出镜像 tar 包后，计算出 tar 包的 MD5 值</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">md5sum</span> demo.tar  <span class="comment"># md5sum 是 Linux 自带的命令</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将 demo.tar 从 Linux 下载下来后，再次对 demo.tar 计算 MD5 值</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">certutil -hashfile demo.tar MD5  <span class="comment"># certutil 是 Windows 自带的程序</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>计算后，对比上面两步的 MD5 值，如果不一致，说明从 Linux 将 demo.tar 包下载下来时，可能因为网络等原因，导致数据发生了改变，从而产生这个错误。只需要重新从 Linux 下载 demo.tar 即可，下载后再次计算 MD5 进行对比，直到一致。</p>
 ]]></content>
       <categories>
         <category>技术文章</category>
       </categories>
       <tags>
-        <tag>软件</tag>
-        <tag>解决方案</tag>
-        <tag>Xshell</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -1741,6 +1715,32 @@
         <tag>IDEA</tag>
         <tag>Web</tag>
         <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决方案：xshell无法启动</title>
+    <url>/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9AXshell%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</url>
+    <content><![CDATA[<p>xshell 无法启动，提示：“要继续使用此程序，您必须应用最新的更新或使用新版本”。</p>
+<span id="more"></span>
+
+<p>[[toc]]</p>
+<p>在使用 xshell 6 时，启动要求更新版本，否则无法正常启动</p>
+<img src="https://oss.puppetdev.top/image/note/8da0dca3f0f4e83d5b97c9db2d8ac0da.png" alt="image-20210222110448584" style="zoom:67%;" />
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>原理：修改时间</p>
+<h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>修改电脑系统时间，例如修改为 18 年 12 月 25 日之前的时间</p>
+<p>但该方案看起来就很蠢，临时使用还好，不然为了使用这个软件还得去改时间。</p>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>修改 nslicense.dll 文件。该文件为一个二进制文件，需要使用特别的编辑器才能打开，否则会乱码，例如使用 C32asm、UltraEdit，我使用的是 UltraEdit，可以直接百度搜索，官网下载。该软件需要付费使用，可试用 30 天，用来改个文件绰绰有余。(也可以自己想办法破解)</p>
+<p>下载安装好 UltraEdit 后，打开 xshell 的安装目录，找到目录下的 nslicense.dll，用 UltraEdit 打开，Ctrl + F 搜索 “7F 0C 81 F9 80 33 E1 01 0F 86 81”，将 86 改为 83，保存。<strong>注意备份 nslicense.dll 文件，避免失败重装</strong></p>
+<p>完成。</p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>解决方案</tag>
+        <tag>Xshell</tag>
       </tags>
   </entry>
   <entry>
@@ -2006,6 +2006,25 @@
       </tags>
   </entry>
   <entry>
+    <title>如何去找电子书籍、教程等资源</title>
+    <url>/20220315/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E5%8E%BB%E6%89%BE%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D%E3%80%81%E6%95%99%E7%A8%8B%E7%AD%89%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<p>平时我们经常需要各种各样的资源，但不知道如何去找，又或者没有形成系统性的搜索方式，而没有办法找到自己想要的资源，这篇文章就主要记录一下平时个人查找资源的方式。</p>
+<p>可以说，掌握了这些技巧，几乎市面上可以看到的任何书籍、任何文档、教程，都能够找到。再也不用买很多书籍，占地方还重，妈妈再也不用担心我的学习了。</p>
+<span id="more"></span>
+
+<h2 id="电子书籍"><a href="#电子书籍" class="headerlink" title="电子书籍"></a>电子书籍</h2><h3 id="网盘搜"><a href="#网盘搜" class="headerlink" title="网盘搜"></a>网盘搜</h3><ul>
+<li>阿里云盘：<a href="https://www.alipansou.com/">https://www.alipansou.com/</a></li>
+<li>百度网盘：<a href="https://www.lzpan.com/">https://www.lzpan.com/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>资源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>创业团队</title>
     <url>/20220921/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E5%88%9B%E4%B8%9A%E5%9B%A2%E9%98%9F/</url>
     <content><![CDATA[<h1 id="创业团队"><a href="#创业团队" class="headerlink" title="创业团队"></a>创业团队</h1><blockquote>
@@ -2025,25 +2044,6 @@
       </categories>
       <tags>
         <tag>创业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何去找电子书籍、教程等资源</title>
-    <url>/20220315/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E5%8E%BB%E6%89%BE%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D%E3%80%81%E6%95%99%E7%A8%8B%E7%AD%89%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<p>平时我们经常需要各种各样的资源，但不知道如何去找，又或者没有形成系统性的搜索方式，而没有办法找到自己想要的资源，这篇文章就主要记录一下平时个人查找资源的方式。</p>
-<p>可以说，掌握了这些技巧，几乎市面上可以看到的任何书籍、任何文档、教程，都能够找到。再也不用买很多书籍，占地方还重，妈妈再也不用担心我的学习了。</p>
-<span id="more"></span>
-
-<h2 id="电子书籍"><a href="#电子书籍" class="headerlink" title="电子书籍"></a>电子书籍</h2><h3 id="网盘搜"><a href="#网盘搜" class="headerlink" title="网盘搜"></a>网盘搜</h3><ul>
-<li>阿里云盘：<a href="https://www.alipansou.com/">https://www.alipansou.com/</a></li>
-<li>百度网盘：<a href="https://www.lzpan.com/">https://www.lzpan.com/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活随笔</category>
-      </categories>
-      <tags>
-        <tag>资源</tag>
       </tags>
   </entry>
   <entry>
@@ -2207,30 +2207,6 @@
       </tags>
   </entry>
   <entry>
-    <title>纯小白如何自学编程</title>
-    <url>/20221025/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="纯小白如何自学编程"><a href="#纯小白如何自学编程" class="headerlink" title="纯小白如何自学编程"></a>纯小白如何自学编程</h1><p>看似一个简单的问题但包藏着很多信息，绝对不是简单几句话就能说清楚。首先程序员也分为很多种。例如从大的方向来说，有后端、web，移动端、嵌入式等等。再从编程语言方向细分，如后端程序员又分为 Java、PHP、.NET 等等，所以无论是自学还是报班都要先搞清楚你要学习或者你感兴趣的方向，其次再确定编程语言，之后再开始学习。这个顺序不搞清楚，自学起来就会稀里糊涂，越学越累，走很多弯路。</p>
-<p>即使我这么描述了一圈，还是有一些读者接着问，“后端程序员又是个啥玩意？”，每次听到这类问题我都感觉很无语，不知道怎么解释。但闲下来后再想想，这些茫然我也是经历过，被嘲笑过，被无语过，毕竟我也算是 0 基础自学过来的，所以，今天趁着周末，我会尽可能的在自己的知识范围内为大家梳理一下这些问题。</p>
-<p>首先就从大家经常接触的前端开始。这里的前端并不是单单指 web，其实应该叫终端。再通俗点说可以理解为给用户使用的产品。你打开的一个网页、一个 App、或者 PC 端的一个软件，都可以理解为前端，而这些产品需要程序员用不同的编程语言开发。这里先给大家大致梳理一下关于前端的一下东西。</p>
-<p><img src="https://oss.puppetdev.top/image/note/fc2b65c9fdb321e1cf8ae49a457c85c0.png" alt="image-20210904124356657"></p>
-<p>这图应该还算清晰吧，假如你想学习 Android 开发，那首先学习的编程语言就应该是 Java 或者 Kotlin。当然这张图还是非常笼统的，只不过是让大家先有个简单的认识，毕竟是给小白写的不能太复杂。前端的东西相对还是很好理解的，毕竟看得见摸得着。</p>
-<p>那后端又是啥玩意呢？可以简单理解为运行在远程服务器上的代码程序，主要是为前端提供数据。例如网站上展示的文字图片；用户的登录及用户信息的存储等，都是有后端程序完成的。而一个最基本的后端也至少包含两部分：处理程序和数据库。能够开发后端程序的技术也是有很多，不同的技术也使用不用的编程语言。大概如下图。</p>
-<img src="https://oss.puppetdev.top/image/note/9d72224e89969bf1f219a77c9288ad74.png" alt="image-20210904124442490" style="zoom:80%;" />
-
-<p>再强调一下，此图只是一个最基本的后端，而后端范畴远不止于此。这里就不扩展开来讲了。很多东西都是在学习的过程中慢慢理解的。</p>
-<p>那么前后端是如何通信的呢。那就不得不说到 HTTP 请求了。</p>
-<p><img src="https://oss.puppetdev.top/image/note/f3dfa1cd1333d17a545018034e526b28.png" alt="image-20210904124507450"></p>
-<p>至此，别说是小白了，就算是个猴子也应该对前后端&#x2F;对自学编程有初步的认识了吧！（开个玩笑）</p>
-<p>那么肯定又有读者会纠结：到底是学习前端还是后端呢？哪个简单？哪个工资高？只能说因人而异吧。作为初学者也别太纠结，都学就是了，先找找感觉，后面再选择一个技术栈深造！后端的程序员多少要懂点前端，而前端程序员大概率都会点后端技术。</p>
-]]></content>
-      <categories>
-        <category>生活随笔</category>
-      </categories>
-      <tags>
-        <tag>自学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript数组递归：构建ElementUI级联选择器的树形数据</title>
     <url>/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/JavaScript%E6%95%B0%E7%BB%84%E9%80%92%E5%BD%92%EF%BC%9A%E6%9E%84%E5%BB%BAElementUI%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<h2 id="前端处理"><a href="#前端处理" class="headerlink" title="前端处理"></a>前端处理</h2><p>通常，我们前端在开发管理后台的时候，会选择 <code>vue+element</code> 这样的技术栈去实现。但我们后端给的数据格式通常并不符合 <code>element</code> 的参数数据要求。比如，级联选择器 <code>cascader</code> 的参数数据格式如下：</p>
@@ -2260,27 +2236,6 @@
       <tags>
         <tag>ElementUI</tag>
         <tag>递归</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>el-date-picker的常规使用</title>
-    <url>/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/el-date-picker%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="el-date-picker的常规使用"><a href="#el-date-picker的常规使用" class="headerlink" title="el-date-picker的常规使用"></a>el-date-picker的常规使用</h1><p>HTML 页面部分</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;时间&quot;</span> <span class="attr">prop</span>=<span class="string">&quot;testDate&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-date-picker</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">&quot;testDate&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tyep</span>=<span class="string">&quot;daterange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">start-placeholde</span>=<span class="string">&quot;开始日期&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">end-placeholde</span>=<span class="string">&quot;结束日期&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<p> JavaScript 部分</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    startTime = <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    endTime = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">  ....</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="attr">testDate</span>: &#123;</span><br><span class="line">      <span class="title function_">get</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> [<span class="variable language_">this</span>.<span class="property">startTime</span>, <span class="variable language_">this</span>.<span class="property">endTime</span>]</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="title function_">set</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="comment">// 此处需要对 val 进行判空，因为 el-date-picker 的清空按钮点击之后会将 testDate 置为 null</span></span><br><span class="line">        <span class="keyword">if</span> (val) &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="title function_">dateFormate</span>(val[<span class="number">0</span>])</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="title function_">dateFormate</span>(val[<span class="number">0</span>])</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attr">method</span>: &#123;</span><br><span class="line">    <span class="title function_">reset</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">       <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>ElementUI</tag>
       </tags>
   </entry>
   <entry>
@@ -2325,6 +2280,72 @@
       </categories>
       <tags>
         <tag>ElementUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>el-date-picker的常规使用</title>
+    <url>/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/el-date-picker%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="el-date-picker的常规使用"><a href="#el-date-picker的常规使用" class="headerlink" title="el-date-picker的常规使用"></a>el-date-picker的常规使用</h1><p>HTML 页面部分</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;时间&quot;</span> <span class="attr">prop</span>=<span class="string">&quot;testDate&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-date-picker</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">&quot;testDate&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tyep</span>=<span class="string">&quot;daterange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">start-placeholde</span>=<span class="string">&quot;开始日期&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">end-placeholde</span>=<span class="string">&quot;结束日期&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p> JavaScript 部分</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    startTime = <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    endTime = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">  ....</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="attr">testDate</span>: &#123;</span><br><span class="line">      <span class="title function_">get</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> [<span class="variable language_">this</span>.<span class="property">startTime</span>, <span class="variable language_">this</span>.<span class="property">endTime</span>]</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="title function_">set</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="comment">// 此处需要对 val 进行判空，因为 el-date-picker 的清空按钮点击之后会将 testDate 置为 null</span></span><br><span class="line">        <span class="keyword">if</span> (val) &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="title function_">dateFormate</span>(val[<span class="number">0</span>])</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="title function_">dateFormate</span>(val[<span class="number">0</span>])</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attr">method</span>: &#123;</span><br><span class="line">    <span class="title function_">reset</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="variable language_">this</span>.<span class="property">startTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">       <span class="variable language_">this</span>.<span class="property">endTime</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>ElementUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决方案：el-cascader级联选择器出现空面板的问题</title>
+    <url>/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ael-cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E9%9D%A2%E6%9D%BF%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="Cascader级联选择器出现空面板的问题"><a href="#Cascader级联选择器出现空面板的问题" class="headerlink" title="Cascader级联选择器出现空面板的问题"></a>Cascader级联选择器出现空面板的问题</h1><blockquote>
+<p>vue、element、el-element</p>
+</blockquote>
+<img src="https://oss.puppetdev.top/image/note/0a8653f711ba357386a3201f78c03b6e.png" alt="image-20210617122750695" style="zoom: 67%;" />
+
+<p>出现空白面板是因为树形结构的数据的<strong>最底层 children 是个空数组</strong>。遇到这种问题，前端可以通过递归，将 children 长度为 0 的节点对象的 children 属性删除，或将值赋为 undefined</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">cleanData</span>(<span class="params">itemList</span>) &#123;  <span class="comment">// 将根节点的 children 传入，传入的只是数据对象的引用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> item <span class="keyword">of</span> itemList) &#123;</span><br><span class="line">        <span class="keyword">if</span> (item.<span class="property">children</span>.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">delete</span> item.<span class="property">children</span></span><br><span class="line">        <span class="keyword">else</span> <span class="variable language_">this</span>.<span class="title function_">cleanData</span>(item.<span class="property">children</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> itemList </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>解决方案</tag>
+        <tag>ElementUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>纯小白如何自学编程</title>
+    <url>/20221025/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="纯小白如何自学编程"><a href="#纯小白如何自学编程" class="headerlink" title="纯小白如何自学编程"></a>纯小白如何自学编程</h1><p>看似一个简单的问题但包藏着很多信息，绝对不是简单几句话就能说清楚。首先程序员也分为很多种。例如从大的方向来说，有后端、web，移动端、嵌入式等等。再从编程语言方向细分，如后端程序员又分为 Java、PHP、.NET 等等，所以无论是自学还是报班都要先搞清楚你要学习或者你感兴趣的方向，其次再确定编程语言，之后再开始学习。这个顺序不搞清楚，自学起来就会稀里糊涂，越学越累，走很多弯路。</p>
+<p>即使我这么描述了一圈，还是有一些读者接着问，“后端程序员又是个啥玩意？”，每次听到这类问题我都感觉很无语，不知道怎么解释。但闲下来后再想想，这些茫然我也是经历过，被嘲笑过，被无语过，毕竟我也算是 0 基础自学过来的，所以，今天趁着周末，我会尽可能的在自己的知识范围内为大家梳理一下这些问题。</p>
+<p>首先就从大家经常接触的前端开始。这里的前端并不是单单指 web，其实应该叫终端。再通俗点说可以理解为给用户使用的产品。你打开的一个网页、一个 App、或者 PC 端的一个软件，都可以理解为前端，而这些产品需要程序员用不同的编程语言开发。这里先给大家大致梳理一下关于前端的一下东西。</p>
+<p><img src="https://oss.puppetdev.top/image/note/fc2b65c9fdb321e1cf8ae49a457c85c0.png" alt="image-20210904124356657"></p>
+<p>这图应该还算清晰吧，假如你想学习 Android 开发，那首先学习的编程语言就应该是 Java 或者 Kotlin。当然这张图还是非常笼统的，只不过是让大家先有个简单的认识，毕竟是给小白写的不能太复杂。前端的东西相对还是很好理解的，毕竟看得见摸得着。</p>
+<p>那后端又是啥玩意呢？可以简单理解为运行在远程服务器上的代码程序，主要是为前端提供数据。例如网站上展示的文字图片；用户的登录及用户信息的存储等，都是有后端程序完成的。而一个最基本的后端也至少包含两部分：处理程序和数据库。能够开发后端程序的技术也是有很多，不同的技术也使用不用的编程语言。大概如下图。</p>
+<img src="https://oss.puppetdev.top/image/note/9d72224e89969bf1f219a77c9288ad74.png" alt="image-20210904124442490" style="zoom:80%;" />
+
+<p>再强调一下，此图只是一个最基本的后端，而后端范畴远不止于此。这里就不扩展开来讲了。很多东西都是在学习的过程中慢慢理解的。</p>
+<p>那么前后端是如何通信的呢。那就不得不说到 HTTP 请求了。</p>
+<p><img src="https://oss.puppetdev.top/image/note/f3dfa1cd1333d17a545018034e526b28.png" alt="image-20210904124507450"></p>
+<p>至此，别说是小白了，就算是个猴子也应该对前后端&#x2F;对自学编程有初步的认识了吧！（开个玩笑）</p>
+<p>那么肯定又有读者会纠结：到底是学习前端还是后端呢？哪个简单？哪个工资高？只能说因人而异吧。作为初学者也别太纠结，都学就是了，先找找感觉，后面再选择一个技术栈深造！后端的程序员多少要懂点前端，而前端程序员大概率都会点后端技术。</p>
+]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>自学</tag>
       </tags>
   </entry>
   <entry>
@@ -2386,27 +2407,6 @@
       <tags>
         <tag>解决方案</tag>
         <tag>Vant</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决方案：el-cascader级联选择器出现空面板的问题</title>
-    <url>/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ael-cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E9%9D%A2%E6%9D%BF%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="Cascader级联选择器出现空面板的问题"><a href="#Cascader级联选择器出现空面板的问题" class="headerlink" title="Cascader级联选择器出现空面板的问题"></a>Cascader级联选择器出现空面板的问题</h1><blockquote>
-<p>vue、element、el-element</p>
-</blockquote>
-<img src="https://oss.puppetdev.top/image/note/0a8653f711ba357386a3201f78c03b6e.png" alt="image-20210617122750695" style="zoom: 67%;" />
-
-<p>出现空白面板是因为树形结构的数据的<strong>最底层 children 是个空数组</strong>。遇到这种问题，前端可以通过递归，将 children 长度为 0 的节点对象的 children 属性删除，或将值赋为 undefined</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">cleanData</span>(<span class="params">itemList</span>) &#123;  <span class="comment">// 将根节点的 children 传入，传入的只是数据对象的引用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> item <span class="keyword">of</span> itemList) &#123;</span><br><span class="line">        <span class="keyword">if</span> (item.<span class="property">children</span>.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">delete</span> item.<span class="property">children</span></span><br><span class="line">        <span class="keyword">else</span> <span class="variable language_">this</span>.<span class="title function_">cleanData</span>(item.<span class="property">children</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> itemList </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>解决方案</tag>
-        <tag>ElementUI</tag>
       </tags>
   </entry>
   <entry>
@@ -2631,33 +2631,10 @@
       </tags>
   </entry>
   <entry>
-    <title>解决方案：SpringBoot-前端时间传递到后端少了8个小时的问题</title>
-    <url>/20221109/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%90%8E%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9ASpringBoot-%E5%89%8D%E7%AB%AF%E6%97%B6%E9%97%B4%E4%BC%A0%E9%80%92%E5%88%B0%E5%90%8E%E7%AB%AF%E5%B0%91%E4%BA%868%E4%B8%AA%E5%B0%8F%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>前端向后端发送 POST 请求，请求数据为 JSON 格式，其中有个字段为日期，后端 SpringBoot 通过 Date 类型去接收入参，结果发现比当前时间少了 8 个小时。</p>
-<p>初步分析是时区导致的。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>第一步：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">	<span class="attr">jackson:</span></span><br><span class="line">		<span class="string">//</span> <span class="string">注意格式不要写错了，例如</span> <span class="string">HH</span> <span class="string">不要写出</span> <span class="string">hh，否则可能会有其他问题</span></span><br><span class="line">	    <span class="attr">date-format:</span> <span class="string">yyyy-MM-dd</span> <span class="string">HH:mm:ss</span></span><br><span class="line">	    <span class="attr">time-zone:</span> <span class="string">GMT+8</span></span><br></pre></td></tr></table></figure>
-
-<p>第二步：时区用 <code>Asia/Shanghai</code> 或者 <code>GMT%2B8</code></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">jdbc:mysql://127.0.0.1:3306/aaaaa?</span></span><br><span class="line"><span class="string">useUnicode=true&amp;</span></span><br><span class="line"><span class="string">characterEncoding=utf-8&amp;</span></span><br><span class="line"><span class="string">useSSL=true&amp;</span></span><br><span class="line"><span class="string">serverTimezone=Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>解决方案</tag>
-        <tag>SpringBoot</tag>
-        <tag>时区问题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>slf4j、Log4j、Log4j2与Logback关系详解和相关用法</title>
     <url>/20220331/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%90%8E%E7%AB%AF/slf4j%E3%80%81log4j%E3%80%81log4j2%E4%B8%8Elogback%E5%85%B3%E7%B3%BB%E8%AF%A6%E8%A7%A3%E5%92%8C%E7%9B%B8%E5%85%B3%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p>作为一名 Java 开发程序员，我们对项目中的日志打印肯定不会陌生，但是有没有发现，Java 的日志框架有很多，琳罗满目，这些框架有什么区别呢？有什么关系呢？在了解之后，仅以本文做一点粗浅的记录。</p>
+    <content><![CDATA[<p><img src="https://oss.puppetdev.top/image/note/fe2a2b3d705d7e9de12b90f11d401666.jpg" alt="log4j log.jpg"></p>
+<p>作为一名 Java 开发程序员，我们对项目中的日志打印肯定不会陌生，但是有没有发现，Java 的日志框架有很多，琳罗满目，这些框架有什么区别呢？有什么关系呢？在了解之后，仅以本文做一点粗浅的记录。</p>
 <span id="more"></span>
 
 <h2 id="1-1-slf4j"><a href="#1-1-slf4j" class="headerlink" title="1.1 slf4j"></a>1.1 slf4j</h2><p>slf4j 全称为：The Simple Logging Facade for Java</p>
@@ -2761,25 +2738,27 @@
       </tags>
   </entry>
   <entry>
-    <title>解决方案：使用@Async或@Transactional注解失效</title>
-    <url>/20220719/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%90%8E%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E4%BD%BF%E7%94%A8@Async%E6%88%96@Transactional%E6%B3%A8%E8%A7%A3%E5%A4%B1%E6%95%88/</url>
-    <content><![CDATA[<p>本文记录个人在使用 @Async 和 @Transactional 注解时，遇到的问题及对应的解决方案</p>
-<span id="more"></span>
+    <title>解决方案：SpringBoot-前端时间传递到后端少了8个小时的问题</title>
+    <url>/20221109/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%90%8E%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9ASpringBoot-%E5%89%8D%E7%AB%AF%E6%97%B6%E9%97%B4%E4%BC%A0%E9%80%92%E5%88%B0%E5%90%8E%E7%AB%AF%E5%B0%91%E4%BA%868%E4%B8%AA%E5%B0%8F%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>前端向后端发送 POST 请求，请求数据为 JSON 格式，其中有个字段为日期，后端 SpringBoot 通过 Date 类型去接收入参，结果发现比当前时间少了 8 个小时。</p>
+<p>初步分析是时区导致的。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>第一步：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">	<span class="attr">jackson:</span></span><br><span class="line">		<span class="string">//</span> <span class="string">注意格式不要写错了，例如</span> <span class="string">HH</span> <span class="string">不要写出</span> <span class="string">hh，否则可能会有其他问题</span></span><br><span class="line">	    <span class="attr">date-format:</span> <span class="string">yyyy-MM-dd</span> <span class="string">HH:mm:ss</span></span><br><span class="line">	    <span class="attr">time-zone:</span> <span class="string">GMT+8</span></span><br></pre></td></tr></table></figure>
 
-<p>参考如下：</p>
-<ul>
-<li><a href="https://blog.csdn.net/Dongguabai/article/details/80788585">分析使用@Async或@Transactional注解失效（解决使用AopContext.currentProxy()出现”Cannot find current proxy“）_Dongguabai的博客-CSDN博客</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1497700">从@Async案例找到Spring框架的bug：exposeProxy&#x3D;true不生效原因大剖析+最佳解决方案【享学Spring】 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></li>
-<li><a href="https://blog.csdn.net/lvxiucai/article/details/101758179">解决No thread-bound request found: Are you referring to request attributes outside of an actual web re_lvxiucai的博客-CSDN博客</a></li>
-</ul>
+<p>第二步：时区用 <code>Asia/Shanghai</code> 或者 <code>GMT%2B8</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">jdbc:mysql://127.0.0.1:3306/aaaaa?</span></span><br><span class="line"><span class="string">useUnicode=true&amp;</span></span><br><span class="line"><span class="string">characterEncoding=utf-8&amp;</span></span><br><span class="line"><span class="string">useSSL=true&amp;</span></span><br><span class="line"><span class="string">serverTimezone=Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>技术文章</category>
         <category>后端</category>
       </categories>
       <tags>
-        <tag>Spring</tag>
+        <tag>解决方案</tag>
         <tag>SpringBoot</tag>
+        <tag>时区问题</tag>
       </tags>
   </entry>
   <entry>
@@ -2802,6 +2781,28 @@
       <tags>
         <tag>JDK</tag>
         <tag>解决方案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决方案：使用@Async或@Transactional注解失效</title>
+    <url>/20220719/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%90%8E%E7%AB%AF/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E4%BD%BF%E7%94%A8@Async%E6%88%96@Transactional%E6%B3%A8%E8%A7%A3%E5%A4%B1%E6%95%88/</url>
+    <content><![CDATA[<p>本文记录个人在使用 @Async 和 @Transactional 注解时，遇到的问题及对应的解决方案</p>
+<span id="more"></span>
+
+<p>参考如下：</p>
+<ul>
+<li><a href="https://blog.csdn.net/Dongguabai/article/details/80788585">分析使用@Async或@Transactional注解失效（解决使用AopContext.currentProxy()出现”Cannot find current proxy“）_Dongguabai的博客-CSDN博客</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1497700">从@Async案例找到Spring框架的bug：exposeProxy&#x3D;true不生效原因大剖析+最佳解决方案【享学Spring】 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></li>
+<li><a href="https://blog.csdn.net/lvxiucai/article/details/101758179">解决No thread-bound request found: Are you referring to request attributes outside of an actual web re_lvxiucai的博客-CSDN博客</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
 </search>
