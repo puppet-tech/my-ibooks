@@ -15,6 +15,8 @@ categories:
 date: 2022-03-31 00:00:00
 ---
 
+![log4j log.jpg](https://oss.puppetdev.top/image/note/fe2a2b3d705d7e9de12b90f11d401666.jpg)
+
 作为一名 Java 开发程序员，我们对项目中的日志打印肯定不会陌生，但是有没有发现，Java 的日志框架有很多，琳罗满目，这些框架有什么区别呢？有什么关系呢？在了解之后，仅以本文做一点粗浅的记录。
 
 <!-- more -->
