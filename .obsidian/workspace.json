@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
+                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5
+    "width": 373.5,
+    "collapsed": true
   },
   "right": {
     "id": "5eb3e75808d560d6",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
+                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
+                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +137,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md"
+                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md"
               }
             }
           }
@@ -176,8 +177,16 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "17943fc62e3a267a",
+  "active": "99f72b7bd613a56c",
   "lastOpenFiles": [
+    "templates/Content Intercept.md",
+    "templates/问题集合.md",
+    "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
+    "source/_posts/技术文章/不为人知的搜索技巧(人肉).md",
+    "templates/问题-解决.md",
+    "templates",
+    "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
+    "source/_posts/技术文章/Jenkins",
     "db.json",
     "public/uploads/wechat_channel.png",
     "public/20220413/技术文章/Postman四种Body类型之间的区别/index.html",
@@ -187,9 +196,6 @@
     "public/20220413/技术文章/解决方案：IDEA结合Tomcat启动web项目报错/index.html",
     "public/20220413/技术文章/解决方案：IDEA结合Tomcat启动web项目报错",
     "public/20220413/技术文章/IDEA源码阅读技巧/index.html",
-    "public/20220413/技术文章/IDEA源码阅读技巧",
-    "public/20220413/技术文章/Mybatis与SpringDataJpa的关系/index.html",
-    "public/20220413/技术文章/Mybatis与SpringDataJpa的关系",
     "public/uploads/avatar.png",
     "public/uploads/wechatpay.jpeg",
     "public/uploads/alipay.jpeg",
@@ -219,11 +225,6 @@
     "50.收藏与导航/10.代码库/40.文件操作/35.文件操作复用代码库.md",
     "50.收藏与导航/10.代码库/10.Shell脚本/10.获取请求响应状态码.md",
     "50.收藏与导航/10.代码库/30.爬虫/30.爬虫复用代码库.md",
-    "50.收藏与导航/20.轮子库/020.前端轮子.md",
-    "50.收藏与导航/20.轮子库/010.Python轮子.md",
-    "50.收藏与导航/20.轮子库/001.Java轮子.md",
-    "50.收藏与导航/50.各种镜像源帮助文档.md",
-    "50.收藏与导航/40.字体.md",
     "canvas/未命名 1.canvas",
     "canvas/未命名.canvas",
     "未命名.canvas"
