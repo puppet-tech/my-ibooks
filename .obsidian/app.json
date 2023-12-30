@@ -26,7 +26,7 @@
     "downscalePercent": 100
   },
   "promptDelete": true,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "strictLineBreaks": true,
   "foldHeading": false,
   "foldIndent": false,

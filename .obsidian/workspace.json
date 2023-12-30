@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
+                "file": "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5,
-    "collapsed": true
+    "width": 373.5
   },
   "right": {
     "id": "5eb3e75808d560d6",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
+                "file": "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
+                "file": "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +136,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md"
+                "file": "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md"
               }
             }
           }
@@ -177,34 +176,39 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "99f72b7bd613a56c",
+  "active": "17943fc62e3a267a",
   "lastOpenFiles": [
-    "templates/Content Intercept.md",
-    "templates/问题集合.md",
-    "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
-    "source/_posts/技术文章/不为人知的搜索技巧(人肉).md",
-    "templates/问题-解决.md",
-    "templates",
-    "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
-    "source/_posts/技术文章/Jenkins",
-    "db.json",
-    "public/uploads/wechat_channel.png",
-    "public/20220413/技术文章/Postman四种Body类型之间的区别/index.html",
-    "public/20220413/技术文章/Postman四种Body类型之间的区别",
-    "public/20220413/技术文章/解决方案：Xshell无法启动/index.html",
-    "public/20220413/技术文章/解决方案：Xshell无法启动",
-    "public/20220413/技术文章/解决方案：IDEA结合Tomcat启动web项目报错/index.html",
-    "public/20220413/技术文章/解决方案：IDEA结合Tomcat启动web项目报错",
-    "public/20220413/技术文章/IDEA源码阅读技巧/index.html",
-    "public/uploads/avatar.png",
-    "public/uploads/wechatpay.jpeg",
-    "public/uploads/alipay.jpeg",
-    "public/uploads/logo.png",
-    "public/images/apple-touch-icon-next.png",
-    "public/images/favicon-32x32-next.png",
+    "public/tags/知识/index.html",
+    "public/tags/知识",
+    "public/tags/浏览器/index.html",
+    "public/tags/浏览器",
+    "public/tags/求职/index.html",
+    "public/tags/求职",
+    "public/tags/时区问题/index.html",
+    "public/tags/时区问题",
+    "public/tags/日志/index.html",
+    "public/tags/日志",
+    "public/tags/文件同步/index.html",
     "public/images/logo.svg",
     "public/images/logo-algolia-nebula-blue-full.svg",
+    "public/images/favicon-16x16-next.png",
+    "public/images/favicon-32x32-next.png",
     "public/images/avatar.gif",
+    "public/images/apple-touch-icon-next.png",
+    "public/uploads/wechat_channel.png",
+    "public/uploads/wechatpay.jpeg",
+    "public/uploads/logo.png",
+    "public/uploads/avatar.png",
+    "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md",
+    "templates/问题-解决.md",
+    "templates/问题集合.md",
+    "source/_drafts/销售.md",
+    "scaffolds/post.md",
+    "scaffolds/page.md",
+    "scaffolds/draft.md",
+    "source/_posts/技术文章/后端/slf4j、log4j、log4j2与logback关系详解和相关用法.md",
+    "templates/Content Intercept.md",
+    "source/_posts/技术文章/前端/合集：Jenkins流水线前端编译打包失败问题.md",
     "source/404.md",
     "themes/next-reloaded/languages/README.md",
     "themes/next-reloaded/docs/zh-CN/README.md",
@@ -220,11 +224,6 @@
     "05.后端/15.Netty网络编程/00.Netty网络编程学习资料.md",
     "docs/10.更多技术/040.Jenkins/072.方案实现：Jenkins通过Kubernetes实现高可用.md",
     "docs/02.后端/02.数据库/02.MySQL(偏重使用)/18.存储过程&自定义函数.md",
-    "50.收藏与导航/10.代码库/20.前端/20.前端复用代码库.md",
-    "50.收藏与导航/10.代码库/10.Shell脚本/20.检查所有docker镜像的架构.md",
-    "50.收藏与导航/10.代码库/40.文件操作/35.文件操作复用代码库.md",
-    "50.收藏与导航/10.代码库/10.Shell脚本/10.获取请求响应状态码.md",
-    "50.收藏与导航/10.代码库/30.爬虫/30.爬虫复用代码库.md",
     "canvas/未命名 1.canvas",
     "canvas/未命名.canvas",
     "未命名.canvas"

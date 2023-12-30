@@ -1,3 +1,8 @@
+---
+categories:
+  - 技术文章
+  - 前端
+---
 ![the webpack how to work.png](https://oss.puppetdev.top/image/note/21c20a886cd579bb5965fea1e9843e49.png)
 
 <!--more-->
