@@ -1,8 +1,8 @@
 ---
 categories:
   - 技术文章
+title: Windows端口不可用：Error：listen EACCES：permission denied 0.0.0.0：5200
 ---
-![image.png](https://oss.puppetdev.top/image/note/2f2010b43ba763c7c96a14e1fd1afe3d.png)
 
 当我使用 Windows 11 下的 VSCode 启动 Vue 项目时，出现以下报错：
 
