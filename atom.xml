@@ -6,7 +6,7 @@
   <link href="https://blog.puppetdev.top/atom.xml" rel="self"/>
   
   <link href="https://blog.puppetdev.top/"/>
-  <updated>2024-01-02T08:51:17.216Z</updated>
+  <updated>2024-01-02T16:32:40.116Z</updated>
   <id>https://blog.puppetdev.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Windows端口不可用：Error：listen EACCES：permission denied 0.0.0.0：5200</title>
     <link href="https://blog.puppetdev.top/20240102/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Windows%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9AError%EF%BC%9Alisten%20EACCES%EF%BC%9Apermission%20denied%200.0.0.0%EF%BC%9A5200/"/>
     <id>https://blog.puppetdev.top/20240102/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Windows%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9AError%EF%BC%9Alisten%20EACCES%EF%BC%9Apermission%20denied%200.0.0.0%EF%BC%9A5200/</id>
     <published>2024-01-02T08:08:46.244Z</published>
-    <updated>2024-01-02T08:51:17.216Z</updated>
+    <updated>2024-01-02T16:32:40.116Z</updated>
     
     
     <summary type="html">&lt;p&gt;当我使用 Windows 11 下的 VSCode 启动 Vue 项目时，出现以下报错：&lt;/p&gt;
@@ -29,15 +29,17 @@
     
     
     
+    <category term="技术文章" scheme="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
+    
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>合集：Jenkins流水线前端编译打包失败问题</title>
     <link href="https://blog.puppetdev.top/20231227/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E5%90%88%E9%9B%86%EF%BC%9AJenkins%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/"/>
     <id>https://blog.puppetdev.top/20231227/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E5%90%88%E9%9B%86%EF%BC%9AJenkins%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</id>
     <published>2023-12-27T13:55:38.359Z</published>
-    <updated>2023-12-30T15:39:37.971Z</updated>
+    <updated>2024-01-02T16:33:29.179Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://oss.puppetdev.top/image/note/21c20a886cd579bb5965fea1e9843e49.png&quot; alt=&quot;the webpack how to work.png&quot;&gt;&lt;/p&gt;</summary>
@@ -369,6 +371,35 @@
   </entry>
   
   <entry>
+    <title>Mac软件推荐</title>
+    <link href="https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</id>
+    <published>2022-10-07T16:00:00.000Z</published>
+    <updated>2023-12-19T15:37:00.889Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac</summary>
+        
+      
+    
+    
+    
+    <category term="测评推荐" scheme="https://blog.puppetdev.top/categories/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="软件" scheme="https://blog.puppetdev.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="MacOS" scheme="https://blog.puppetdev.top/tags/MacOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>商用U盘</title>
     <link href="https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/"/>
     <id>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/</id>
@@ -396,35 +427,6 @@
     <category term="硬件" scheme="https://blog.puppetdev.top/tags/%E7%A1%AC%E4%BB%B6/"/>
     
     <category term="商用" scheme="https://blog.puppetdev.top/tags/%E5%95%86%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac软件推荐</title>
-    <link href="https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/"/>
-    <id>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</id>
-    <published>2022-10-07T16:00:00.000Z</published>
-    <updated>2023-12-19T15:37:00.889Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-
-&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac</summary>
-        
-      
-    
-    
-    
-    <category term="测评推荐" scheme="https://blog.puppetdev.top/categories/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="MacOS" scheme="https://blog.puppetdev.top/tags/MacOS/"/>
-    
-    <category term="软件" scheme="https://blog.puppetdev.top/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   

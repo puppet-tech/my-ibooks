@@ -15,11 +15,11 @@
     <atom:link href="https://blog.puppetdev.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>本站为木偶的技术分享博客，偶尔会聊聊其他的。主要内容涵盖Java、Python、Go、C、Cpp、前端以及对应相关的一些框架技术的研究与知识分享。</description>
-    <pubDate>Tue, 02 Jan 2024 08:51:17 GMT</pubDate>
+    <pubDate>Tue, 02 Jan 2024 16:32:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title></title>
+      <title>Windows端口不可用：Error：listen EACCES：permission denied 0.0.0.0：5200</title>
       <link>https://blog.puppetdev.top/20240102/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Windows%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9AError%EF%BC%9Alisten%20EACCES%EF%BC%9Apermission%20denied%200.0.0.0%EF%BC%9A5200/</link>
       <guid>https://blog.puppetdev.top/20240102/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Windows%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9AError%EF%BC%9Alisten%20EACCES%EF%BC%9Apermission%20denied%200.0.0.0%EF%BC%9A5200/</guid>
       <pubDate>Tue, 02 Jan 2024 08:08:46 GMT</pubDate>
@@ -30,6 +30,8 @@
       
       
       
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
+      
       
       
       <comments>https://blog.puppetdev.top/20240102/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/Windows%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9AError%EF%BC%9Alisten%20EACCES%EF%BC%9Apermission%20denied%200.0.0.0%EF%BC%9A5200/#disqus_thread</comments>
@@ -37,7 +39,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>合集：Jenkins流水线前端编译打包失败问题</title>
       <link>https://blog.puppetdev.top/20231227/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E5%90%88%E9%9B%86%EF%BC%9AJenkins%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</link>
       <guid>https://blog.puppetdev.top/20231227/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/%E5%90%88%E9%9B%86%EF%BC%9AJenkins%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%89%8D%E7%AB%AF%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</guid>
       <pubDate>Wed, 27 Dec 2023 13:55:38 GMT</pubDate>
@@ -399,6 +401,37 @@
     </item>
     
     <item>
+      <title>Mac软件推荐</title>
+      <link>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</link>
+      <guid>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</guid>
+      <pubDate>Fri, 07 Oct 2022 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/">测评推荐</category>
+      
+      
+      <category domain="https://blog.puppetdev.top/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      
+      <category domain="https://blog.puppetdev.top/tags/MacOS/">MacOS</category>
+      
+      
+      <comments>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>商用U盘</title>
       <link>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/</link>
       <guid>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/</guid>
@@ -428,37 +461,6 @@
       
       
       <comments>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/U%E7%9B%98/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Mac软件推荐</title>
-      <link>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</link>
-      <guid>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/</guid>
-      <pubDate>Fri, 07 Oct 2022 16:00:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-
-&lt;h2 id=&quot;brew-Mac&quot;&gt;&lt;a href=&quot;#brew-Mac&quot; class=&quot;headerlink&quot; title=&quot;brew(Mac)&quot;&gt;&lt;/a&gt;brew(Mac)&lt;/h2&gt;&lt;p&gt;为什么有 brew？因为 mac</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://blog.puppetdev.top/categories/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/">测评推荐</category>
-      
-      
-      <category domain="https://blog.puppetdev.top/tags/MacOS/">MacOS</category>
-      
-      <category domain="https://blog.puppetdev.top/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
-      
-      
-      <comments>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/#disqus_thread</comments>
       
     </item>
     
