@@ -4,6 +4,7 @@ categories:
   - 前端
 title: 合集：Jenkins流水线前端编译打包失败问题
 ---
+
 ![the webpack how to work.png](https://oss.puppetdev.top/image/note/21c20a886cd579bb5965fea1e9843e49.png)
 
 <!--more-->
