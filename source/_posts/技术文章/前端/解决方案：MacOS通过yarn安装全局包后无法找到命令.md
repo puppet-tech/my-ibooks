@@ -3,12 +3,12 @@ title: 解决方案：通过yarn安装全局包后无法找到命令
 sidebar: auto
 tags:
   - 包管理器
-  - yarn
   - 解决方案
+  - Yarn
 publish: true
 author:
   name: 木偶
-  link: 'https://github.com/puppetdevz'
+  link: https://github.com/puppetdevz
 categories:
   - 技术文章
   - 前端

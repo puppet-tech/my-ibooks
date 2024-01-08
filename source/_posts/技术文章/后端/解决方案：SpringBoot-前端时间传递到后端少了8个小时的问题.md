@@ -4,10 +4,9 @@ sidebar: auto
 tags:
   - 解决方案
   - SpringBoot
-  - 时区问题
 author:
   name: 木偶
-  link: 'https://github.com/puppetdevz'
+  link: https://github.com/puppetdevz
 categories:
   - 技术文章
   - 后端
