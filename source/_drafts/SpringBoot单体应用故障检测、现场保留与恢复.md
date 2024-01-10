@@ -13,4 +13,12 @@ nohup java -jar -Xms1024m -Xmx1536m -XX:NewRatio=2 -XX:SurvivorRatio=8 -XX:Metas
 
 <!--more-->
 
+Actuator
 
+Netdata
+
+编写一个 Go 程序，当程序异常，自动调取重启
+
+OMM 策略，自动杀掉重启
+
+资源弹性伸缩

@@ -2,34 +2,6 @@
   "workspace:goto-tab-2": [],
   "workspace:goto-tab-1": [],
   "outline:open-for-current": [],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "1"
-    },
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "1"
-    }
-  ],
-  "app:toggle-right-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "2"
-    },
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "2"
-    }
-  ],
   "file-explorer:reveal-active-file": [
     {
       "modifiers": [
@@ -184,6 +156,34 @@
         "Mod"
       ],
       "key": "T"
+    }
+  ],
+  "obsidian-quiet-outline:quiet-outline": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "2"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
+  ],
+  "file-explorer:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "1"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
     }
   ]
 }
