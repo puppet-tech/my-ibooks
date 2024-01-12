@@ -231,13 +231,14 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "99f72b7bd613a56c",
+  "active": "3b495b83d52e142e",
   "lastOpenFiles": [
+    "source/_drafts/sjs skills.md",
+    "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
     "source/_drafts/RabbitMQ消费者离线，消息堆积未消费.md",
     "source/_drafts/CCE灰度发布机制.md",
     "source/_drafts/Maven项目编译工具优化升级.md",
     "source/_drafts/Jenkins作业日志太大导致Jenkins崩溃.md",
-    "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
     "source/_drafts/Win11无法删除文件及文件夹，“你需要来自xxx的权限才能..”.md",
     "source/_drafts/销售.md",
     "source/_drafts/记给父母购买保险事宜.md",
@@ -278,7 +279,6 @@
     "themes/next-reloaded/docs/zh-CN/README.md",
     "themes/next-reloaded/docs/zh-CN/CONTRIBUTING.md",
     "themes/next-reloaded/docs/zh-CN/CODE_OF_CONDUCT.md",
-    "themes/next-reloaded/docs/ru/README.md",
     "canvas/未命名 1.canvas",
     "canvas/未命名.canvas",
     "未命名.canvas"
