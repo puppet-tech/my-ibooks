@@ -175,7 +175,7 @@ $ mvn clean install -Dprofile
 $ mvn clean install -PskipITs
 ```
 
-## 1.3 改用 mvnd
+## 1.3 结合 mvnd
 
 ### 1.3.1 什么是 mvnd
 
@@ -191,7 +191,7 @@ mvnd 是 apache/maven 的一个子项目，它并不是一个全新的构建工�
 
 JVM 中即时 (JIT) 编译器生成的本地代码也被保留，与常规 Maven 相比，JIT 编译所花费的时间更少。在重复构建期间，JIT 优化的代码立即可用，这不仅适用于来自 Maven 插件和 Maven Core 的代码，也适用于所有来自 JDK 本身的代码。
 
-## 1.4 结合 mvnd
+### 1.4 结合 mvnd
 
 1. 使用 Maven daemon
 2. 在不需要运行测试时跳过测试。

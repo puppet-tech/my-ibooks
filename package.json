@@ -7,8 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo clean && hexo generate && hexo deploy",
     "server": "hexo clean && hexo server",
-    "push": "pnpm run deploy && deploy.py --push-src",
-    "only-push": "deploy.py --push-src",
+    "push-d": "pnpm run deploy && deploy.py --push-src",
+    "push": "deploy.py --push-src",
     "edit-fm": "node utils/editFrontmatter.mjs"
   },
   "hexo": {

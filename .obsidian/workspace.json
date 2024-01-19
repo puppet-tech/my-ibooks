@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
+                "file": "source/_drafts/Maven项目编译工具优化升级.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
+                "file": "source/_drafts/Maven项目编译工具优化升级.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
+                "file": "source/_drafts/Maven项目编译工具优化升级.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +191,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md"
+                "file": "source/_drafts/Maven项目编译工具优化升级.md"
               }
             }
           }
@@ -233,9 +233,9 @@
   },
   "active": "3b495b83d52e142e",
   "lastOpenFiles": [
-    "source/_drafts/sjs skills.md",
-    "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
     "source/_drafts/RabbitMQ消费者离线，消息堆积未消费.md",
+    "source/_drafts/SpringBoot单体应用故障检测、现场保留与恢复.md",
+    "source/_drafts/sjs skills.md",
     "source/_drafts/CCE灰度发布机制.md",
     "source/_drafts/Maven项目编译工具优化升级.md",
     "source/_drafts/Jenkins作业日志太大导致Jenkins崩溃.md",
