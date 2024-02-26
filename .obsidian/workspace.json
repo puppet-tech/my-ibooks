@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "提高npm install效率.md",
+                "file": "source/_drafts/Web通信协议：SSE与WebSocket.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "提高npm install效率.md",
+                "file": "source/_drafts/Web通信协议：SSE与WebSocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "提高npm install效率.md",
+                "file": "source/_drafts/Web通信协议：SSE与WebSocket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,13 +131,21 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "4c77aa6fbaab0431",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,8 +162,9 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "7456150c9bd5ca1b",
+  "active": "b5135c7e732fe780",
   "lastOpenFiles": [
-    "提高npm install效率.md"
+    "提高npm install效率.md",
+    "source/_drafts/Web通信协议：SSE与WebSocket.md"
   ]
 }
