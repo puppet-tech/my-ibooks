@@ -7,3 +7,4 @@ public/
 .deploy*/
 _multiconfig.yml
 .obsidian/plugins/obsidian-image-auto-upload-plugin/data.json
+.obsidian/workspace.json
