@@ -45,7 +45,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -53,7 +53,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -147,6 +148,6 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "7456150c9bd5ca1b",
+  "active": "5435a8f822f29a54",
   "lastOpenFiles": []
 }
