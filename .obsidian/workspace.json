@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d5ebd1bfe8c3317d",
+        "id": "496b038ca9c0d62b",
         "type": "tabs",
         "children": [
           {
-            "id": "7456150c9bd5ca1b",
+            "id": "91d3e5e34371375d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -125,13 +125,21 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "4c77aa6fbaab0431",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,6 +156,6 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "5435a8f822f29a54",
-  "lastOpenFiles": []
+  "active": "91d3e5e34371375d",
+  "lastOpenFiles": ["source/_drafts/Web通信协议：SSE与WebSocket.md", "提高npm install效率.md"]
 }
