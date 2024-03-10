@@ -20,6 +20,12 @@
       "icon": "album",
       "name": "导出为 PDF",
       "mode": "any"
+    },
+    {
+      "id": "copy-document-as-html:copy-as-html",
+      "icon": "activity",
+      "name": "Copy document as HTML: Copy entire document to clipboard",
+      "mode": "any"
     }
   ],
   "fileMenu": [
