@@ -138,10 +138,13 @@ nextcloud 的一些卷地址：
 
 ![image.png](https://oss.puppetdev.top/image/note/128b011a00a09c0e3f7e8e68594dd0a3.png)
 
-## 1.5 补充：配置 SSL 证书
+## 1.5 [安全配置](https://docs.nextcloud.com/server/28/admin_manual/installation/harden_server.html)
+
+### 1.5.1 配置 SSL 证书
 
 由于使用的是 nextcloud，而不是 fpm，因此 Web 代理采用了内置的 Apache2
 
+- 安装 vim：`apt update && apt install vim`
 - 在 apache 安装目录下新建一个文件夹 cert：`/etc/apache2/certs`
 - 上传 Apache 类型的证书文件到 certs 目录下
 - 启用 SSL 模块和默认的 SSL 站点配置
@@ -153,20 +156,24 @@ nextcloud 的一些卷地址：
 
 - 修改 default-ssl.conf 配置文件：`vim /etc/apache2/sites-available/default-ssl.conf`
 
-    添加或修改如下语句
+    添加或修改如下语句（**修改前记得备份**）
 
     ```
+    # 邮箱
+    ServerAdmin xxxxx@163.com
+    # 域名
+    ServerName cloud.nextcloud.com
+    # 头部安全配置
+        <IfModule mod_headers.c>
+          Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+        </IfModule>
+    
+    # SSL 证书配置
     SSLEngine on
     SSLCertificateFile /etc/apache2/certs/public.crt
     SSLCertificateKeyFile /etc/apache2/certs/web.key
     SSLProtocol all -SSLv2 -SSLv3
     SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM
-    ```
-
-    使用 sed 命令直接替换（如果不想下载 vim 的话），**替换前记得备份**
-
-    ```shell
-    sed -i '/SSLCertificateFile      \/etc\/ssl\/certs\/ssl-cert-snakeoil.pem/,/SSLCertificateKeyFile   \/etc\/ssl\/private\/ssl-cert-snakeoil.key/c\        SSLCertificateFile /etc/apache2/certs/public.crt\n        SSLCertificateKeyFile /etc/apache2/certs/web.key\n        SSLProtocol all -SSLv2 -SSLv3\n        SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM'  /etc/apache2/sites-available/default-ssl.conf
     ```
 
 > `SSLProtocol all -SSLv2 -SSLv3`：指定 Apache 服务器支持的 SSL 和 TLS 协议版本。启用了所有可用的协议（`all`），但禁用了旧版的 `SSLv2` 和 `SSLv3`。这是因为 `SSLv2` 和 `SSLv3` 都存在严重的安全漏洞，如 POODLE 攻击，因此在现代 Web 服务器配置中应当被禁用以保证安全。
@@ -186,20 +193,24 @@ nextcloud 的一些卷地址：
 > 有些还需要配置了：`SSLCertificateChainFile /etc/apache2/cert/chain.crt`
 > 指定包含证书链的文件的路径。证书链文件（有时称为 CA 证书束）包含了从服务器证书到根 CA 证书（包括中间 CA 证书）的完整路径。这是必要的，因为客户端（如 Web 浏览器）需要这个证书链来验证服务器证书的真实性。Apache 2.4.8 及更高版本中推荐使用 `SSLCertificateFile` 指令来代替 `SSLCertificateChainFile`，因为 `SSLCertificateFile` 现在可以同时处理服务器证书和链证书。
 
-- 进一步修改配置文件：`/etc/apache2/sites-available/default-ssl.conf`
-
-    ```shell
-    # 将以下内容
-    ServerAdmin webmaster@localhost
-    # 替换为
-    ServerAdmin 邮箱
-    ServerName 域名
-
-    # 用 sed 命令替换
-    sed -i '/ServerAdmin webmaster@localhost/{s/^\(\s*\)ServerAdmin webmaster@localhost/\1ServerAdmin xxx@163.com\n\1ServerName nextcloud.xxx.xxx/}' /etc/apache2/sites-available/default-ssl.conf
-    ```
-
-- 替换后可以用 `apache2ctl configtest` 检查一下配置是否有异常。
+- 修改用 `apache2ctl configtest` 检查一下配置是否有异常。
 - 重启 apache 服务：`/etc/init.d/apache2 restart` or `service apache2 restart`
 
 使用域名访问 nextcloud 即可。如果未正确识别，可清除浏览记录，关闭浏览器再重新打开。
+
+### 1.5.2 将 HTTP 的访问也重定向到 HTTPS
+
+Apache2 可以同时启用多个虚拟主机配置文件，可通过 `apachectl -S` 进行查看，一般为：
+
+![image.png](https://oss.puppetdev.top/image/note/9e470a538d0c23296c6cc7c3f859acd2.png)
+
+上面我们已经配置了监听 443 端口的虚拟主机，为了更加安全，我们需要进一步修改监听 80 端口的虚拟主机，使其访问重定向到 443 端口
+
+```conf
+<VirtualHost *:80>
+   ServerName cloud.nextcloud.com
+   Redirect permanent / https://cloud.nextcloud.com/
+</VirtualHost>
+```
+
+最后重启 apache 服务：`/etc/init.d/apache2 restart` or `service apache2 restart`

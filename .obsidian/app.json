@@ -1,7 +1,7 @@
 {
   "showFrontmatter": true,
   "showLineNumber": false,
-  "vimMode": false,
+  "vimMode": true,
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "userIgnoreFilters": [
