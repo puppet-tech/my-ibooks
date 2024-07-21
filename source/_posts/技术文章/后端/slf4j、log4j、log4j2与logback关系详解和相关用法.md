@@ -21,7 +21,7 @@ date: 2022-03-31 00:00:00
 
 <!-- more -->
 
-## 1.1 slf4j
+## 1 slf4j
 
 slf4j 全称为：The Simple Logging Facade for Java
 
@@ -48,7 +48,7 @@ public class DemoSlf4j {
 
 ![img](https://oss.puppetdev.top/image/note/0fd1e80416e526a14caf7f765cad0680.png)
 
-## 1.2 Log4j
+## 2 Log4j
 
 Log4j 是 apache 实现的一个开源日志组件（Wrapped implementations，即对 slf4j 的包装实现）
 
@@ -56,7 +56,7 @@ Log4j 是 apache 实现的一个开源日志组件（Wrapped implementations，�
 
 此外，Log4j 目前已不再更新维护。
 
-### 1.2.1 依赖引入
+### 2.1 依赖引入
 
 ```xml
 <dependency>
@@ -81,7 +81,7 @@ Log4j 是 apache 实现的一个开源日志组件（Wrapped implementations，�
 
 其实只要引入 slf4j-log4j12，就会引入 slf4j-api，但是我们依旧推荐自己引入 slf4j-api，因为这样子我们可以自己控制日志门面版本，同时使我们具备在 Log4j、Log4j2 和 Logback 这类基于 slf4j 的日志框架间灵活的能力。
 
-### 1.2.2 配置文件
+### 2.2 配置文件
 
 > 配置文件详解：[Log4j配置详解之Log4j.properties](https://www.iteye.com/blog/zengxiantao-1881700)
 
@@ -179,7 +179,7 @@ Log4j 的正常运行需要配置文件（**如果没有，则采用 Log4j 默�
 </log4j:configuration>
 ```
 
-## 1.3 Logback
+## 3 Logback
 
 Logback 同样是由 Log4j 的作者设计完成的，拥有更好的特性，用来取代 Log4j 的一个日志框架，是 slf4j 的原生实现。（Native implementations，即直接实现了 slf4j 的接口）
 
@@ -187,7 +187,7 @@ Logback 当前分成三个模块：logback-core、logback-classic 和 logback-ac
 
 logback-core 是其它两个模块的基础模块。logback-classic 是 log4j 的一个改良版本。
 
-### 1.3.1 依赖引入
+### 3.1 依赖引入
 
 ```xml
 <dependency>
@@ -227,7 +227,9 @@ logback-core 是其它两个模块的基础模块。logback-classic 是 log4j �
 </dependency>
 ```
 
-### 1.3.2 配置文件
+### 3.2 配置文件
+
+> 如果是 Spring 项目，在 `src/main/resources` 目录下创建一个 `logback-spring.xml` 文件（推荐使用 `logback-spring.xml` 而不是 `logback.xml`，因为前者支持 Spring 的配置属性）
 
 > 详细参见：[官方文档](http://Logback.qos.ch/manual/index.html)
 
@@ -237,7 +239,7 @@ Logback 支持编程方式和配置文件的方式进行配置，同时官方网
 
 下面是 logback.xml 配置文件的配置内容（**如果没有，则采用 Log4j 默认配置**）：
 
-~~~~xml 
+~~~xml 
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -286,7 +288,7 @@ Logback 支持编程方式和配置文件的方式进行配置，同时官方网
         <appender-ref ref="FILE"/>
     </root>
 </configuration>
-~~~~
+```
 
 ## 1.4 Log4j2
 

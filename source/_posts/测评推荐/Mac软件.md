@@ -18,7 +18,7 @@ sticky:
 
 <!-- more -->
 
-## brew(Mac)
+## 1.1 brew(Mac)
 
 为什么有 brew？因为 mac 平台的 appstore 非常的不好用，审核也很严，因此有**很多一些大家公认的“正版”好用的软件，都会在 homebrew 发布**，例如 openjdk、qq、maven、go 等，它是 Mac OSX 上的软件包管理工具，能够使用命令行实现安装、卸载、升级的功能。类似 ubuntu 系统下的 apt-get 的功能。而且很多软件都推荐使用 brew 安装，因为它可以帮助你解决安装依赖问题，例如你想下载 go、maven 这种命令行工具，你还需要配置其它的一些环境，而 brew 在安装的时候都帮你配置好了。
 
@@ -47,7 +47,7 @@ sticky:
 7. `brew cleanup`：清理缓存等
 8. `brew doctor`：查看建议，例如升级等
 
-## iterm2+zsh+json_pp（Mac）
+## 1.2 iterm2+zsh+json_pp（Mac）
 
 这是我的一个套装组合，各个都可以拆分来使用，但是它们组合使用效率极高。
 
@@ -71,7 +71,7 @@ json_pp 我主要是用来格式化 `curl` 命令行的结果，例如测试某�
 >
 > ![image-20210410193534907](https://oss.puppetdev.top/image/note/4057db7c4f8df76fee5cc2d77c66a9cd.png)
 
-## Itsycal（Mac）
+## 1.3 Itsycal（Mac）
 
 Mac 左上角的时间栏只能看当前时间不能看日历非常的不方便，因此有很多软件都支持左上角时间点击显示日历，但是 Itsycal 是我用过最方便轻量的免费软件，不仅可以同步日历的事件，而且各种小功能也非常的实用：
 
@@ -87,7 +87,7 @@ Mac 左上角的时间栏只能看当前时间不能看日历非常的不方便�
 
 
 
-## xnip pro + QQ（Mac）
+## 1.4 xnip pro + QQ（Mac）
 
 没错，这个 QQ 就是我们平常用的 QQ 聊天软件。
 
@@ -106,7 +106,7 @@ QQ 首选项配置截图、录制快捷键设置：
 
 ![image-20210410193748927](https://oss.puppetdev.top/image/note/fa091375870df4021eec71195a179aba.png)
 
-## 语雀（Windows/Mac）
+## 1.5 语雀（Windows/Mac）
 
 我的笔记之路，从白嫖有道云笔记，再到买了一年的印象笔记的高级会员，最后是买了阿里云服务器自制了蚂蚁笔记服务端，自己的笔记之路一路折腾，最后我发现还是语雀符合我对笔记知识整合的理解。本篇文章也同步发布在了语雀。
 
@@ -120,7 +120,7 @@ QQ 首选项配置截图、录制快捷键设置：
 1. 主页地址：https://www.yuque.com/
 2. 帮助手册：https://www.yuque.com/yuque/help
 
-## 7. tencent-lemon（Mac）
+## 1.6 tencent-lemon（Mac）
 
 腾讯柠檬清理，基本对标的就是 CleanMyMac，我个人没用过 CleanMyMac，但是感觉腾讯家的这个产品挺好用，在内测的时候就在一直用，产品在社区里面也一直听取用户的意见改进，持状态栏显示当前内存占用、网速等，对我来说是够用了。
 
@@ -132,7 +132,7 @@ QQ 首选项配置截图、录制快捷键设置：
 2. 社区地址：https://support.qq.com/products/36664
 3. 下载：`brew cask install tencent-lemon`
 
-## oss-brower（Windows/Mac）
+## 1.7 oss-brower（Windows/Mac）
 
 这个仅适合使用了阿里云 oss 的用户，它是快速的方便用户对自己 oss 进行操作管理，而且还有权限功能，我平常都是电脑截图，然后拖拽图片到 oss-brower 里面，接着获取地址。另外该产品是开源的，我开始很难相信这是阿里出的产品。
 
@@ -141,13 +141,13 @@ QQ 首选项配置截图、录制快捷键设置：
 1. 主页地址：https://github.com/aliyun/oss-browser
 2. 中文文档：https://github.com/aliyun/oss-browser/blob/master/README-CN.md
 
-## ScreenTime（Mac）
+## 1.8 ScreenTime（Mac）
 
 即 apple 自带的屏幕时间，大家有时候可能想知道，我在 Mac 和 Iphone 上使用各个软件的时候大概是多久，可能 Iphone 大家都知道，但是 Mac 大家可能不怎么关注，但是其实 Mac 的屏幕时间更加方便和强大，因为它根据 icloud 可以获取所有设备的总时间，或其它设备（例如 watch???）的使用时间。
 
 ![image-20210410194056343](https://oss.puppetdev.top/image/note/9f40110eea0e503d77655ccc2fa5e0ca.png)
 
-## BackgroudMusic（Mac）
+## 1.9 BackgroudMusic（Mac）
 
 这个软件用于单独为每个软件设置独立的音量大小。属于你不装的时候挺好，装了之后就严重依赖它的软件。属于开源软件，社区活跃，更新也频繁，我使用过程中已知的 bug 主要是在开启和关闭过程中会没声音，不过我设置开机启动就好了。
 
@@ -162,7 +162,7 @@ QQ 首选项配置截图、录制快捷键设置：
 1. 主页地址：https://github.com/kyleneideck/BackgroundMusic
 2. 下载地址：`brew cask install background-music`
 
-## another redis desktop manager（Windows/Mac）
+## 1.10 another redis desktop manager（Windows/Mac）
 
 可视化的 Redis 管理软件，开源软件。颜值高、功能多、作者更新快的可视化 Redis 管理软件。
 

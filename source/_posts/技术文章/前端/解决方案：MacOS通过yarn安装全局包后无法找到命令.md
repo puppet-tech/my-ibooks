@@ -20,18 +20,18 @@ sticky:
 
 <!-- more -->
 
-## 背景描述
+## 1.1 背景描述
 
 * 操作系统：macOS
 * 通过 npm 全局安装的 yarn
 
-## 问题描述
+## 1.2 问题描述
 
 通过命令 `yarn global add packageName` 后，试图该模块的命令，发现无法找到
 
 <img src="https://oss.puppetdev.top/image/note/4fe618e399628724ad20b4a6323b0a59.png" alt="image-20210930135631984" style="zoom:50%;" />
 
-## 问题分析
+## 1.3 问题分析
 
 macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置和包路径默认位于家目录下
 
@@ -43,7 +43,7 @@ macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置�
 
 而该路径是没有配置在环境变量中的，因此无法找到。
 
-## 解决方案
+## 1.4 解决方案
 
 将上述路径配置到环境变量中即可。此处我是配置在 `~/.zshrc` 中，大家可以视自身所用的 shell 自行决定。
 

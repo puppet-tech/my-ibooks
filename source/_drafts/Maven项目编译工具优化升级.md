@@ -191,19 +191,19 @@ mvnd 是 apache/maven 的一个子项目，它并不是一个全新的构建工�
 
 JVM 中即时 (JIT) 编译器生成的本地代码也被保留，与常规 Maven 相比，JIT 编译所花费的时间更少。在重复构建期间，JIT 优化的代码立即可用，这不仅适用于来自 Maven 插件和 Maven Core 的代码，也适用于所有来自 JDK 本身的代码。
 
-### 1.4 结合 mvnd
+### 1.3.3 结合 mvnd
 
 1. 使用 Maven daemon
 2. 在不需要运行测试时跳过测试。
 3. 对构建进行配置，使用 Maven profiles 排除耗时的低价值任务。
 
-## 1.5 改用 Gradle
+## 1.4 改用 Gradle
 
-### 1.5.1 gradle 和 maven 的比较
+### 1.4.1 gradle 和 maven 的比较
 
 虽然 gradle 和 maven 都可以作为 java 程序的构建工具。但是两者还是有很大的不同之处的。我们可以从下面几个方面来进行分析。
 
-#### 1.5.1.1 可扩展性
+#### 1.4.1.1 可扩展性
 
 Google 选择 gradle 作为 android 的构建工具不是没有理由的，其中一个非常重要的原因就是因为 gradle 够灵活。一方面是因为 gradle 使用的是 groovy 或者 kotlin 语言作为脚本的编写语言，这样极大的提高了脚本的灵活性，但是其本质上的原因是 gradle 的基础架构能够支持这种灵活性。
 
@@ -213,7 +213,7 @@ Google 选择 gradle 作为 android 的构建工具不是没有理由的，其�
 
 所以如果你的项目没有太多自定义构建需求的话还是推荐使用 maven，但是如果有自定义的构建需求，那么还是投入 gradle 的怀抱吧。
 
-#### 1.5.1.2 性能比较
+#### 1.4.1.2 性能比较
 
 虽然现在大家的机子性能都比较强劲，好像在做项目构建的时候性能的优势并不是那么的迫切，但是对于大型项目来说，一次构建可能会需要很长的时间，尤其对于自动化构建和 CI 的环境来说，当然希望这个构建是越快越好。
 
@@ -267,13 +267,13 @@ Gradle 和 Maven 都支持并行的项目构建和依赖解析。但是 gradle �
 
 可以看到 gradle 性能的提升是非常明显的。
 
-#### 1.5.1.3 依赖的区别
+#### 1.4.1.3 依赖的区别
 
 gralde 和 maven 都可以本地缓存依赖文件，并且都支持依赖文件的并行下载。
 
 在 maven 中只可以通过版本号来覆盖一个依赖项。而 gradle 更加灵活，你可以自定义依赖关系和替换规则，通过这些替换规则，gradle 可以构建非常复杂的项目。
 
-### 1.5.2 从 maven 迁移到 gradle
+### 1.4.2 从 maven 迁移到 gradle
 
 因为 maven 出现的时间比较早，所以基本上所有的 java 项目都支持 maven，但是并不是所有的项目都支持 gradle。如果你有需要把 maven 项目迁移到 gradle 的想法，那么就一起来看看吧。
 
@@ -299,11 +299,11 @@ clean 会被转换成为 clean task，compile 会被转换成为 classes task，
 
 有了这些 task 之间的对应关系，我们就可以尝试进行 maven 到 gradle 的转换了。
 
-#### 1.5.2.1 自动转换
+#### 1.4.2.1 自动转换
 
 我们除了可以使用 gradle init 命令来创建一个 gradle 的架子之外，还可以使用这个命令来将 maven 项目转换成为 gradle 项目，gradle init 命令会去读取 pom 文件，并将其转换成为 gradle 项目。
 
-#### 1.5.2.2 转换依赖
+#### 1.4.2.2 转换依赖
 
 gradle 和 maven 的依赖都包含了 group ID, artifact ID 和版本号。两者本质上是一样的，只是形式不同，我们看一个转换的例子：
 
@@ -378,7 +378,7 @@ dependencies {
 }
 ```
 
-#### 1.5.2.3 转换 repositories 仓库
+#### 1.4.2.3 转换 repositories 仓库
 
 gradle 可以兼容使用 maven 或者 lvy 的 repository。gradle 没有默认的仓库地址，所以你必须手动指定一个。
 
@@ -414,7 +414,7 @@ mavenLocal 只是 maven 在本地的一个 cache，它包含的内容并不完�
 
 并且本地的 repository 是不可信任的，因为里面的内容可以轻易被修改，并没有任何的验证机制。
 
-#### 1.5.2.4 控制依赖的版本
+#### 1.4.2.4 控制依赖的版本
 
 如果同一个项目中对同一个模块有不同版本的两个依赖的话，默认情况下 Gradle 会在解析完 DAG 之后，选择版本最高的那个依赖包。
 
@@ -469,7 +469,7 @@ dependencies {
 }
 ```
 
-#### 1.5.2.5 多模块项目
+#### 1.4.2.5 多模块项目
 
 maven 中可以创建多模块项目：
 
@@ -488,7 +488,7 @@ rootProject.name = 'simple-multi-module'
 include 'simple-weather', 'simple-webapp'  
 ```
 
-#### 1.5.2.6 profile 和属性
+#### 1.4.2.6 profile 和属性
 
 maven 中可以使用 profile 来区别不同的环境，在 gradle 中，我们可以定义好不同的 profile 文件，然后通过脚本来加载他们：
 
@@ -528,7 +528,7 @@ foobar
 testing 1 2 3
 ```
 
-#### 1.5.2.7 资源处理
+#### 1.4.2.7 资源处理
 
 在 maven 中有一个 process-resources 阶段，可以执行 resources:resources 用来进行 resource 文件的拷贝操作。
 
