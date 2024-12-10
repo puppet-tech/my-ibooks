@@ -14,8 +14,6 @@ date: 2022-04-13 00:00:00
 sticky:
 ---
 
-
-
 阅读代码（源码）是我们经常需要做的事情。那么 IDEA 有什么技巧可以帮助我们更好、效率更高地去阅读代码（源码）呢？
 
 <!-- more -->
@@ -80,7 +78,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 ![image-20220415165912312](https://oss.puppetdev.top/image/note/676fb89916d8a644b9fd68db12049633.png)
 
-## 1.5 快速检索类/文件/符号/操作/Git命令
+## 1.5 快速检索类/文件/符号/操作/Git 命令
 
 | 使用频率 | 相关快捷键  |
 | -------- | ----------- |
@@ -104,7 +102,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 这个时候我们就可以借助 IDEA 技巧，在要查看的类/接口上按下 `Alt+7`（win）/`Command+7`（Mac），IDEA 就会弹出类似小窗口，将该类/接口的整体结构展示出来。
 
-<img src="https://oss.puppetdev.top/image/note/4e53078daacb0354556740b70d967e74.png" alt="image-20220415165429888" style="zoom:50%;" />
+![image-20220415165429888](https://oss.puppetdev.top/image/note/4e53078daacb0354556740b70d967e74.png)
 
 ## 1.7 查看类/接口/方法被调用的情况
 
@@ -114,7 +112,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 如果我们想要知道某个类/接口/方法在哪里被调用了，我们可以通过在方法名上使用快捷键 `Alt + F7` 来查看。
 
-<img src="https://oss.puppetdev.top/image/note/654fa137809b4ec5ec7f8c7564d128a2.png" alt="image-20220415165705991" style="zoom:50%;" />
+![image-20220415165705991](https://oss.puppetdev.top/image/note/654fa137809b4ec5ec7f8c7564d128a2.png)
 
 ## 1.8 查看当前类/接口的继承链路（图表形式）
 

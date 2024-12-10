@@ -1,4 +1,4 @@
-```
+```java
 Unexpected mutation of “xxxx” prop vue/no-mutatiing-props
 ```
 

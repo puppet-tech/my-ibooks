@@ -1,6 +1,9 @@
 ---
-tags: 
 title: OMV结合NextCloud实现私人网盘
+categories:
+  - 技术文章
+  - NAS
+tags:
 ---
 
 ![OMV NAS & NextCloud搭建私人网盘.webp](https://oss.puppetdev.top/image/note/ab9bff5d9f1b185ad091b0387e139630.webp)
@@ -158,7 +161,7 @@ nextcloud 的一些卷地址：
 
     添加或修改如下语句（**修改前记得备份**）
 
-    ```
+    ```conf
     # 邮箱
     ServerAdmin xxxxx@163.com
     # 域名

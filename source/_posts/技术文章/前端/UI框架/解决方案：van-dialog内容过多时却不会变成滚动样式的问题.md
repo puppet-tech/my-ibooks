@@ -10,6 +10,7 @@ sidebar: auto
 categories:
   - 技术文章
   - 前端
+  - UI框架
 date: 2022-09-21 22:14:44
 ---
 # 解决van-dialog内容过多却没有滚动样式的问题

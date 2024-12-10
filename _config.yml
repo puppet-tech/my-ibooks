@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.puppetdev.top
+url: https://www.puppetdevz.top
 permalink: :year:month:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -106,7 +106,7 @@ deploy:
     branch: gh-pages
   # 除了项目要安装 hexo-deployer-rsync 插件外，本地和远程也要安装 rsync 工具
   # - type: rsync
-  #   host: blog.puppetdev.top
+  #   host: www.puppetdevz.top
   #   user: root
   #   root: /root/blog/
 
