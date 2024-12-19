@@ -54,7 +54,7 @@ sticky:
 
 例如 JpaRepository 的子类层次结构为：
 
-![image-20220415161022505](https://oss.puppetdev.top/image/note/ba3a07f61ecfae874509d6f1962a210f.png)
+![image-20220415161022505](https://oss.puppetdevz.top/image/note/ba3a07f61ecfae874509d6f1962a210f.png)
 
 由此看出，
 
@@ -66,7 +66,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 一层接着一层，非常清晰。同理，其父类层次结构为：
 
-![image-20220415161343689](https://oss.puppetdev.top/image/note/744eee18f28e2814d9cbba3e264c094f.png)
+![image-20220415161343689](https://oss.puppetdevz.top/image/note/744eee18f28e2814d9cbba3e264c094f.png)
 
 ## 1.4 查看最近使用的文件/操作
 
@@ -76,7 +76,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 如果我们想要查看最近使用过的文件/操作，我们可以通过该快捷键调取，IDEA 会弹出如下窗口：
 
-![image-20220415165912312](https://oss.puppetdev.top/image/note/676fb89916d8a644b9fd68db12049633.png)
+![image-20220415165912312](https://oss.puppetdevz.top/image/note/676fb89916d8a644b9fd68db12049633.png)
 
 ## 1.5 快速检索类/文件/符号/操作/Git 命令
 
@@ -90,7 +90,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 * 想要搜索某个包下文件（类、接口、配置等等，项目内的以及项目的依赖包内的），常用于搜索某个依赖包下的某个类。
 * 快速搜索并执行某个 IDEA 或 Git 的操作/命令
 
-![image-20220415170640761](https://oss.puppetdev.top/image/note/d58c8796ecbf02c13ae74ca7de5312bb.png)
+![image-20220415170640761](https://oss.puppetdevz.top/image/note/d58c8796ecbf02c13ae74ca7de5312bb.png)
 
 ## 1.6 查看当前类/接口的结构
 
@@ -102,7 +102,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 这个时候我们就可以借助 IDEA 技巧，在要查看的类/接口上按下 `Alt+7`（win）/`Command+7`（Mac），IDEA 就会弹出类似小窗口，将该类/接口的整体结构展示出来。
 
-![image-20220415165429888](https://oss.puppetdev.top/image/note/4e53078daacb0354556740b70d967e74.png)
+![image-20220415165429888](https://oss.puppetdevz.top/image/note/4e53078daacb0354556740b70d967e74.png)
 
 ## 1.7 查看类/接口/方法被调用的情况
 
@@ -112,7 +112,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 如果我们想要知道某个类/接口/方法在哪里被调用了，我们可以通过在方法名上使用快捷键 `Alt + F7` 来查看。
 
-![image-20220415165705991](https://oss.puppetdev.top/image/note/654fa137809b4ec5ec7f8c7564d128a2.png)
+![image-20220415165705991](https://oss.puppetdevz.top/image/note/654fa137809b4ec5ec7f8c7564d128a2.png)
 
 ## 1.8 查看当前类/接口的继承链路（图表形式）
 
@@ -122,7 +122,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 在类/接口名称上**右键** ，选择 **Shw Diagrams**（显示图表） 即可查看图表形式的类继承链。
 
-![image-20220415171108449](https://oss.puppetdev.top/image/note/29461c557e743aeb76f9601567aba3a8.png)
+![image-20220415171108449](https://oss.puppetdevz.top/image/note/29461c557e743aeb76f9601567aba3a8.png)
 
 我们还可以对图表进行一些操作。比如，可以点击图表中具体的类/接口 **右键**，然后选择显示它的实现、父类，或者依赖项，也可以查看该类/接口被调用的情况，甚至可以直接跳转到其源码进行查看。
 
@@ -130,7 +130,7 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 总之，功能非常多，想要全部记住是不现实的，需要用到哪个，再进行摸索就可以了。
 
-![image-20220415171423744](https://oss.puppetdev.top/image/note/35498e8ecf8cbc633191059cf2228b9d.png)
+![image-20220415171423744](https://oss.puppetdevz.top/image/note/35498e8ecf8cbc633191059cf2228b9d.png)
 
 ## 1.9 源码阅读技巧之插件推荐
 
@@ -146,11 +146,11 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 安装之后，我们选中方法名（不能是类/接口名），然后右键，选择 **Sequence Diagram** 选项。
 
-![image-20220415172639932](https://oss.puppetdev.top/image/note/8cbde2fe44c9aed6ef2dedd8cd395f93.png)
+![image-20220415172639932](https://oss.puppetdevz.top/image/note/8cbde2fe44c9aed6ef2dedd8cd395f93.png)
 
 我们还可以对时序图的展示做一些配置，例如调用深度、是否显示构造方法等等
 
-![image-20220415172822462](https://oss.puppetdev.top/image/note/c003f29f1b9cf96ab9ca00c7168a903b.png)
+![image-20220415172822462](https://oss.puppetdevz.top/image/note/c003f29f1b9cf96ab9ca00c7168a903b.png)
 
 此外，我们还可以在时序图中，点击定位到相关的代码中，让我们快速了解该方法的内容，同时，还能将生成的时序图导出为图片。
 
@@ -160,10 +160,10 @@ SimpleJpaRepository 又被 QuerydslJpaRepository 继承
 
 我们可以非常直观地看到项目中所有类型的文件的信息，比如数量、大小等等，可以帮助我们更好地了解项目。
 
-![image-20220415173209584](https://oss.puppetdev.top/image/note/90062621a93529eeef3bcb08968e1bfa.png)
+![image-20220415173209584](https://oss.puppetdevz.top/image/note/90062621a93529eeef3bcb08968e1bfa.png)
 
 还可以使用它看所有类的总行数、有效代码行数、注释行数、以及有效代码比重等等这些东西。
 
-![image-20220415173246950](https://oss.puppetdev.top/image/note/22d80e78229ed42314128662766b2f09.png)
+![image-20220415173246950](https://oss.puppetdevz.top/image/note/22d80e78229ed42314128662766b2f09.png)
 
 当然，如果项目太大，该插件会运行一段时间，好在插件本身可以设置为启动时不激活，当我们需要查看项目情况的时候，再点击底部 Tab 栏进行激活。

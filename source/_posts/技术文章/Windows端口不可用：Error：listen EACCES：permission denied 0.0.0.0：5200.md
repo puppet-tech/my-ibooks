@@ -38,10 +38,10 @@ Error: listen EACCES: permission denied 0.0.0.0:5200
 - Windows 11
 
 ```
-    版本	Windows 11 专业版
-    版本	22H2
-    安装日期	‎2022-‎10-‎07
-    操作系统版本	22621.2861
+    版本 Windows 11 专业版
+    版本 22H2
+    安装日期 ‎2022-‎10-‎07
+    操作系统版本 22621.2861
 ```
 
 ## 1.2 解决方案
@@ -55,7 +55,7 @@ Error: listen EACCES: permission denied 0.0.0.0:5200
 netsh interface ipv4 show excludedportrange protocol=tcp
 ```
 
-![image.png](https://oss.puppetdev.top/image/note/addbb4e2a5c2a09278b26d060e7345e3.png)
+![image.png](https://oss.puppetdevz.top/image/note/addbb4e2a5c2a09278b26d060e7345e3.png)
 
 该命令会列出 TCP 协议下被排除的、不能被使用的端口范围。
 

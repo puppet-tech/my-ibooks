@@ -24,9 +24,9 @@ sticky:
 
 > 其中有个趣闻，就是 homebrew 作者因为不会白板翻转二叉树被 Google 拒了。笔者搜到 15 年的推特图。
 
-1. 主页地址：https://brew.sh/index_zh-cn
-2. 支持安装的命令行软件列表：https://formulae.brew.sh/formula/
-3. 支持安装的桌面端软件列表：https://formulae.brew.sh/cask/
+1. 主页地址：<https://brew.sh/index_zh-cn>
+2. 支持安装的命令行软件列表：<https://formulae.brew.sh/formula/>
+3. 支持安装的桌面端软件列表：<https://formulae.brew.sh/cask/>
 
 > 1. 命令行软件，例如 go、openjdk、maven、python 等。使用的基本命令为：
 >
@@ -58,18 +58,18 @@ zsh 是 oh-my-zsh 的简称，我们默认都是用的 `bash` 终端，是不支
 json_pp 我主要是用来格式化 `curl` 命令行的结果，例如测试某个 restful 接口，返回的 json，在命令行就会自动给你格式化好输出，
 
 1. 这三个软件都是搭配 `brew` 安装
-2. 搭配安装教程地址：https://gist.github.com/kevin-smets/8568070
+2. 搭配安装教程地址：<https://gist.github.com/kevin-smets/8568070>
 3. iterm2 安装：`brew cask install iterm2`
-4. zsh 安装：https://ohmyz.sh/#install
+4. zsh 安装：<https://ohmyz.sh/#install>
 5. json_pp 安装：`brew install jsonpp`
 
 > 当安装了 zsh 后，你可以在 vscode/idea 软件中切换默认的 shell
 >
-> ![image-20210410193552018](https://oss.puppetdev.top/image/note/305c7c97f70ebeef4f8942eddb46b10e.png)
+> ![image-20210410193552018](https://oss.puppetdevz.top/image/note/305c7c97f70ebeef4f8942eddb46b10e.png)
 >
 > 效果图如下，命令提示高亮，显示当前 git 分支
 >
-> ![image-20210410193534907](https://oss.puppetdev.top/image/note/4057db7c4f8df76fee5cc2d77c66a9cd.png)
+> ![image-20210410193534907](https://oss.puppetdevz.top/image/note/4057db7c4f8df76fee5cc2d77c66a9cd.png)
 
 ## 1.3 Itsycal（Mac）
 
@@ -80,12 +80,10 @@ Mac 左上角的时间栏只能看当前时间不能看日历非常的不方便�
 3. 自定义 dateformat 显示日期，我设置的为：YYYY-MM-dd EE HH:mm:ss
 4. 支持暗黑模式，不过我都是设置为跟随系统主题，白天白色，晚上黑色自动切换。
 
-![image-20210410193628976](https://oss.puppetdev.top/image/note/91005003cf55d8cc84500920db00e7de.png)
+![image-20210410193628976](https://oss.puppetdevz.top/image/note/91005003cf55d8cc84500920db00e7de.png)
 
-1. 文档地址：https://www.mowglii.com/itsycal/
+1. 文档地址：<https://www.mowglii.com/itsycal/>
 2. 下载：`brew cask install itsycal`
-
-
 
 ## 1.4 xnip pro + QQ（Mac）
 
@@ -95,16 +93,16 @@ Mac 左上角的时间栏只能看当前时间不能看日历非常的不方便�
 
 QQ 截图是结合截图、OCR 识别以及录视频为一体的超级功能！有时候发的截图里面的 token，或者手机号，又例如银行卡，就非常的方便，而且识别的非常准确！另外 qq 截图有个小技巧，截图双击时会截当前软件的边缘，不用自己手动拖拽。
 
-1. snip 地址：https://zh.xnipapp.com/
-2. QQ 地址：https://im.qq.com/macqq/
+1. snip 地址：<https://zh.xnipapp.com/>
+2. QQ 地址：<https://im.qq.com/macqq/>
 
 QQ 截图 OCR 识别：
 
-![image-20210410193733548](https://oss.puppetdev.top/image/note/cadd8b8185018ff2954d9c567b148b48.png)
+![image-20210410193733548](https://oss.puppetdevz.top/image/note/cadd8b8185018ff2954d9c567b148b48.png)
 
 QQ 首选项配置截图、录制快捷键设置：
 
-![image-20210410193748927](https://oss.puppetdev.top/image/note/fa091375870df4021eec71195a179aba.png)
+![image-20210410193748927](https://oss.puppetdevz.top/image/note/fa091375870df4021eec71195a179aba.png)
 
 ## 1.5 语雀（Windows/Mac）
 
@@ -117,35 +115,35 @@ QQ 首选项配置截图、录制快捷键设置：
 
 个人感觉语雀还是很香的！自己用来记笔记还是当做博客都是非常不错的选择。
 
-1. 主页地址：https://www.yuque.com/
-2. 帮助手册：https://www.yuque.com/yuque/help
+1. 主页地址：<https://www.yuque.com/>
+2. 帮助手册：<https://www.yuque.com/yuque/help>
 
 ## 1.6 tencent-lemon（Mac）
 
 腾讯柠檬清理，基本对标的就是 CleanMyMac，我个人没用过 CleanMyMac，但是感觉腾讯家的这个产品挺好用，在内测的时候就在一直用，产品在社区里面也一直听取用户的意见改进，持状态栏显示当前内存占用、网速等，对我来说是够用了。
 
-![image-20210410193905940](https://oss.puppetdev.top/image/note/1e0e4616569d83d3fea95813136d4084.png)
+![image-20210410193905940](https://oss.puppetdevz.top/image/note/1e0e4616569d83d3fea95813136d4084.png)
 
-![image-20210410193925982](https://oss.puppetdev.top/image/note/72c45c414d83c780a6fbc4333f9cb956.png)
+![image-20210410193925982](https://oss.puppetdevz.top/image/note/72c45c414d83c780a6fbc4333f9cb956.png)
 
-1. 主页地址：https://lemon.qq.com/
-2. 社区地址：https://support.qq.com/products/36664
+1. 主页地址：<https://lemon.qq.com/>
+2. 社区地址：<https://support.qq.com/products/36664>
 3. 下载：`brew cask install tencent-lemon`
 
 ## 1.7 oss-brower（Windows/Mac）
 
 这个仅适合使用了阿里云 oss 的用户，它是快速的方便用户对自己 oss 进行操作管理，而且还有权限功能，我平常都是电脑截图，然后拖拽图片到 oss-brower 里面，接着获取地址。另外该产品是开源的，我开始很难相信这是阿里出的产品。
 
-![image-20210410194011352](https://oss.puppetdev.top/image/note/0e58663d089c2f055c7c70f3c7dcfac2.png)
+![image-20210410194011352](https://oss.puppetdevz.top/image/note/0e58663d089c2f055c7c70f3c7dcfac2.png)
 
-1. 主页地址：https://github.com/aliyun/oss-browser
-2. 中文文档：https://github.com/aliyun/oss-browser/blob/master/README-CN.md
+1. 主页地址：<https://github.com/aliyun/oss-browser>
+2. 中文文档：<https://github.com/aliyun/oss-browser/blob/master/README-CN.md>
 
 ## 1.8 ScreenTime（Mac）
 
 即 apple 自带的屏幕时间，大家有时候可能想知道，我在 Mac 和 Iphone 上使用各个软件的时候大概是多久，可能 Iphone 大家都知道，但是 Mac 大家可能不怎么关注，但是其实 Mac 的屏幕时间更加方便和强大，因为它根据 icloud 可以获取所有设备的总时间，或其它设备（例如 watch???）的使用时间。
 
-![image-20210410194056343](https://oss.puppetdev.top/image/note/9f40110eea0e503d77655ccc2fa5e0ca.png)
+![image-20210410194056343](https://oss.puppetdevz.top/image/note/9f40110eea0e503d77655ccc2fa5e0ca.png)
 
 ## 1.9 BackgroudMusic（Mac）
 
@@ -155,19 +153,16 @@ QQ 首选项配置截图、录制快捷键设置：
 2. 在家时，我想设置小网页声音大，办公软件提示音小，它可以做到。
 3. 我想设置声音左耳大，右耳小（这个功能我暂时没用上）。
 
-![image-20210410194129238](https://oss.puppetdev.top/image/note/84e7c4e79d78cb4509f1ce4e87927449.png)
+![image-20210410194129238](https://oss.puppetdevz.top/image/note/84e7c4e79d78cb4509f1ce4e87927449.png)
 
-
-
-1. 主页地址：https://github.com/kyleneideck/BackgroundMusic
+1. 主页地址：<https://github.com/kyleneideck/BackgroundMusic>
 2. 下载地址：`brew cask install background-music`
 
 ## 1.10 another redis desktop manager（Windows/Mac）
 
 可视化的 Redis 管理软件，开源软件。颜值高、功能多、作者更新快的可视化 Redis 管理软件。
 
-![image-20210410194254991](https://oss.puppetdev.top/image/note/9ac5e22d096918037a01360e92bfe52c.png)
+![image-20210410194254991](https://oss.puppetdevz.top/image/note/9ac5e22d096918037a01360e92bfe52c.png)
 
-1. 主页地址：https://github.com/qishibo/AnotherRedisDesktopManager
+1. 主页地址：<https://github.com/qishibo/AnotherRedisDesktopManager>
 2. 下载：`brew cask install another-redis-desktop-manager`
-

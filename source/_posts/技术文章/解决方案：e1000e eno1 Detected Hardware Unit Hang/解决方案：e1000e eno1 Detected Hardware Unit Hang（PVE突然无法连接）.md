@@ -11,7 +11,7 @@ date: 2024-10-31 11:27:47
 mtime: 2024-11-04 20:22:28
 ---
 
-![fjy89](https://oss.puppetdev.top/image/note/8a813c25c40bdf839d7466c7a2da9098.png)
+![fjy89](https://oss.puppetdevz.top/image/note/8a813c25c40bdf839d7466c7a2da9098.png)
 
 在 Proxmox 6.5.11-8 中，偶发性会出现以下报错，尤其是在进行大文件传输后：
 
@@ -59,13 +59,14 @@ iface eno1 inet manual
 - **post-up**：这是一个钩子命令，它会在接口被成功激活（“up”状态）后执行。这里的命令会在 `eno1` 接口启动之后执行一系列动作。
 - **/usr/bin/logger -p debug -t ifup “Disabling offload for eno1”**：这条命令使用 `logger` 程序，将一条调试级别（`debug`）的信息写入系统日志。日志内容为 `"Disabling offload for eno1"`，标记为 `ifup`。这样做的目的是记录接口启动时禁用某些功能的动作，方便日后查看系统日志，了解配置是否按预期执行。（可通过 `journalctl -t ifup -p debug` 查看日志）
 - **/sbin/ethtool -K $IFACE tso off gso off gro off tx off rx off**：这里使用 `ethtool` 工具来关闭网络接口的一些“硬件卸载（offload）”功能。具体地：
-    - **tso（TCP Segmentation Offload）**：关闭 TCP 分段卸载。TSO 允许网卡将大型 TCP 数据包分段，减轻 CPU 负担。如果关闭，系统会由 CPU 进行 TCP 分段。
-    - **gso（Generic Segmentation Offload）**：关闭通用分段卸载。GSO 是一种将不同协议的数据分段处理的技术，关闭它会让系统自己处理分段。
-    - **gro（Generic Receive Offload）**：关闭通用接收卸载。GRO 是一种接收数据包处理优化技术。关闭它意味着数据包接收将完全交由 CPU 处理。
-    - **tx（Transmit Checksum Offload）**：完全关闭传输时的校验和卸载。网卡不会自动处理数据包的校验和，而是让系统自行处理。
-    - **rx（Receive Checksum Offload）**：完全关闭接收时的校验和卸载，网卡不会校验接收到的数据包，需要系统来进行检查。
+  - **tso（TCP Segmentation Offload）**：关闭 TCP 分段卸载。TSO 允许网卡将大型 TCP 数据包分段，减轻 CPU 负担。如果关闭，系统会由 CPU 进行 TCP 分段。
+  - **gso（Generic Segmentation Offload）**：关闭通用分段卸载。GSO 是一种将不同协议的数据分段处理的技术，关闭它会让系统自己处理分段。
+  - **gro（Generic Receive Offload）**：关闭通用接收卸载。GRO 是一种接收数据包处理优化技术。关闭它意味着数据包接收将完全交由 CPU 处理。
+  - **tx（Transmit Checksum Offload）**：完全关闭传输时的校验和卸载。网卡不会自动处理数据包的校验和，而是让系统自行处理。
+  - **rx（Receive Checksum Offload）**：完全关闭接收时的校验和卸载，网卡不会校验接收到的数据包，需要系统来进行检查。
 
 > [!info] 信息
+>
 > - **TSO**、**GSO** 和 **GRO** 分别用于控制 TCP 分段、通用分段和接收卸载，这三个是针对传输层和网络层的优化。
 > - **tx off** 和 **rx off** 是更通用的选项，用于关闭整个发送（TX）和接收（RX）的卸载功能。
 >
@@ -78,13 +79,13 @@ iface eno1 inet manual
 
 如何查看 tso、gso、gro 是否已经关闭：`ethtool -k eno1 | grep -E 'tso|gso|gro'`
 
-![yp93w](https://oss.puppetdev.top/image/note/9ebac05995653141eb5529a53e633a8b.png)
+![yp93w](https://oss.puppetdevz.top/image/note/9ebac05995653141eb5529a53e633a8b.png)
 
 均为 off，说明已经关闭。
 
 如何查看 TCP 校验和卸载是否开启：`ethtool -a eno1`
 
-![qegq7](https://oss.puppetdev.top/image/note/a6de0c3547bf2b8d8868b0885dd1f2e1.png)
+![qegq7](https://oss.puppetdevz.top/image/note/a6de0c3547bf2b8d8868b0885dd1f2e1.png)
 
 些参数主要用于控制网络接口的流量控制，以减少数据包丢失，确保在网络拥堵时网络的稳定性。
 

@@ -26,7 +26,7 @@ date: 2022-04-13 00:00:00
 
 ### 问题描述
 
-![image-20220428114132435](https://oss.puppetdev.top/image/note/f04a0dc90d8e5d17b1e3e2e49633b463.png)
+![image-20220428114132435](https://oss.puppetdevz.top/image/note/f04a0dc90d8e5d17b1e3e2e49633b463.png)
 
 ### 原因分析&&解决方案
 
@@ -34,9 +34,8 @@ date: 2022-04-13 00:00:00
 
 进一步查看编译输出目录下时候有 lib 目录
 
-<img src="https://oss.puppetdev.top/image/note/5f7506f4006c04a35b99396119cb4275.png" alt="image-20220428114412254" style="zoom:50%;" />
+<img src="https://oss.puppetdevz.top/image/note/5f7506f4006c04a35b99396119cb4275.png" alt="image-20220428114412254" style="zoom:50%;" />
 
 如果没有，可能是依赖库没有加载加载进来，或者放置的位置有问题，进一步查看
 
-<img src="https://oss.puppetdev.top/image/note/cf82a2b57215281a12bcf4b6d9c9875a.png" alt="image-20220428114645183" style="zoom:50%;" />
-
+<img src="https://oss.puppetdevz.top/image/note/cf82a2b57215281a12bcf4b6d9c9875a.png" alt="image-20220428114645183" style="zoom:50%;" />

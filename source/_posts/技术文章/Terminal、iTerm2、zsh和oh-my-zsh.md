@@ -30,14 +30,14 @@ zsh 和 bash 是两种不同的 shell，是区别于『核』的『壳』，借�
 
 ## 1.2 [iTerm2](https://iterm2.com/index.html)
 
-iTerm2 的配色主题方案：https://iterm2colorschemes.com/
+iTerm2 的配色主题方案：<https://iterm2colorschemes.com/>
 
 ## 1.3 oh-my-zsh简介与官网
 
 官网与项目地址：
 
-* https://ohmyz.sh/
-* https://github.com/ohmyzsh/ohmyzsh
+* <https://ohmyz.sh/>
+* <https://github.com/ohmyzsh/ohmyzsh>
 
 oh-my-zsh 可以理解成 zsh 的超级增强版，如果是 MacOS，且默认的 shell 是 zsh，那安装是相当容易的，只需要根据 GitHub 上的教程，执行以下命令，就可以安装好了
 
@@ -60,7 +60,7 @@ oh-my-zsh 在安装后，便自带了很多插件和主题，我们只需要在 
 >
 > 例如 agnoster 主题，如果没有合适的字体补丁，就会乱码
 >
-> <img src="https://oss.puppetdev.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png" alt="image-20221109130141997" style="zoom:50%;" />
+> <img src="https://oss.puppetdevz.top/image/note/9d5bbe83622b201dec9fdabadea6c6f4.png" alt="image-20221109130141997" style="zoom:50%;" />
 >
 > 用了 Powerline Font 或 Nerd Front 后，就正常了
 
@@ -83,8 +83,6 @@ oh-my-zsh 在安装后，便自带了很多插件和主题，我们只需要在 
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git 
   ```
 
-  
-
 * zsh-autosuggestions：自动补全可能的路径
 
   ```shell
@@ -92,11 +90,10 @@ oh-my-zsh 在安装后，便自带了很多插件和主题，我们只需要在 
   git clone https://github.com/zsh-users/zsh-autosuggestions 
   ```
 
-
 ## 1.5 推荐的主题
 
 每个人的 the right-one 都不同，可以到[这里](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)去找
 
 其他三方主题推荐：
 
-* https://github.com/romkatv/powerlevel10k
+* <https://github.com/romkatv/powerlevel10k>

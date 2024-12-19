@@ -2,13 +2,13 @@
 ---
 问题如图所示：
 
-![image.png](https://oss.puppetdev.top/image/note/55cd72a51c116edd02bc2c3b06e14f72.png)
+![image.png](https://oss.puppetdevz.top/image/note/55cd72a51c116edd02bc2c3b06e14f72.png)
 
 <!--more-->
 
 放弃前摇，直接给出解决方案：换个主题即可。
 
-![image.png](https://oss.puppetdev.top/image/note/2690eb88b4db166d6321ff9553e613cf.png)
+![image.png](https://oss.puppetdevz.top/image/note/2690eb88b4db166d6321ff9553e613cf.png)
 
 实测，Light Modern 的色域正常，其他的没有经过测试。
 

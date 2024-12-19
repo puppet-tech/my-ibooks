@@ -15,7 +15,7 @@ categories:
 date: 2022-03-31 00:00:00
 ---
 
-![log4j log.jpg](https://oss.puppetdev.top/image/note/fe2a2b3d705d7e9de12b90f11d401666.jpg)
+![log4j log.jpg](https://oss.puppetdevz.top/image/note/fe2a2b3d705d7e9de12b90f11d401666.jpg)
 
 作为一名 Java 开发程序员，我们对项目中的日志打印肯定不会陌生，但是有没有发现，Java 的日志框架有很多，琳罗满目，这些框架有什么区别呢？有什么关系呢？在了解之后，仅以本文做一点粗浅的记录。
 
@@ -46,7 +46,7 @@ public class DemoSlf4j {
 
 运行后，报了如下错误：
 
-![img](https://oss.puppetdev.top/image/note/0fd1e80416e526a14caf7f765cad0680.png)
+![img](https://oss.puppetdevz.top/image/note/0fd1e80416e526a14caf7f765cad0680.png)
 
 ## 2 Log4j
 
@@ -73,7 +73,7 @@ Log4j 是 apache 实现的一个开源日志组件（Wrapped implementations，�
 
 添加了上面的依赖后，会引入以下三个包
 
-![image-20220401102656101](https://oss.puppetdev.top/image/note/3fca1c7dca1732392f8c00ffa657c435.png)
+![image-20220401102656101](https://oss.puppetdevz.top/image/note/3fca1c7dca1732392f8c00ffa657c435.png)
 
 * log4j：适配层
 * slf4j-api：slf4j 规范
@@ -239,7 +239,7 @@ Logback 支持编程方式和配置文件的方式进行配置，同时官方网
 
 下面是 logback.xml 配置文件的配置内容（**如果没有，则采用 Log4j 默认配置**）：
 
-~~~xml 
+~~~xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -333,7 +333,7 @@ Log4j2 在 Log4j 上做了很多重大的改进，还吸取了 Logback 很多优
 
 ### 1.5.1 异步性能比较
 
-![image-20220401110328469](https://oss.puppetdev.top/image/note/46c4671dd720db36186b6c1e70d0ebe7.png)
+![image-20220401110328469](https://oss.puppetdevz.top/image/note/46c4671dd720db36186b6c1e70d0ebe7.png)
 
 其中，`Loggers all async` 是基于 [LMAX Disruptor](http://lmax-exchange.github.com/disruptor/) 实现的，可见 Log4j2 的异步日志性能是最棒的。
 

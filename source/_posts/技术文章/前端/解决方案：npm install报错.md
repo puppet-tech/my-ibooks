@@ -23,7 +23,7 @@ date: 2022-03-17 00:00:00
 ：pm ERR! code EINTEGRITY
 ```
 
-![image-20220317132008831](https://oss.puppetdev.top/image/note/0df6ae6fb0bd9e492fb05a3d8d15b2d3.png)
+![image-20220317132008831](https://oss.puppetdevz.top/image/note/0df6ae6fb0bd9e492fb05a3d8d15b2d3.png)
 
 ### 1.1.2 问题解决
 
@@ -47,6 +47,3 @@ stack Error: Can't find Python executable python
 1. 下载安装 python 2.7，并设置系统路径
 
 2. 终端中进行设置：`npm config set python "C:\Python27\python.exe"`
-
-
-

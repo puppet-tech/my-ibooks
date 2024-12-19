@@ -21,7 +21,7 @@ xshell 无法启动，提示：“要继续使用此程序，您必须应用最�
 
 在使用 xshell 6 时，启动要求更新版本，否则无法正常启动
 
-<img src="https://oss.puppetdev.top/image/note/8da0dca3f0f4e83d5b97c9db2d8ac0da.png" alt="image-20210222110448584" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/8da0dca3f0f4e83d5b97c9db2d8ac0da.png" alt="image-20210222110448584" style="zoom:67%;" />
 
 ## 解决方案
 

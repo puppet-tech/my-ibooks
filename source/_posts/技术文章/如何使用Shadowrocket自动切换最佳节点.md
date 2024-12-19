@@ -23,7 +23,7 @@ Shadowrocket 有一个功能是可以自动对列表节点进行定时测速并�
 
 新版本的 Shadowrocket（2.2.2）支持” 简单模式 “直接开启” 自动切换最佳节点 “功能。
 
-![image-20220304100414118](https://oss.puppetdev.top/image/note/cafe3d2f37579721f4f13c13f97e4f7a.png)
+![image-20220304100414118](https://oss.puppetdevz.top/image/note/cafe3d2f37579721f4f13c13f97e4f7a.png)
 
 经由上面的简单设置后，默认所有节点为一个分组，且会自动进行测速，并切换为最佳的节点。
 
@@ -37,5 +37,4 @@ Shadowrocket—> 全局路由 —> 分组 —>URL 测试设置
 
 下图为每 10 分钟测试一次，5s 无应答视为节点超时，当一个节点的响应时间 + 10ms 仍旧比当前使用节点快时，切换至更快节点。
 
-<img src="https://oss.puppetdev.top/image/note/f5600a06f65b3e351c630deb60e19f05.png" alt="image-20220304093859314" style="zoom:50%;" />
-
+<img src="https://oss.puppetdevz.top/image/note/f5600a06f65b3e351c630deb60e19f05.png" alt="image-20220304093859314" style="zoom:50%;" />
