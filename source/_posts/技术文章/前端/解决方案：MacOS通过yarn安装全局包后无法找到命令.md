@@ -29,17 +29,17 @@ sticky:
 
 通过命令 `yarn global add packageName` 后，试图该模块的命令，发现无法找到
 
-<img src="https://oss.puppetdev.top/image/note/4fe618e399628724ad20b4a6323b0a59.png" alt="image-20210930135631984" style="zoom:50%;" />
+<img src="https://oss.puppetdevz.top/image/note/4fe618e399628724ad20b4a6323b0a59.png" alt="image-20210930135631984" style="zoom:50%;" />
 
 ## 1.3 问题分析
 
 macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置和包路径默认位于家目录下
 
-<img src="https://oss.puppetdev.top/image/note/5dada55a4915bb85a40e68e0f75354cd.png" alt="image-20210930135818676" style="zoom:50%;" />
+<img src="https://oss.puppetdevz.top/image/note/5dada55a4915bb85a40e68e0f75354cd.png" alt="image-20210930135818676" style="zoom:50%;" />
 
 通过 yarn global add 安装包，则会被安装到 `~/.config/yarn/global/node_modules/` 中
 
-![image-20210930140102368](https://oss.puppetdev.top/image/note/791f480a09702d4bbc1f5d8213509e76.png)
+![image-20210930140102368](https://oss.puppetdevz.top/image/note/791f480a09702d4bbc1f5d8213509e76.png)
 
 而该路径是没有配置在环境变量中的，因此无法找到。
 
@@ -49,7 +49,7 @@ macOS 在安装完 npm 后，再通过 npm 安装 yarn。则 yarn 相关配置�
 
 配置如下：
 
-![image-20210930140654119](https://oss.puppetdev.top/image/note/8e5e85ebf430d7676443903be1407465.png)
+![image-20210930140654119](https://oss.puppetdevz.top/image/note/8e5e85ebf430d7676443903be1407465.png)
 
 ~~~shell
 export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
@@ -59,5 +59,4 @@ export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin
 
 结果如下：
 
-<img src="https://oss.puppetdev.top/image/note/ad02e37701153120d62feef66115b282.png" alt="image-20210930140835904" style="zoom:50%;" />
-
+<img src="https://oss.puppetdevz.top/image/note/ad02e37701153120d62feef66115b282.png" alt="image-20210930140835904" style="zoom:50%;" />

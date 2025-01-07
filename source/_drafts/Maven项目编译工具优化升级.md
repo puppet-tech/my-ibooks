@@ -115,12 +115,12 @@ mvn clean install -o
 现在，我们可以使用该命令来更深入地了解我们的构建时间：
 
 ```shell
-$ mvn clean install -Dprofile
+mvn clean install -Dprofile
 ```
 
 构建完成后，我们可以在 `.profiler` 文件夹中找到 HTML 文本形式的报告。
 
-![maven profiler](https://oss.puppetdev.top/image/note/08876f769f56df1a301ba0bbb314e8f5.webp)
+![maven profiler](https://oss.puppetdevz.top/image/note/08876f769f56df1a301ba0bbb314e8f5.webp)
 
 可以看到，profiler 列出了所有插件的执行情况，并记录了它们所耗费的时间。
 
@@ -172,7 +172,7 @@ $ mvn clean install -Dprofile
 由于重写了配置，激活了 `skipITs` profile，集成测试现在被跳过了：
 
 ```shell
-$ mvn clean install -PskipITs
+mvn clean install -PskipITs
 ```
 
 ## 1.3 结合 mvnd
@@ -223,7 +223,7 @@ Gradle 和 Maven 都支持并行的项目构建和依赖解析。但是 gradle �
 
     gradle 为了提升构建的效率，提出了增量构建的概念，为了实现增量构建，gradle 将每一个 task 都分成了三部分，分别是 input 输入，任务本身和 output 输出。下图是一个典型的 java 编译的 task。
 
-![](https://oss.puppetdev.top/image/note/62fcda325821467863f530222781862e.png)
+![](https://oss.puppetdevz.top/image/note/62fcda325821467863f530222781862e.png)
 
 以上图为例，input 就是目标 jdk 的版本，源代码等，output 就是编译出来的 class 文件。
 
@@ -255,15 +255,15 @@ Gradle 和 Maven 都支持并行的项目构建和依赖解析。但是 gradle �
 
 - 使用 gradle 和 maven 构建 Apache Commons Lang 3 的比较：
 
-![](https://oss.puppetdev.top/image/note/0c6f37efd14ae36a690558da76c48905.png)
+![](https://oss.puppetdevz.top/image/note/0c6f37efd14ae36a690558da76c48905.png)
 
 - 使用 gradle 和 maven 构建小项目（10 个模块，每个模块 50 个源文件和 50 个测试文件）的比较：
 
-![](https://oss.puppetdev.top/image/note/db5bdbaa21aa0ff852868adb329e6c98.png)
+![](https://oss.puppetdevz.top/image/note/db5bdbaa21aa0ff852868adb329e6c98.png)
 
 - 使用 gradle 和 maven 构建大项目（500 个模块，每个模块 100 个源文件和 100 个测试文件）的比较：
 
-![](https://oss.puppetdev.top/image/note/4bdcbf87392b2dc94ca0ef2bc73d45f3.png)
+![](https://oss.puppetdevz.top/image/note/4bdcbf87392b2dc94ca0ef2bc73d45f3.png)
 
 可以看到 gradle 性能的提升是非常明显的。
 

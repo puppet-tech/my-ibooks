@@ -10,6 +10,7 @@ sidebar: auto
 categories:
   - 技术文章
   - 前端
+  - UI框架
 date: 2022-09-21 22:14:44
 ---
 # 解决van-dialog内容过多却没有滚动样式的问题
@@ -18,7 +19,7 @@ date: 2022-09-21 22:14:44
 
 通过组件调用 Dialog 时，van-dialog 内嵌套其他组件，其内容过多，Dialog 不会自动出现滚动样式，导致无法显示底部按钮
 
-![image-20210708143224495](https://oss.puppetdev.top/image/note/ef727b324fb70c17dba47541cc6a0ec8.png)
+![image-20210708143224495](https://oss.puppetdevz.top/image/note/ef727b324fb70c17dba47541cc6a0ec8.png)
 
 ## 解决方案
 

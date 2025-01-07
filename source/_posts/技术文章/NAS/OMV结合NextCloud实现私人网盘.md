@@ -1,9 +1,12 @@
 ---
-tags: 
 title: OMV结合NextCloud实现私人网盘
+categories:
+  - 技术文章
+  - NAS
+tags:
 ---
 
-![OMV NAS & NextCloud搭建私人网盘.webp](https://oss.puppetdev.top/image/note/ab9bff5d9f1b185ad091b0387e139630.webp)
+![OMV NAS & NextCloud搭建私人网盘.webp](https://oss.puppetdevz.top/image/note/ab9bff5d9f1b185ad091b0387e139630.webp)
 
 OpenMediaVault (OMV) 是一款基于 Debian 的开源网络附加存储（NAS）解决方案，它通过易于使用的界面提供数据存储、备份和共享服务。结合 Nextcloud，用户可以在 OMV 平台上搭建一个功能强大的私人网盘，实现文件同步、分享和协作。这种组合不仅增强了数据的可访问性和安全性，也为个人和小型企业提供了一个成本效益高、隐私保护好的云存储解决方案。通过 Docker 容器或直接安装，OMV 与 Nextcloud 的整合可以轻松完成，满足现代数字生活的存储需求。
 
@@ -35,10 +38,10 @@ sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript
 ## 1.2 创建共享文件夹用于存放 NextCloud 的 Data
 
 1. 创建共享文件夹，记录绝对路径：/srv/dev-disk-by-uuid-3f0211f1-75af-4278-9d80-21f507bb8650/NextCloudData
-    ![image.png](https://oss.puppetdev.top/image/note/b07d48b9dbffd4fd9bf424d300a886d7.png)
+    ![image.png](https://oss.puppetdevz.top/image/note/b07d48b9dbffd4fd9bf424d300a886d7.png)
 2. **重要**！！！修改共享文件夹的 ACL 权限，将用户组修改为 www-data，否则初始化 NextCloud 时，会出现权限不足而失败。
 
-    ![image.png](https://oss.puppetdev.top/image/note/a322e5eab62d1dd79f525aa219685254.png)
+    ![image.png](https://oss.puppetdevz.top/image/note/a322e5eab62d1dd79f525aa219685254.png)
 
 ## 1.3 借助 Compose 整体启用安装 MySQL 和 NextCloud
 
@@ -132,11 +135,11 @@ nextcloud 的一些卷地址：
 
 最后的效果：Amazing！！！！
 
-![image.png](https://oss.puppetdev.top/image/note/9d8abde41a2ce10acd9c1ffb8e9973fa.png)
+![image.png](https://oss.puppetdevz.top/image/note/9d8abde41a2ce10acd9c1ffb8e9973fa.png)
 
-![image.png](https://oss.puppetdev.top/image/note/69da14431cb380184c83876467f6af67.png)
+![image.png](https://oss.puppetdevz.top/image/note/69da14431cb380184c83876467f6af67.png)
 
-![image.png](https://oss.puppetdev.top/image/note/128b011a00a09c0e3f7e8e68594dd0a3.png)
+![image.png](https://oss.puppetdevz.top/image/note/128b011a00a09c0e3f7e8e68594dd0a3.png)
 
 ## 1.5 [安全配置](https://docs.nextcloud.com/server/28/admin_manual/installation/harden_server.html)
 
@@ -158,7 +161,7 @@ nextcloud 的一些卷地址：
 
     添加或修改如下语句（**修改前记得备份**）
 
-    ```
+    ```conf
     # 邮箱
     ServerAdmin xxxxx@163.com
     # 域名
@@ -180,6 +183,7 @@ nextcloud 的一些卷地址：
 
 > `SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM`
 > ：定义 Apache 服务器在 SSL/TLS 握手过程中可以使用的加密套件（cipher suites）
+>
 > - `HIGH`：启用被认为是高强度的加密套件。
 > - `!RC4`：禁用 RC4 加密算法。RC4 已被发现存在多种安全问题。
 > - `!MD5`：禁用 MD5 散列函数。MD5 因其安全性不足而不推荐使用。
@@ -202,7 +206,7 @@ nextcloud 的一些卷地址：
 
 Apache2 可以同时启用多个虚拟主机配置文件，可通过 `apachectl -S` 进行查看，一般为：
 
-![image.png](https://oss.puppetdev.top/image/note/9e470a538d0c23296c6cc7c3f859acd2.png)
+![image.png](https://oss.puppetdevz.top/image/note/9e470a538d0c23296c6cc7c3f859acd2.png)
 
 上面我们已经配置了监听 443 端口的虚拟主机，为了更加安全，我们需要进一步修改监听 80 端口的虚拟主机，使其访问重定向到 443 端口
 

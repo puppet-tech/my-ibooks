@@ -1,4 +1,4 @@
-```
+```java
 Unexpected mutation of “xxxx” prop vue/no-mutatiing-props
 ```
 
@@ -10,7 +10,7 @@ Unexpected mutation of “xxxx” prop vue/no-mutatiing-props
 
 在上述版本下，我使用 eslint 进行语法校验，发现报了一下错误：
 
-![image-20211102095545509](https://oss.puppetdev.top/image/note/253df3a085af6d21e599da9017239c6b.png)
+![image-20211102095545509](https://oss.puppetdevz.top/image/note/253df3a085af6d21e599da9017239c6b.png)
 
 <!--more-->
 

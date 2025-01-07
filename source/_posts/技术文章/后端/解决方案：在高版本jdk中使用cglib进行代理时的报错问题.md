@@ -20,8 +20,6 @@ date: 2022-11-28 14:10:20
 
 Unable to make [protected](https://so.csdn.net/so/search?q=protected&spm=1001.2101.3001.7020) final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @5c29bfd
 
-
-
 我的代码为：
 
 ```java
@@ -68,4 +66,4 @@ public class CglibProxyForMultiInterfacesTest {
 --add-opens java.base/java.lang=ALL-UNNAMED  
 ```
 
-![image-20221128141538748](https://oss.puppetdev.top/image/note/26068c2c1d8b57fd7b41650b68e1086f.png)
+![image-20221128141538748](https://oss.puppetdevz.top/image/note/26068c2c1d8b57fd7b41650b68e1086f.png)

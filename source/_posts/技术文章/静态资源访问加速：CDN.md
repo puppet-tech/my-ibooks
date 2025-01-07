@@ -13,7 +13,7 @@ categories:
 date: 2022-09-21 22:14:44
 ---
 
-![image.png](https://oss.puppetdev.top/image/note/7d6fa3076b00679af6ca49e3963cc264.png)
+![image.png](https://oss.puppetdevz.top/image/note/7d6fa3076b00679af6ca49e3963cc264.png)
 
 ## 1.1 CDN加速是什么？
 

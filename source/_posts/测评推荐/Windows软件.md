@@ -44,7 +44,7 @@ PDF专用
 
   大名鼎鼎的 DRAWBOARD PDF，正价 88 元，**有时候微软应用商店特价至 0 元**，适合移动办公/SURFACE 平板人群使用。
 
-* 万兴PDF专家（PDFelement），[PDFelement ](https://link.zhihu.com/?target=https%3A//pdf.wondershare.cn/landing_zhihu.html%3Futm_source%3DZHBrandybuck%26utm_medium%3DLemon%26utm_campaign%3Dyuedupdf0417)功能齐全、极其易用、界面美观，是目前（2020年4月）用过的PDF软件中综合表现最好的。
+* 万兴PDF专家（PDFelement），[PDFelement](https://link.zhihu.com/?target=https%3A//pdf.wondershare.cn/landing_zhihu.html%3Futm_source%3DZHBrandybuck%26utm_medium%3DLemon%26utm_campaign%3Dyuedupdf0417)功能齐全、极其易用、界面美观，是目前（2020年4月）用过的PDF软件中综合表现最好的。
 
 * 嗨格式阅读器。小巧简洁，主打阅读。
 
@@ -64,11 +64,11 @@ utools 支持 **Windows/Mac/Linux**，
 
 > 以下页面都是 mac 上截图，其他平台大同小异。
 
-![image-20210301125232328](https://oss.puppetdev.top/image/note/90d14a5245e45aea09e7cc30d73cdee5.png)
+![image-20210301125232328](https://oss.puppetdevz.top/image/note/90d14a5245e45aea09e7cc30d73cdee5.png)
 
 这个界面比较像 **Alfred**，刚开始没有安装任何插件，只能简单根据关键字查找系统中已安装的应用。
 
-![image-20210301125250491](https://oss.puppetdev.top/image/note/4519dc3fd9108d82d930042edd7a9ec8.png)
+![image-20210301125250491](https://oss.puppetdevz.top/image/note/4519dc3fd9108d82d930042edd7a9ec8.png)
 
 我们可以通过安装插件，扩展 『**utools**』的功能，提高我们的生产力。
 
@@ -76,11 +76,11 @@ utools 支持 **Windows/Mac/Linux**，
 
 相关插件都可以在插件中心安装，只需要在窗口输入插件，选择**插件中心**。
 
-<img src="https://oss.puppetdev.top/image/note/17ab2616227fca8396282d4a98e463b4.png" alt="image-20210301125334138" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/17ab2616227fca8396282d4a98e463b4.png" alt="image-20210301125334138" style="zoom:67%;" />
 
 进入插件中心，选择安装相应的插件。
 
-<img src="https://oss.puppetdev.top/image/note/c50943059949dbe8c8b24003e7ad3026.png" alt="image-20210301125404210" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/c50943059949dbe8c8b24003e7ad3026.png" alt="image-20210301125404210" style="zoom:67%;" />
 
 ## 插件推荐
 
@@ -90,7 +90,7 @@ utools 支持 **Windows/Mac/Linux**，
 
 关键字： translate/翻译
 
-![image-20210301125532976](https://oss.puppetdev.top/image/note/aa47e1baff254a8d6db31e5e3cbc8382.png)
+![image-20210301125532976](https://oss.puppetdevz.top/image/note/aa47e1baff254a8d6db31e5e3cbc8382.png)
 
 ### 剪贴板历史
 
@@ -155,15 +155,15 @@ utools 支持 **Windows/Mac/Linux**，
 
 ### 常见文档(vue、Python等等)
 
-<img src="https://oss.puppetdev.top/image/note/577793623b7c3e74bf5bdad2a48964f2.png" alt="image-20210301130219067" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/577793623b7c3e74bf5bdad2a48964f2.png" alt="image-20210301130219067" style="zoom:67%;" />
 
 可以快速查找 Linux 命令使用方法，这真是极好的。
 
-<img src="https://oss.puppetdev.top/image/note/89a07959f9b27b94b175012006b99910.png" alt="image-20210301130243069" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/89a07959f9b27b94b175012006b99910.png" alt="image-20210301130243069" style="zoom:67%;" />
 
 ### 人生进度条
 
-![image-20210301130316529](https://oss.puppetdev.top/image/note/26c52fa7d58c546b66e8d956a46ea339.png)
+![image-20210301130316529](https://oss.puppetdevz.top/image/note/26c52fa7d58c546b66e8d956a46ea339.png)
 
 件中心还有很多插件，小伙伴们可以自行查找。没找到想要的插件，小伙伴也考虑自己开发。
 
@@ -180,28 +180,28 @@ utools 支持 **Windows/Mac/Linux**，
 
 如果弹出这个，说明 CleanMyPC 处于打开状态
 
-<img src="https://oss.puppetdev.top/image/note/92ef6adde9e1bbb0206fe31133eade99.png" alt="image-20210302170104534" style="zoom:67%;" />
+<img src="https://oss.puppetdevz.top/image/note/92ef6adde9e1bbb0206fe31133eade99.png" alt="image-20210302170104534" style="zoom:67%;" />
 
 1. 任务管理器，终止 “CleanMyPC NT Service” 进程，
 2. 系统服务，找到“CleanMyPC观察程序”服务，将服务停止，并将服务改为“手动”启动。
 
 再打开 Patch.exe，点击 patch 激活。出现下方红框字样，说明激活成功：
 
-![image-20210509114351092](https://oss.puppetdev.top/image/note/d136a91563ee6d2b17c61ed8caa637cd.png)
+![image-20210509114351092](https://oss.puppetdevz.top/image/note/d136a91563ee6d2b17c61ed8caa637cd.png)
 
 ## SpaceSniffer
 
 SpaceSniffer 是一款能够可视化分析磁盘空间占用情况的磁盘清理软件！免费，有用且可靠的，可以扫描Windows PC 上的文件。使用此工具，可以清楚地了解计算机硬盘中文件和文件夹的结构。为了检查磁盘空间，该程序使用 Treemap 可视化布局，该布局使您可以基于颜色感知大型文件和文件夹在设备上的位置。 由于此磁盘清洁器速度很快，因此您可以在几秒钟内清楚地了解整体情况。只需单击一下，SpaceSniffer 便会详细显示所选文件，包括大小，文件名，创建日期等。
 
-下载地址和官网为：http://www.uderzo.it/main_products/space_sniffer/
+下载地址和官网为：<http://www.uderzo.it/main_products/space_sniffer/>
 
 下载后得到一个 zip 压缩包，直接解压后以“管理员”的身份打开 exe 文件
 
-![image-20210404213809678](https://oss.puppetdev.top/image/note/c509b3e3bc6a9f58ada84ae95446286c.png)
+![image-20210404213809678](https://oss.puppetdevz.top/image/note/c509b3e3bc6a9f58ada84ae95446286c.png)
 
 打开后，选择要分析的目录，就可以很快地得到该目录的磁盘空间占用情况：
 
-![image-20210404214135028](https://oss.puppetdev.top/image/note/39ff0cb14245143815c25a9f7926bb17.png)
+![image-20210404214135028](https://oss.puppetdevz.top/image/note/39ff0cb14245143815c25a9f7926bb17.png)
 
 点击方格后，还会继续往下显示目录的磁盘占用情况，鼠标右键方格，则可以对该目录进行操作，打开、删除等等。
 
@@ -241,8 +241,8 @@ SpaceSniffer 是一款能够可视化分析磁盘空间占用情况的磁盘清�
 
 ## 右键管理神器
 
-https://github.com/BluePointLilac/ContextMenuManager
+<https://github.com/BluePointLilac/ContextMenuManager>
 
 开源免费，非常方便地管理鼠标右键菜单，而不用自己去面对枯燥的注册表。
 
-![image-20221012201505681](https://oss.puppetdev.top/image/note/b193753dba9b77ef575490b19f7e4e80.png)
+![image-20221012201505681](https://oss.puppetdevz.top/image/note/b193753dba9b77ef575490b19f7e4e80.png)

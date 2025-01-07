@@ -1,20 +1,20 @@
 ---
-date: 2022-10-05 00:00:00
-tags: 
+tags:
   - 解决方案
   - Vue
   - Vant
   - ElementUI
-sticky: null
 permalink: /pages/9e5248/
-author: 
+author:
   name: 木偶
-  link: https://github.com/puppetdevz
-categories: 
-  - 学习专栏
-  - Vue框架
-  - 待整理
+  link: 'https://github.com/puppetdevz'
+categories:
+  - 技术文章
+  - 前端
+  - UI框架
 title: 使用vant或element-ui时给组件加样式没有生效
+date: 2022-10-05 00:00:00
+sticky:
 ---
 
 

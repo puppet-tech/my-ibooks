@@ -5,7 +5,7 @@ tags:
 title: Jenkins作业日志太大导致Jenkins崩溃
 ---
 
-![image.png](https://oss.puppetdev.top/image/note/d7d95225cef35da6a867289e072bb864.png)
+![image.png](https://oss.puppetdevz.top/image/note/d7d95225cef35da6a867289e072bb864.png)
 
 Jenkins 流水线运行时由于某些原因，Console Output 日志太大了，导致 Jenkins 主节点内存溢出，程序崩溃。
 
@@ -24,8 +24,8 @@ Jenkins 流水线运行时由于某些原因，Console Output 日志太大了，
 
 - 借助已有插件：Log Size Checker，安装后，在 Build Environment 中配置，设置 Set maximum log size，并设置超过指定大小时的策略，例如 Fail the build
 - 借助 groovy 脚本
-    - 在构建过程中添加一个步骤来运行 Groovy 脚本。
-    - 编写脚本定期检查日志文件的大小，并在超过指定阈值时终止构建，并发送通知。
+  - 在构建过程中添加一个步骤来运行 Groovy 脚本。
+  - 编写脚本定期检查日志文件的大小，并在超过指定阈值时终止构建，并发送通知。
 
 **优劣分析**
 
