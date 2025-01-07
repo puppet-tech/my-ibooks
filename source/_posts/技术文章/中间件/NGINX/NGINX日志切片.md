@@ -4,6 +4,7 @@ categories:
   - 中间件
   - NGINX
 ---
+
 当 NGINX 的日志文件变得过大时，通常的做法是进行日志切片（log rotation），这样可以防止单个日志文件过大，便于管理和存储。
 
 而 NGINX 自身或者其扩展的模块均不支持类似的功能。 所以 NGINX 日志切片通常需要依赖外部工具来实现，比如 Linux 系统中常用的 `logrotate`。以下是如何使用 `logrotate` 对 NGINX 日志进行切片的步骤：
