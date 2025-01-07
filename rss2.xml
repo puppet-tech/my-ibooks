@@ -15,7 +15,7 @@
     <atom:link href="https://blog.puppetdev.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>本站为木偶的技术分享博客，偶尔会聊聊其他的。主要内容涵盖Java、Python、Go、C、Cpp、前端以及对应相关的一些框架技术的研究与知识分享。</description>
-    <pubDate>Tue, 07 Jan 2025 09:48:43 GMT</pubDate>
+    <pubDate>Tue, 07 Jan 2025 16:01:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -35,6 +35,10 @@
       
       
       
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e-eno1-Detected-Hardware-Unit-Hang/">解决方案：e1000e eno1 Detected Hardware Unit Hang</category>
       
       
       <category domain="https://blog.puppetdev.top/tags/Linux/">Linux</category>
@@ -60,6 +64,12 @@
       
       
       
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/">中间件</category>
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/NGINX/">NGINX</category>
+      
       
       
       <comments>https://blog.puppetdev.top/20240510/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/NGINX/NGINX%E6%97%A5%E5%BF%97%E5%88%87%E7%89%87/#disqus_thread</comments>
@@ -77,6 +87,10 @@
       
       
       
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/">NAS</category>
       
       
       
@@ -394,6 +408,8 @@
       
       <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/">前端</category>
       
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/">UI框架</category>
+      
       
       <category domain="https://blog.puppetdev.top/tags/Vant/">Vant</category>
       
@@ -424,6 +440,8 @@
       <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
       
       <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/">前端</category>
+      
+      <category domain="https://blog.puppetdev.top/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/">UI框架</category>
       
       
       <category domain="https://blog.puppetdev.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">解决方案</category>
@@ -486,9 +504,9 @@
       <category domain="https://blog.puppetdev.top/categories/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/">测评推荐</category>
       
       
-      <category domain="https://blog.puppetdev.top/tags/MacOS/">MacOS</category>
-      
       <category domain="https://blog.puppetdev.top/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      
+      <category domain="https://blog.puppetdev.top/tags/MacOS/">MacOS</category>
       
       
       <comments>https://blog.puppetdev.top/20221008/%E6%B5%8B%E8%AF%84%E6%8E%A8%E8%8D%90/Mac%E8%BD%AF%E4%BB%B6/#disqus_thread</comments>
