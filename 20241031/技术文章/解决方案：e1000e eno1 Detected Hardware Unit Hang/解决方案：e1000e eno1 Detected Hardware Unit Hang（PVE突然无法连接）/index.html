@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.puppetdev.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.puppetdevz.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="在 Proxmox 6.5.11-8 中，偶发性会出现以下报错，尤其是在进行大文件传输后： 123456789101112131415[97377.240263] e1000e 0000:00:1f eno1: Detected Hardware Unit Hang:                 TDH                  &lt;22&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决方案：e1000e eno1 Detected Hardware Unit Hang">
-<meta property="og:url" content="https://blog.puppetdev.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/index.html">
+<meta property="og:url" content="https://www.puppetdevz.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/index.html">
 <meta property="og:site_name" content="木偶&#39;s Blog">
 <meta property="og:description" content="在 Proxmox 6.5.11-8 中，偶发性会出现以下报错，尤其是在进行大文件传输后： 123456789101112131415[97377.240263] e1000e 0000:00:1f eno1: Detected Hardware Unit Hang:                 TDH                  &lt;22&gt;">
 <meta property="og:locale" content="zh_CN">
@@ -39,11 +39,11 @@
 <meta name="twitter:image" content="https://oss.puppetdevz.top/image/note/8a813c25c40bdf839d7466c7a2da9098.png">
 
 
-<link rel="canonical" href="https://blog.puppetdev.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/">
+<link rel="canonical" href="https://www.puppetdevz.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.puppetdev.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/","path":"20241031/技术文章/解决方案：e1000e eno1 Detected Hardware Unit Hang/解决方案：e1000e eno1 Detected Hardware Unit Hang（PVE突然无法连接）/","title":"解决方案：e1000e eno1 Detected Hardware Unit Hang"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.puppetdevz.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/","path":"20241031/技术文章/解决方案：e1000e eno1 Detected Hardware Unit Hang/解决方案：e1000e eno1 Detected Hardware Unit Hang（PVE突然无法连接）/","title":"解决方案：e1000e eno1 Detected Hardware Unit Hang"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>解决方案：e1000e eno1 Detected Hardware Unit Hang | 木偶's Blog</title>
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://www.puppetdevz.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -367,7 +367,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.puppetdev.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/" title="解决方案：e1000e eno1 Detected Hardware Unit Hang">https://blog.puppetdev.top/20241031/技术文章/解决方案：e1000e eno1 Detected Hardware Unit Hang/解决方案：e1000e eno1 Detected Hardware Unit Hang（PVE突然无法连接）/</a>
+      <a href="https://www.puppetdevz.top/20241031/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Ae1000e%20eno1%20Detected%20Hardware%20Unit%20Hang%EF%BC%88PVE%E7%AA%81%E7%84%B6%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%EF%BC%89/" title="解决方案：e1000e eno1 Detected Hardware Unit Hang">https://www.puppetdevz.top/20241031/技术文章/解决方案：e1000e eno1 Detected Hardware Unit Hang/解决方案：e1000e eno1 Detected Hardware Unit Hang（PVE突然无法连接）/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

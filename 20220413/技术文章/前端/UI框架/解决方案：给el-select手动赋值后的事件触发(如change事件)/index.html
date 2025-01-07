@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.puppetdev.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.puppetdevz.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="环境vue、elementUI、vscode 问题描述在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由&#39;&#39; 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决方案：给el-select手动赋值后的事件触发（如change事件）">
-<meta property="og:url" content="https://blog.puppetdev.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/index.html">
+<meta property="og:url" content="https://www.puppetdevz.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/index.html">
 <meta property="og:site_name" content="木偶&#39;s Blog">
 <meta property="og:description" content="环境vue、elementUI、vscode 问题描述在实现业务编辑时，采用 dialog 内嵌表单，当点击“编辑”按钮，数据传入 dialog 并回显到表单中，其中表单有一个select 下拉框，回显时，输入回显到下拉框中，select 选中的值由&#39;&#39; 变成具体的值，此时我的本意是监听这个变化，尝试调用el-select 的 change 事件，但结果发现，手动赋值并不会触发">
 <meta property="og:locale" content="zh_CN">
@@ -34,11 +34,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.puppetdev.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
+<link rel="canonical" href="https://www.puppetdevz.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"auto","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.puppetdev.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/","path":"20220413/技术文章/前端/UI框架/解决方案：给el-select手动赋值后的事件触发(如change事件)/","title":"解决方案：给el-select手动赋值后的事件触发（如change事件）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"auto","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.puppetdevz.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/","path":"20220413/技术文章/前端/UI框架/解决方案：给el-select手动赋值后的事件触发(如change事件)/","title":"解决方案：给el-select手动赋值后的事件触发（如change事件）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>解决方案：给el-select手动赋值后的事件触发（如change事件） | 木偶's Blog</title>
@@ -204,7 +204,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
+    <link itemprop="mainEntityOfPage" href="https://www.puppetdevz.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -316,7 +316,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.puppetdev.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/" title="解决方案：给el-select手动赋值后的事件触发（如change事件）">https://blog.puppetdev.top/20220413/技术文章/前端/UI框架/解决方案：给el-select手动赋值后的事件触发(如change事件)/</a>
+      <a href="https://www.puppetdevz.top/20220413/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%89%8D%E7%AB%AF/UI%E6%A1%86%E6%9E%B6/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BB%99el-select%E6%89%8B%E5%8A%A8%E8%B5%8B%E5%80%BC%E5%90%8E%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91(%E5%A6%82change%E4%BA%8B%E4%BB%B6)/" title="解决方案：给el-select手动赋值后的事件触发（如change事件）">https://www.puppetdevz.top/20220413/技术文章/前端/UI框架/解决方案：给el-select手动赋值后的事件触发(如change事件)/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

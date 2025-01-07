@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.puppetdev.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.puppetdevz.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="OpenMediaVault (OMV) 是一款基于 Debian 的开源网络附加存储（NAS）解决方案，它通过易于使用的界面提供数据存储、备份和共享服务。结合 Nextcloud，用户可以在 OMV 平台上搭建一个功能强大的私人网盘，实现文件同步、分享和协作。这种组合不仅增强了数据的可访问性和安全性，也为个人和小型企业提供了一个成本效益高、隐私保护好的云存储解决方案。通过 Docker 容器或">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OMV结合NextCloud实现私人网盘">
-<meta property="og:url" content="https://blog.puppetdev.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/index.html">
+<meta property="og:url" content="https://www.puppetdevz.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/index.html">
 <meta property="og:site_name" content="木偶&#39;s Blog">
 <meta property="og:description" content="OpenMediaVault (OMV) 是一款基于 Debian 的开源网络附加存储（NAS）解决方案，它通过易于使用的界面提供数据存储、备份和共享服务。结合 Nextcloud，用户可以在 OMV 平台上搭建一个功能强大的私人网盘，实现文件同步、分享和协作。这种组合不仅增强了数据的可访问性和安全性，也为个人和小型企业提供了一个成本效益高、隐私保护好的云存储解决方案。通过 Docker 容器或">
 <meta property="og:locale" content="zh_CN">
@@ -41,11 +41,11 @@
 <meta name="twitter:image" content="https://oss.puppetdevz.top/image/note/ab9bff5d9f1b185ad091b0387e139630.webp">
 
 
-<link rel="canonical" href="https://blog.puppetdev.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/">
+<link rel="canonical" href="https://www.puppetdevz.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.puppetdev.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/","path":"20240325/技术文章/NAS/OMV结合NextCloud实现私人网盘/","title":"OMV结合NextCloud实现私人网盘"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.puppetdevz.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/","path":"20240325/技术文章/NAS/OMV结合NextCloud实现私人网盘/","title":"OMV结合NextCloud实现私人网盘"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>OMV结合NextCloud实现私人网盘 | 木偶's Blog</title>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/">
+    <link itemprop="mainEntityOfPage" href="https://www.puppetdevz.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -412,7 +412,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.puppetdev.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/" title="OMV结合NextCloud实现私人网盘">https://blog.puppetdev.top/20240325/技术文章/NAS/OMV结合NextCloud实现私人网盘/</a>
+      <a href="https://www.puppetdevz.top/20240325/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/NAS/OMV%E7%BB%93%E5%90%88NextCloud%E5%AE%9E%E7%8E%B0%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/" title="OMV结合NextCloud实现私人网盘">https://www.puppetdevz.top/20240325/技术文章/NAS/OMV结合NextCloud实现私人网盘/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

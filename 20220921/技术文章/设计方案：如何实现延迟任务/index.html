@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.puppetdev.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.puppetdevz.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="如何实现延迟任务场景描述假设现在有一个需求：生成订单 30 分钟未支付，则自动取消，如何实现？又或者，生成订单 60秒 后，给用户发短信。 像上面这样子的需求，就属于延时任务。 这个延时任务和定时任务的区别究竟在哪里呢？  定时任务有明确的触发时间，延时任务没有 定时任务有执行周期，而延时任务在某事件触发后一段时间内执行，没有执行周期 定时任务一般执行的是批处理操作是多个任务，而延时任务一般是单个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何实现延迟任务">
-<meta property="og:url" content="https://blog.puppetdev.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/index.html">
+<meta property="og:url" content="https://www.puppetdevz.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/index.html">
 <meta property="og:site_name" content="木偶&#39;s Blog">
 <meta property="og:description" content="如何实现延迟任务场景描述假设现在有一个需求：生成订单 30 分钟未支付，则自动取消，如何实现？又或者，生成订单 60秒 后，给用户发短信。 像上面这样子的需求，就属于延时任务。 这个延时任务和定时任务的区别究竟在哪里呢？  定时任务有明确的触发时间，延时任务没有 定时任务有执行周期，而延时任务在某事件触发后一段时间内执行，没有执行周期 定时任务一般执行的是批处理操作是多个任务，而延时任务一般是单个">
 <meta property="og:locale" content="zh_CN">
@@ -42,11 +42,11 @@
 <meta name="twitter:image" content="https://oss.puppetdevz.top/image/note/9b5bce102fb2afe5ca6ecf61fa8dc802.png">
 
 
-<link rel="canonical" href="https://blog.puppetdev.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/">
+<link rel="canonical" href="https://www.puppetdevz.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"auto","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.puppetdev.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/","path":"20220921/技术文章/设计方案：如何实现延迟任务/","title":"如何实现延迟任务"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"auto","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.puppetdevz.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/","path":"20220921/技术文章/设计方案：如何实现延迟任务/","title":"如何实现延迟任务"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>如何实现延迟任务 | 木偶's Blog</title>
@@ -212,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.puppetdev.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/">
+    <link itemprop="mainEntityOfPage" href="https://www.puppetdevz.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -451,7 +451,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.puppetdev.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/" title="如何实现延迟任务">https://blog.puppetdev.top/20220921/技术文章/设计方案：如何实现延迟任务/</a>
+      <a href="https://www.puppetdevz.top/20220921/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E4%BB%BB%E5%8A%A1/" title="如何实现延迟任务">https://www.puppetdevz.top/20220921/技术文章/设计方案：如何实现延迟任务/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
